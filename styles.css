@@ -66,7 +66,7 @@ body {
 
 .logo {
     display: flex;
-    align-items: center;
+    align-items: left;
     font-size: 24px;
     color: white;
     width: 40%;
@@ -79,6 +79,9 @@ body {
     width: 25%;
     height: auto;
     transform: translate(-50%, -50%);
+    align-items: left;
+    top: 8px;
+    left: 10px;
 }
 
 .menu-items {
@@ -155,8 +158,24 @@ body {
 /* Button styling */
 
 input {
-  /* width: calc(100% - 5px); */
-  /* padding: 10px; */
+  width: calc(100% - 5px);
+  padding: 10px; 
+  margin-bottom: 10px;
+margin-left: 5px;
+  border: 2px solid #4d72a0;
+  border-radius: 40px;
+    font-family: "Syncopate", sans-serif;
+    display: flex;
+    top: 50%;
+    left: 5%;
+  padding: 24px 150px;
+    font-size: 20px;
+align-items: left;
+}
+
+form {
+  width: calc(100% - 5px);
+  padding: 10px;
   margin-bottom: 10px;
 margin-left: 5px;
   border: 2px solid #4d72a0;
