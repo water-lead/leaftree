@@ -137,7 +137,7 @@ body {
 /* Landing Page styling */
 .landing-section {
     position: absolute;
-    bottom: 42%;
+    bottom: 43%;
     left: 50%;
     transform: translate(-50%);
     text-align: left;
@@ -154,7 +154,7 @@ body {
 /* Button styling */
 
 input {
-  width: calc(100% - 5px);
+  /* width: calc(100% - 5px); */
   /* padding: 10px; */
   margin-bottom: 10px;
   border: 2px solid #4d72a0;
@@ -173,7 +173,7 @@ button {
   padding: 24px 150px;
   background-color: #538BC3;
   color: #fff;
-  border: 2px solid #ffffFf;
+  border: 2px solid #ffffff;
   border-radius: 40px;
   cursor: pointer;
     font-family: "Syncopate", sans-serif;
