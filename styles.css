@@ -65,23 +65,24 @@ body {
 }
 
 .logo {
+    top: 12px;
+    left: 7px;
     display: flex;
     align-items: left;
     font-size: 24px;
     color: white;
     width: 40%;
     margin-left: 25px;
-    top: 12px;
-    left: 7px
+    gap: 600px;
 }
 
 .logo img {
+    top: 15px;
+    left: 10px;
     width: 40%;
     height: auto;
     transform: translate(-50%, -50%);
     align-items: left;
-    top: 15px;
-    left: 10px;
     gap: 600px;
 }
 
@@ -159,7 +160,8 @@ body {
 /* Button styling */
 
 input {
-  width: calc(100% - 5px);
+  max-width: 500px;
+    /*width: calc(100% - 5px);*/
   padding: 10px; 
   margin-bottom: 10px;
 margin-left: 5px;
@@ -175,7 +177,8 @@ align-items: left;
 }
 
 form {
-  width: calc(100% - 5px);
+  /*width: calc(100% - 5px);*/
+    max-width: 500px;
   padding: 10px;
   margin-bottom: 10px;
 margin-left: 5px;
@@ -191,6 +194,7 @@ align-items: left;
 }
 
 button {
+    max-width: 500px;
     top: 50%;
     left: 50%;
   padding: 24px 150px;
