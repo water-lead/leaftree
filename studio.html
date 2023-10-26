@@ -40,56 +40,46 @@
     </nav>
 
     <div class="studio-content">
-        <!-- Landing Page Content -->
-        <section class="landing-section" id="landing">
-                <div class="centered">
-                    <button id="startButton">START HERE</button>
-                        <form id="email" style="display: none;">
-                            <input type="text" placeholder="E-mail Address">
-                        </form>
-                        <form id="password" style="display: none;">
-                            <input type="text" placeholder="Password">
-                            <input type="submit" value="Submit">
-                        </form>
-                    </div>
-                </div>
-        </section>
-    </div>
         <!-- Welcome Page -->
         <section class="page-section" id="engine">
             <div = id="page1">
             <div class="centered">
                 <h1>Welcome follow the instruction on each page</h1>
                 <p class="prompt">Enter the industries you want to analyze:</p>
-                <button id="startButton">START HERE</button>
-                        <form id="industry1" style="display: none;">
-                            <input type="text" placeholder="Ex: Travel">
-                        </form>
-                        <form id="industry2" style="display: none;">
-                            <input type="text" placeholder="Ex: Clothing">
-                            <input type="submit" value="Submit">
-                        </form>
+                        <div id="loginButton">
+        <button onclick="showIndustryInput1()">START</button>
+                        </div>
+                        <div id="industryInput1" style="display: none;">
+        <input type="text" id="industry1" placeholder="Ex: Travel" />
+      </div>
+                        <div id="industryInput1" style="display: none;">
+        <input type="password" id="industry2" placeholder="Ex: Clothing" />
+      </div>
+                <div = id="page2">
+                <div class="centered">
                 <h1>Congrats on completing the First Step</h1>
         <p class="description">We have captured the focus industries, next, we need to fine-tune our engine with specific concepts/ideas. You are required to enter at least two.</p>
-                <button id="proceedButton">PROCEED</button>
-                        <form id="idea1" style="display: none;">
-                            <input type="text" placeholder="Ex: JetLag">
-                        </form>
-                        <form id="idea2" style="display: none;">
-                            <input type="text" placeholder="Ex: Portability">
-                        </form>
-                        <form id="idea3" style="display: none;">
-                            <input type="text" placeholder="Ex: Hygiene">
-                        </form>
-                        <form id="idea4" style="display: none;">
-                            <input type="text" placeholder="Ex: Fragrance">
-                            </form>
-                        <form id="idea5" style="display: none;">
-                            <input type="text" placeholder="Ex: Convenience">
-                        </form>
+                        <div id="proceedButton">
+            <button onclick="showIdeaInput1()">PROCEED</button>
+                            </div>
+                        <div id="ideaInput1" style="display: none;">
+        <input type="text" id="idea1" placeholder="Ex: Jetlag" />
+      </div>
+                        <div id="ideaInput2" style="display: none;">
+        <input type="password" id="idea2" placeholder="Ex: Portability" />
+      </div>
+                    <div id="ideaInput3" style="display: none;">
+        <input type="text" id="idea1" placeholder="Ex: Hygiene" />
+      </div>
+                        <div id="ideaInput4" style="display: none;">
+        <input type="password" id="idea2" placeholder="Ex: Fragrance" />
+      </div>
+                                <div id="ideaInput5" style="display: none;">
+        <input type="password" id="idea2" placeholder="Ex: Convenience" />
+      </div>
                 <button id="analyzeButton">ANALYZE</button>
         </section>
     </div>
-    <script src="script.js"></script>
+    <script src="studioScript.js"></script>
 </body>
 </html>
