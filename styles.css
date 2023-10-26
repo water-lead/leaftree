@@ -62,11 +62,12 @@ body {
     background-color: Transparent;
     top: 12px;
     right: 7px;
+    max-width: 100%;
 }
 
 .logo {
-    top: 12px;
-    left: 7px;
+    bottom: 90px;
+    right: 80px;
     display: flex;
     align-items: left;
     font-size: 24px;
@@ -77,9 +78,9 @@ body {
 }
 
 .logo img {
-    top: 15px;
-    left: 10px;
-    width: 40%;
+    bottom: 90px;
+    right: 80px;
+    width: 30%;
     height: auto;
     transform: translate(-50%, -50%);
     align-items: left;
@@ -146,11 +147,11 @@ body {
     left: 50%;
     transform: translate(-50%);
     text-align: left;
-    max-width: 400px;
+    max-width: 600px;
     padding: 5px;
     color: white;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
   padding: 24px 150px;
 }
@@ -160,17 +161,17 @@ body {
 /* Button styling */
 
 input {
-  max-width: 500px;
+  max-width: 600px;
     /*width: calc(100% - 5px);*/
   padding: 10px; 
   margin-bottom: 10px;
-margin-left: 5px;
+/*margin-left: 5px;*/
   border: 2px solid #4d72a0;
   border-radius: 40px;
     font-family: "Syncopate", sans-serif;
     display: flex;
     top: 50%;
-    left: 5%;
+    left: 0%;
   padding: 24px 150px;
     font-size: 20px;
 align-items: left;
@@ -178,23 +179,23 @@ align-items: left;
 
 form {
   /*width: calc(100% - 5px);*/
-    max-width: 500px;
+    max-width: 600px;
   padding: 10px;
   margin-bottom: 10px;
-margin-left: 5px;
+/*margin-left: 5px;*/
   border: 2px solid #4d72a0;
   border-radius: 40px;
     font-family: "Syncopate", sans-serif;
     display: flex;
     top: 50%;
-    left: 5%;
+    left: 0%;
   padding: 24px 150px;
     font-size: 20px;
 align-items: left;
 }
 
 button {
-    max-width: 500px;
+    max-width: 600px;
     top: 50%;
     left: 50%;
   padding: 24px 150px;
