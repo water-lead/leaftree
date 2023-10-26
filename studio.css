@@ -100,17 +100,38 @@ body {
 
 /* Content styles for studio page page sections */
 .page-section {
-  display: none;
-  position: absolute;
-  text-align: center;
-  max-width: 600px;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  background-color: transparent;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    max-width: 400px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-section .description { font-weight: regular; }
+
+/* Button styling */
+.startButton, .industry1, .industry1, .proceedButton, .idea1, .idea2, .idea3, .idea4, .idea5, .analyzeButton {
+    transition: all 0.5s;
+    background-color: #A5f2f9;
+    width: 45%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 18px 130px;
+    border-radius: 40px;
+    border: 1.5px solid;
+    font-size: 30px;
+    font-family: "Syncopate", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Heading styles for studio page page sections */
@@ -125,15 +146,6 @@ body {
     font-size: 21px;
     color: #FFFFFF;
   }
-}
-
-/* Prompt and description text styles */
-.page-section .prompt,
-.page-section .description {
-    font-family: 'Lora', serif;
-    font-weight: normal;
-    margin-bottom: 10px;
-    color: #FFFFFF;
 }
 
 /* Button styles */
@@ -158,21 +170,29 @@ body {
   }
 }
 
-/* Button hover styles */
-.page-section button:hover {
-  background-color: #7aa3d6;
-  color: #FFFFFF;
-  border: 1.5px solid #ffffff;
+/* Prompt and description text styles */
+.page-section .prompt,
+.page-section .description {
+    font-family: 'Lora', serif;
+    font-weight: normal;
+    margin-bottom: 10px;
+    color: #FFFFFF;
 }
 
-/* Input styles */
-input {
-  width: 30%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1.5px solid #0077b6;
-  border-radius: 18px;
-  font-size: 12px;
-  font-weight: light;
-  font-family: "Lora", sans-serif;
+.startButton, .proceedButton, .analyzeButton {
+    background-color: #A5f2f9;
+    color: #ffffff;
+    border-color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100px;
+}
+
+.industry1, .industry2, .idea1, .idea2, .idea3, .idea4, .idea5 {
+    opacity: 0;
+    pointer-events: none;
+    background-color: #ffffff;
+    color: #ffffff;
+    border-color: #4d72a0;
+    font-weight: normal;
 }
