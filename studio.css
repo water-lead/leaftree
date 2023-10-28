@@ -118,27 +118,21 @@ body {
 }
 
 /* Button styling */
-.startButton,
-.proceedButton,
-.idea1,
-.idea2,
-.idea3,
-.idea4,
-.idea5,
-.analyzeButton {
+startButton,
+proceedButton,
+idea1,
+idea2,
+dea3,
+idea4,
+idea5,
+analyzeButton {
   transition: all 0.5s;
-  width: 45%;
   position: fixed;
   transform: translate(-50%, -50%);
-  /*display: block;*/
   justify-content: center;
-  /*align-items: center;*/
-
    max-width: 400px;
-    /*width: calc(100% - 5px);*/
   padding: 10px; 
   margin-bottom: 10px;
-/*margin-left: 5px;*/
   border: 2px solid #4d72a0;
   border-radius: 40px;
     font-family: "Syncopate", sans-serif;
@@ -195,29 +189,47 @@ align-items: left;
   color: #ffffff;
 }
 
-.startButton,
-.proceedButton,
-.analyzeButton {
-  background-color: #a5f2f9;
-  color: #ffffff;
-  border-color: #ffffff;
+startButton,
+proceedButton,
+analyzeButton {
+  max-width: 400px;
+    top: 50%;
+    left: 50%;
+  padding: 24px 150px;
+  background-color: #538BC3;
+  color: #fff;
+  border: 2px solid #ffffff;
+  border-radius: 40px;
   cursor: pointer;
-  font-weight: bold;
-  width: 100px;
+    font-family: "Syncopate", sans-serif;
+    display: inline-flex;
+white-space: nowrap;
+justify-content: center;
+align-items: center;
+font-size: 25px;
 }
 
+.industry1,
 .industry2,
 .idea1,
 .idea2,
 .idea3,
 .idea4,
 .idea5 {
-  opacity: 0;
-  pointer-events: none;
-  background-color: #ffffff;
-  color: #ffffff;
-  border-color: #4d72a0;
-  font-weight: normal;
+ /*width: calc(100% - 5px);*/
+    max-width: 400px;
+  padding: 10px;
+  margin-bottom: 10px;
+/*margin-left: 5px;*/
+  border: 2px solid #4d72a0;
+  border-radius: 40px;
+    font-family: "Syncopate", sans-serif;
+    display: flex;
+    top: 50%;
+    left: 0%;
+  padding: 24px 150px;
+    font-size: 20px;
+align-items: left;
 }
 
 #first-studio-display {
