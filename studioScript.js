@@ -2,6 +2,7 @@
 function showIndustryInput1() {
   document.getElementById("first-studio-display").style.display = "none";
   document.getElementById("enter-industries").style.display = "block";
+  document.getElementById("analyse-view").style.display = "block";
   document.getElementById("industry1").style.display = "block";
   document.getElementById("industry2").style.display = "none";
   document.getElementById("industry1").focus(); // Sets focus on the username input field
@@ -10,6 +11,7 @@ function showIndustryInput1() {
 function showIdeaInput1() {
   document.getElementById("congrats-view").style.display = "none";
   document.getElementById("init-analyse").style.display = "block";
+  document.getElementById("analyse-view").style.display = "block";
   document.getElementById("idea1").style.display = "block";
   document.getElementById("idea1").focus();
 }
