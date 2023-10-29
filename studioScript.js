@@ -2,7 +2,7 @@
 function showIndustryInput1() {
   document.getElementById("first-studio-display").style.display = "none";
   document.getElementById("enter-industries").style.display = "block";
-  document.getElementById("analyse-view").style.display = "none";
+  /*document.getElementById("analyse-view").style.display = "none";*/
   document.getElementById("industry1").style.display = "block";
   document.getElementById("industry2").style.display = "none";
   document.getElementById("industry1").focus(); // Sets focus on the username input field
