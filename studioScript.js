@@ -82,11 +82,13 @@ document.addEventListener("keydown", function (event) {
         document.getElementById("idea3").style.display = "none";
         document.getElementById("idea4").style.display = "none";
       } else if (document.getElementById("idea4").style.display === "block") {
-        document.getElementById("idea3").style.display = "block";
         document.getElementById("idea4").style.display = "none";
+        document.getElementById("idea5").style.display = "block";
+        document.getElementById("analyse-view").style.display = "none";
+      } else if (document.getElementById("idea5").style.display === "block") {
         document.getElementById("idea5").style.display = "none";
         document.getElementById("analyse-view").style.display = "none";
-      }
+      } 
     }
   }
 
