@@ -71,7 +71,28 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-document.addEventListener("keydown", function (event) {
+document.addEventListener("keydown", function(event) {
+  if (event.key === "ArrowRight") {
+    // Hide all initially
+    const elements = ["init-analyse", "idea1", "idea2", "idea3", "idea4", "idea5", "analyse-view"];
+    for (let el of elements) {
+      document.getElementById(el).style.display = "none";
+    }
+
+    if (document.getElementById("idea3").style.display === "block") {
+      document.getElementById("idea4").style.display = "block";
+    } else if (document.getElementById("idea4").style.display === "block") {
+      document.getElementById("idea5").style.display = "block";
+    } else if (document.getElementById("idea5").style.display === "block") {
+      document.getElementById("analyse-view").style.display = "block";
+    } else { // default to show the first "idea"
+      document.getElementById("idea3").style.display = "block";
+    }
+  }
+});
+
+
+/*document.addEventListener("keydown", function (event) {
   if (event.key === "ArrowRight") {
     if (
       document.getElementById("init-analyse").style.display === "block" &&
@@ -90,7 +111,7 @@ document.addEventListener("keydown", function (event) {
         document.getElementById("analyse-view").style.display = "none";
       } 
     }
-  }
+  }*/
 
   if (event.key === "Enter") {
     const industry1Value = document.getElementById("industry1").value;
