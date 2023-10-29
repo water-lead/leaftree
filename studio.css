@@ -230,6 +230,10 @@ align-items: left;
   display: none;
 }
 
+#analyse-view {
+  display: none;
+}
+
 #init-analyse {
   display: none;
 }
