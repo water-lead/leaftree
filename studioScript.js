@@ -2,7 +2,7 @@
 function showIndustryInput1() {
   document.getElementById("first-studio-display").style.display = "none";
   document.getElementById("enter-industries").style.display = "block";
-  document.getElementById("analyse-view").style.display = "block";
+  document.getElementById("analyse-view").style.display = "none";
   document.getElementById("industry1").style.display = "block";
   document.getElementById("industry2").style.display = "none";
   document.getElementById("industry1").focus(); // Sets focus on the username input field
@@ -11,7 +11,7 @@ function showIndustryInput1() {
 function showIdeaInput1() {
   document.getElementById("congrats-view").style.display = "none";
   document.getElementById("init-analyse").style.display = "block";
-  document.getElementById("analyse-view").style.display = "block";
+  document.getElementById("analyse-view").style.display = "none";
   document.getElementById("idea1").style.display = "block";
   document.getElementById("idea1").focus();
 }
@@ -66,7 +66,7 @@ document.addEventListener("keydown", function (event) {
     ) {
       document.getElementById("enter-industries").style.display = "none";
       document.getElementById("congrats-view").style.display = "block";
-      document.getElementById("analyse-view").style.display = "block";
+      document.getElementById("analyse-view").style.display = "none";
     }
   }
 });
@@ -80,11 +80,11 @@ document.addEventListener("keydown", function (event) {
     ) {
       if (document.getElementById("idea3").style.display === "block") {
         document.getElementById("idea3").style.display = "none";
-        document.getElementById("idea4").style.display = "block";
+        document.getElementById("idea4").style.display = "none";
       } else if (document.getElementById("idea4").style.display === "block") {
         document.getElementById("idea3").style.display = "block";
         document.getElementById("idea4").style.display = "none";
-        document.getElementById("idea5").style.display = "block";
+        document.getElementById("idea5").style.display = "none";
         document.getElementById("analyse-view").style.display = "none";
       }
     }
@@ -115,7 +115,7 @@ document.addEventListener("keydown", function (event) {
     ) {
       document.getElementById("enter-industries").style.display = "none";
       document.getElementById("congrats-view").style.display = "block";
-      document.getElementById("analyse-view").style.display = "block";
+      document.getElementById("analyse-view").style.display = "none";
     }
 
     //This uses right arrow key to skip an move to next step
@@ -125,7 +125,7 @@ document.addEventListener("keydown", function (event) {
     ) {
       document.getElementById("idea1").style.display = "none";
       document.getElementById("idea2").style.display = "block";
-      document.getElementById("analyse-view").style.display = "block";
+      document.getElementById("analyse-view").style.display = "none";
       document.getElementById("idea2").focus();
     }
 
@@ -135,7 +135,7 @@ document.addEventListener("keydown", function (event) {
     ) {
       document.getElementById("idea2").style.display = "none";
       document.getElementById("idea3").style.display = "block";
-      document.getElementById("analyse-view").style.display = "block";
+      document.getElementById("analyse-view").style.display = "none";
     }
 
     if (
@@ -143,15 +143,15 @@ document.addEventListener("keydown", function (event) {
       document.getElementById("init-analyse").style.display === "block"
     ) {
       document.getElementById("idea3").style.display = "none";
-      document.getElementById("idea4").style.display = "block";
-      document.getElementById("analyse-view").style.display = "none";
+      document.getElementById("idea4").style.display = "none";
+      document.getElementById("analyse-view").style.display = "block";
       if (
         idea4 &&
         document.getElementById("init-analyse").style.display === "block"
       ) {
         document.getElementById("idea4").style.display = "none";
-        document.getElementById("idea5").style.display = "block";
-        document.getElementById("analyse-view").style.display = "none";
+        document.getElementById("idea5").style.display = "none";
+        document.getElementById("analyse-view").style.display = "block";
       }
     }
   }
