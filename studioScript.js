@@ -67,6 +67,7 @@ document.addEventListener("keydown", function (event) {
     ) {
       document.getElementById("enter-industries").style.display = "none";
       document.getElementById("congrats-view").style.display = "block";
+      document.getElementById("analyse-view").style.display = "block";
     }
   }
 });
@@ -113,6 +114,7 @@ document.addEventListener("keydown", function (event) {
     ) {
       document.getElementById("enter-industries").style.display = "none";
       document.getElementById("congrats-view").style.display = "block";
+      document.getElementById("analyse-view").style.display = "block";
     }
 
     //This uses right arrow key to skip an move to next step
@@ -130,7 +132,8 @@ document.addEventListener("keydown", function (event) {
       document.getElementById("init-analyse").style.display === "block"
     ) {
       document.getElementById("idea2").style.display = "none";
-      document.getElementById("analyze").style.display = "block";
+      document.getElementById("idea3").style.display = "block";
+      document.getElementById("analyse-view").style.display = "none";
     }
 
     if (
@@ -138,13 +141,15 @@ document.addEventListener("keydown", function (event) {
       document.getElementById("init-analyse").style.display === "block"
     ) {
       document.getElementById("idea3").style.display = "none";
-      document.getElementById("analyze").style.display = "block";
+      document.getElementById("idea4").style.display = "block";
+      document.getElementById("analyse-view").style.display = "none";
       if (
         idea4 &&
         document.getElementById("init-analyse").style.display === "block"
       ) {
         document.getElementById("idea4").style.display = "none";
-        document.getElementById("analyze").style.display = "block";
+        document.getElementById("idea5").style.display = "block";
+        document.getElementById("analyse-view").style.display = "block";
       }
     }
   }
