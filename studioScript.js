@@ -151,7 +151,7 @@ document.addEventListener("keydown", function (event) {
       ) {
         document.getElementById("idea4").style.display = "none";
         document.getElementById("idea5").style.display = "none";
-        document.getElementById("analyse-view").style.display = "block";
+        /*document.getElementById("analyse-view").style.display = "block";*/
       }
     }
   }
