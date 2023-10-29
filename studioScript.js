@@ -17,7 +17,6 @@ function showIdeaInput1() {
 }
 
 function runEngine() {
-  document.getElementById("analyse-view").style.display = "none";
     // Get the input values from your HTML elements (assuming text inputs for simplicity)
     const industry1 = document.getElementById("industry1").value;
     const industry2 = document.getElementById("industry2").value;
@@ -83,8 +82,10 @@ document.addEventListener("keydown", function (event) {
         document.getElementById("idea3").style.display = "none";
         document.getElementById("idea4").style.display = "block";
       } else if (document.getElementById("idea4").style.display === "block") {
+        document.getElementById("idea3").style.display = "block";
         document.getElementById("idea4").style.display = "none";
         document.getElementById("idea5").style.display = "block";
+        document.getElementById("analyse-view").style.display = "none";
       }
     }
   }
@@ -124,6 +125,7 @@ document.addEventListener("keydown", function (event) {
     ) {
       document.getElementById("idea1").style.display = "none";
       document.getElementById("idea2").style.display = "block";
+      document.getElementById("analyse-view").style.display = "block";
       document.getElementById("idea2").focus();
     }
 
@@ -133,7 +135,7 @@ document.addEventListener("keydown", function (event) {
     ) {
       document.getElementById("idea2").style.display = "none";
       document.getElementById("idea3").style.display = "block";
-      document.getElementById("analyse-view").style.display = "none";
+      document.getElementById("analyse-view").style.display = "block";
     }
 
     if (
@@ -149,7 +151,7 @@ document.addEventListener("keydown", function (event) {
       ) {
         document.getElementById("idea4").style.display = "none";
         document.getElementById("idea5").style.display = "block";
-        document.getElementById("analyse-view").style.display = "block";
+        document.getElementById("analyse-view").style.display = "none";
       }
     }
   }
@@ -161,6 +163,7 @@ document.addEventListener("keydown", function (event) {
       document.getElementById("industry1").style.display = "none";
       document.getElementById("first-studio-display").style.display = "block";
       document.getElementById("enter-industries").style.display = "none";
+      document.getElementById("analyse-view").style.display = "block";
     } else if (
       document.getElementById("enter-industries").style.display === "block" &&
       document.getElementById("industry2").style.display === "block"
