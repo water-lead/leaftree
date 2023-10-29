@@ -14,6 +14,49 @@ function showIdeaInput1() {
   document.getElementById("idea1").focus();
 }
 
+function runEngine() {
+  document.getElementById("analyse-view").style.display = "none";
+    // Get the input values from your HTML elements (assuming text inputs for simplicity)
+    const industry1 = document.getElementById("industry1").value;
+    const industry2 = document.getElementById("industry2").value;
+    // ... Fetch other input values similarly
+    const idea1 = document.getElementById("idea1").value;
+    const idea2 = document.getElementById("idea2").value;
+    const idea3 = document.getElementById("idea3").value;
+    const idea4 = document.getElementById("idea4").value;
+    const idea5 = document.getElementById("idea5").value;
+
+    // Create the payload for your OpenAI request
+    const payload = {
+        industry1: industry1,
+        industry2: industry2,
+        // ... Include other input values
+        idea1: idea1,
+        idea2: idea2,
+        idea3: idea3,
+        idea4: idea4,
+        idea5: idea5,
+    };
+
+    // Make the API call
+    fetch("/path_to_your_engine_endpoint", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Handle the OpenAI response here. 
+        // For example, display the results on the page
+        document.getElementById("results").innerText = data.text;
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+}
+
 document.addEventListener("keydown", function (event) {
   if (event.key === "ArrowRight") {
     if (
@@ -85,7 +128,7 @@ document.addEventListener("keydown", function (event) {
       document.getElementById("init-analyse").style.display === "block"
     ) {
       document.getElementById("idea2").style.display = "none";
-      document.getElementById("idea3").style.display = "block";
+      document.getElementById("analyze").style.display = "block";
     }
 
     if (
@@ -93,13 +136,13 @@ document.addEventListener("keydown", function (event) {
       document.getElementById("init-analyse").style.display === "block"
     ) {
       document.getElementById("idea3").style.display = "none";
-      document.getElementById("idea4").style.display = "block";
+      document.getElementById("analyze").style.display = "block";
       if (
         idea4 &&
         document.getElementById("init-analyse").style.display === "block"
       ) {
         document.getElementById("idea4").style.display = "none";
-        document.getElementById("idea5").style.display = "block";
+        document.getElementById("analyze").style.display = "block";
       }
     }
   }
