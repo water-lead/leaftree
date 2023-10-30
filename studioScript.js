@@ -64,58 +64,19 @@ document.addEventListener("keydown", function (event) {
       document.getElementById("idea1").style.display === "none" &&
       document.getElementById("idea2").style.display === "none"
     ) {
-    if (
-      document.getElementById("init-analyse").style.display === "block" &&
-      document.getElementById("idea3").style.display === "block"
-    ) {
-      document.getElementById("idea3").style.display = "none";
-      document.getElementById("idea4").style.display = "block";
-      document.getElementById("analyse-view").style.display = "none";
-    } else if (
-      document.getElementById("init-analyse").style.display === "block" &&
-      document.getElementById("idea4").style.display === "block"
-    ) {
-      document.getElementById("idea4").style.display = "none";
-      document.getElementById("idea5").style.display = "block";
-      document.getElementById("analyse-view").style.display = "none";
-    } else if (
-      document.getElementById("init-analyse").style.display === "block" &&
-      document.getElementById("idea5").style.display === "block"
-    ) {
-      document.getElementById("idea5").style.display = "none";
-      document.getElementById("analyse-view").style.display = "block";
-    } 
-  }
-
-  if (event.key === "Enter") {
-    // ... The other code remains unchanged
-    if (
-      idea3 &&
-      document.getElementById("init-analyse").style.display === "block"
-    ) {
-      document.getElementById("idea3").style.display = "none";
-      document.getElementById("idea4").style.display = "block";
-      document.getElementById("analyse-view").style.display = "none";
-    }
-
-    if (
-      idea4 &&
-      document.getElementById("init-analyse").style.display === "block"
-    ) {
-      document.getElementById("idea4").style.display = "none";
-      document.getElementById("idea5").style.display = "block";
-      document.getElementById("analyse-view").style.display = "none";
-    }
-
-    if (
-      idea5 &&
-      document.getElementById("init-analyse").style.display === "block"
-    ) {
-      document.getElementById("idea5").style.display = "none";
-      document.getElementById("analyse-view").style.display = "block";
-    }
-  }
-});
+        if (document.getElementById("idea3").style.display === "block") {
+            document.getElementById("idea3").style.display = "none";
+            document.getElementById("idea4").style.display = "block";
+            document.getElementById("analyse-view").style.display = "none";
+        } else if (document.getElementById("idea4").style.display === "block") {
+            document.getElementById("idea4").style.display = "none";
+            document.getElementById("idea5").style.display = "block";
+            document.getElementById("analyse-view").style.display = "none";
+        } else if (document.getElementById("idea5").style.display === "block") {
+            document.getElementById("idea5").style.display = "none";
+            document.getElementById("analyse-view").style.display = "block";
+        }
+    };
 
 document.addEventListener("keydown", function (event) {
   if (event.key === "ArrowLeft") {
