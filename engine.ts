@@ -1,5 +1,6 @@
 import OpenAI from 'openai';
 import jsPDF from 'jspdf';
+import express from 'express';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
@@ -8,6 +9,8 @@ const openai = new OpenAI({
 export async function POST(req: Request) {
   const { prompt, industry1, industry2, idea1, idea2, idea3, idea4, idea5 } = await req.json();
 
+/*export async function POST(prompt, industry1, industry2, idea1, idea2, idea3, idea4, idea5) { */
+ 
   // Ask OpenAI for a completion based on the given prompt
   const response = await openai.completions.create({
     model: 'gpt-4-32k',
