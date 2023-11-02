@@ -1,13 +1,38 @@
 import OpenAI from 'openai';
 import jsPDF from 'jspdf';
 import express from 'express';
+import { Request, Response } from 'express';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
 
-export async function POST(req: Request) {
-  const { prompt, industry1, industry2, idea1, idea2, idea3, idea4, idea5 } = await req.json();
+const app = express();
+const PORT = process.env.PORT || 8080;
+
+app.use(express.json());  // Middleware to parse JSON requests
+
+app.get('/', (req: Request, res: Response) => {
+    res.send('Hello from TypeScript server!');
+});
+
+// Design processing endpoint
+app.post('/design', async (req: Request, res: Response) => {
+    try {
+        const data = req.body;
+        await POST(data);
+        res.send('PDF Generated Successfully!');  // You can adjust this to return the PDF or its download link
+    } catch (error) {
+        res.status(500).send('Error processing the request.');
+    }
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+});
+
+async function POST(data: any) {
+  const { prompt, industry1, industry2, idea1, idea2, idea3, idea4, idea5 } = data;
 
 /*export async function POST(prompt, industry1, industry2, idea1, idea2, idea3, idea4, idea5) { */
  
