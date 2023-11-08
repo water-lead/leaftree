@@ -9,6 +9,7 @@ body {
     position: fixed; /* Fixed position to cover the viewport */
     top: 0;
     left: 0;
+    object-fit: cover; /* Cover the entire viewport */
     min-width: 120%; /* Minimum width of 100% */
     min-height: 100%;
     max-width: 120%;
@@ -16,7 +17,6 @@ body {
     width: 100vw;
     height: 100vw;
     z-index: -1; /* Behind all other content */
-    /*object-fit: cover; /* Cover the entire viewport */*/
     /*transform: translate(-50%, -50%);*/
 }
 
