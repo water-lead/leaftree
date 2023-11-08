@@ -5,6 +5,18 @@ body {
     background: #ffffff;
 }
 
+#video-bg-desktop, #video-bg-mobile {
+    position: fixed; /* Fixed position to cover the viewport */
+    top: 0;
+    left: 0;
+    min-width: 100%; /* Minimum width of 100% */
+    min-height: 100%; /* Minimum height of 100% */
+    width: auto;
+    height: auto;
+    z-index: -1; /* Behind all other content */
+    object-fit: cover; /* Cover the entire viewport */
+}
+
 /* Menu styling */
 .menu {
     display: flex;
@@ -36,7 +48,7 @@ body {
 .menu-items {
     list-style: none;
     display: flex;
-    gap: 1vw; /* Responsive gap */
+    gap: 2vw; /* Responsive gap */
     margin: 0;
     padding: 0;
 }
@@ -76,11 +88,6 @@ body {
 }
 
 /* Other styles remain unchanged */
-
-.menu-items li a:hover {
-    text-decoration: underline;
-    color: #4d72a0;
-}
 
 .centered {
     display: flex;
@@ -161,4 +168,18 @@ button {
     left: 50%;
     margin-top: 10px;
     color: #538BC3;
+}
+
+@media (max-width: 768px) {
+    #video-bg-desktop, #video-bg-mobile {
+        min-width: 100%;
+        min-height: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    #video-bg-desktop, #video-bg-mobile {
+        min-width: 100%;
+        min-height: 100%;
+    }
 }
