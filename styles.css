@@ -16,7 +16,7 @@ body {
     width: 100vw;
     height: 100vw;
     z-index: -1; /* Behind all other content */
-    object-fit: cover; /* Cover the entire viewport */
+    /*object-fit: cover; /* Cover the entire viewport */*/
     /*transform: translate(-50%, -50%);*/
 }
 
@@ -150,7 +150,7 @@ form {
 
 button {
     max-width: 400px;
-    top: 50%;
+    top: 55%;
     left: 50%;
     padding: 24px 150px;
     background-color: #538BC3;
