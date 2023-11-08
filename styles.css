@@ -5,7 +5,7 @@ body {
     background: #ffffff;
 }
 
-#video-bg-desktop, #video-bg-mobile {
+#video-bg-desktop {
     position: fixed; /* Fixed position to cover the viewport */
     top: 0;
     left: 0;
@@ -171,14 +171,14 @@ button {
 }
 
 @media (max-width: 768px) {
-    #video-bg-desktop, #video-bg-mobile {
+    #video-bg-desktop {
         min-width: 100%;
         min-height: 100%;
     }
 }
 
 @media (max-width: 500px) {
-    #video-bg-desktop, #video-bg-mobile {
+    #video-bg-desktop {
         min-width: 100%;
         min-height: 100%;
     }
