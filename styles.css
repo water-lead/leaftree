@@ -17,7 +17,7 @@ body {
     height: 100vw;
     z-index: -1; /* Behind all other content */
     object-fit: cover; /* Cover the entire viewport */
-    transform: translate(-50%, -50%);
+    /*transform: translate(-50%, -50%);*/
 }
 
 /* Menu styling */
