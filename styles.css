@@ -120,6 +120,8 @@ body {
 
 input {
     max-width: 400px;
+    top: 55%;
+    left: 50%;
     padding: 10px; 
     width: 100vw;
     margin-bottom: 10px;
@@ -127,8 +129,6 @@ input {
     border-radius: 40px;
     font-family: "Syncopate", sans-serif;
     display: flex;
-    top: 50%;
-    left: 0%;
     padding: 24px 150px;
     font-size: 20px;
     align-items: left;
@@ -136,6 +136,8 @@ input {
 
 form {
     max-width: 400px;
+    top: 55%;
+    left: 50%;
     padding: 10px;
     width: 100vw;
     margin-bottom: 10px;
@@ -143,8 +145,6 @@ form {
     border-radius: 40px;
     font-family: "Syncopate", sans-serif;
     display: flex;
-    top: 50%;
-    left: 0%;
     padding: 24px 150px;
     font-size: 20px;
     align-items: left;
