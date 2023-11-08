@@ -121,6 +121,8 @@ body {
 input {
     max-width: 400px;
     padding: 10px; 
+    width: 100vw;
+    height: 100vw;
     margin-bottom: 10px;
     border: 2px solid #4d72a0;
     border-radius: 40px;
@@ -136,6 +138,8 @@ input {
 form {
     max-width: 400px;
     padding: 10px;
+    width: 100vw;
+    height: 100vw;
     margin-bottom: 10px;
     border: 2px solid #4d72a0;
     border-radius: 40px;
@@ -153,6 +157,8 @@ button {
     top: 55%;
     left: 50%;
     padding: 24px 150px;
+    width: 100vw;
+    height: 100vw;
     background-color: #538BC3;
     color: #fff;
     border: 2px solid #ffffff;
