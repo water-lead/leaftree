@@ -9,43 +9,43 @@ body {
 .menu {
     display: flex;
     position: fixed;
-    justify-content: flex-end; /* Align menu items to the right */
+    justify-content: flex-end;
     align-items: center;
-    padding: 20px; /* Adjust top and right padding as needed */
+    padding: 1.5vw 2vw; /* Responsive padding */
     background-color: transparent;
     top: 0;
     right: 0;
     width: 100%;
-    z-index: 10; /* Ensures the menu stays above other elements */
+    z-index: 10;
 }
 
 /* Logo styling - assuming you want the logo to be a part of the HTML not CSS */
 .logo {
     position: fixed;
-    top: 20px; /* Adjust top padding as needed */
-    left: 20px; /* Adjust left padding as needed */
+    top: 1.5vw; /* Responsive padding */
+    left: 1.5vw; /* Responsive padding */
     z-index: 10;
 }
 
 /* Use a class for logo image if it's in the HTML */
 .logo img {
-    width: auto; /* or your preferred width */
-    height: auto; /* or your preferred height */
+    width: 5vw; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .menu-items {
     list-style: none;
     display: flex;
-    gap: 20px; /* Adjust space between menu items */
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
+    gap: 1vw; /* Responsive gap */
+    margin: 0;
+    padding: 0;
 }
 
 .menu-items li a {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.2vw; /* Responsive font size */
 }
 
 .menu-items li a:hover {
@@ -56,18 +56,26 @@ body {
 /* Responsive design adjustments */
 @media (max-width: 768px) {
     .menu-items li a { 
-        font-size: 14px;
+        font-size: 2.5vw;
+    }
+
+    .logo img {
+        width: 10vw;
     }
 }
 
 @media (max-width: 500px) {
     .menu-items li a { 
-        font-size: 12px;
+        font-size: 3.5vw;
     }
+
+    .logo img {
+        width: 12vw;
+    }
+
 }
 
 /* Other styles remain unchanged */
-
 
 .menu-items li a:hover {
     text-decoration: underline;
@@ -93,7 +101,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-  padding: 24px 150px;
+    padding: 3vh 10vw;
 }
 
 .landing-section .description { font-weight: regular; }
@@ -101,60 +109,56 @@ body {
 /* Button styling */
 
 input {
-  max-width: 400px;
-    /*width: calc(100% - 5px);*/
-  padding: 10px; 
-  margin-bottom: 10px;
-/*margin-left: 5px;*/
-  border: 2px solid #4d72a0;
-  border-radius: 40px;
+    max-width: 400px;
+    padding: 10px; 
+    margin-bottom: 10px;
+    border: 2px solid #4d72a0;
+    border-radius: 40px;
     font-family: "Syncopate", sans-serif;
     display: flex;
     top: 50%;
     left: 0%;
-  padding: 24px 150px;
+    padding: 24px 150px;
     font-size: 20px;
-align-items: left;
+    align-items: left;
 }
 
 form {
-  /*width: calc(100% - 5px);*/
     max-width: 400px;
-  padding: 10px;
-  margin-bottom: 10px;
-/*margin-left: 5px;*/
-  border: 2px solid #4d72a0;
-  border-radius: 40px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #4d72a0;
+    border-radius: 40px;
     font-family: "Syncopate", sans-serif;
     display: flex;
     top: 50%;
     left: 0%;
-  padding: 24px 150px;
+    padding: 24px 150px;
     font-size: 20px;
-align-items: left;
+    align-items: left;
 }
 
 button {
     max-width: 400px;
     top: 50%;
     left: 50%;
-  padding: 24px 150px;
-  background-color: #538BC3;
-  color: #fff;
-  border: 2px solid #ffffff;
-  border-radius: 40px;
-  cursor: pointer;
+    padding: 24px 150px;
+    background-color: #538BC3;
+    color: #fff;
+    border: 2px solid #ffffff;
+    border-radius: 40px;
+    cursor: pointer;
     font-family: "Syncopate", sans-serif;
     display: inline-flex;
-white-space: nowrap;
-justify-content: center;
-align-items: center;
-font-size: 25px;  
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;  
 }
 
 .notification {
     top: 60%;
     left: 50%;
-  margin-top: 10px;
+    margin-top: 10px;
     color: #538BC3;
 }
