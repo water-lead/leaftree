@@ -5,97 +5,40 @@ body {
     background: #ffffff;
 }
 
-/* Responsive design for desktop and mobile */
-@media (min-width: 768px) {
-    .desktop-v { display: flex; }
-    .mobile-v { display: none; }
-}
-
-@media (max-width: 768px) {
-    .desktop-v { display: none; }
-    .mobile-v { display: flex; }
-}
-
-/* Video backgrounds */
-@media (min-width: 1536px) {
-    #video-bg-desktop {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        object-fit: cover;
-    }
-}
-
-@media (max-width: 1536px) {
-    #video-bg-mobile {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        object-fit: cover;
-    }
-}
-
-#video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
 /* Menu styling */
-.menu (max-width: 1536px) {
+.menu {
     display: flex;
     position: fixed;
-    justify-content: space-between;
+    justify-content: flex-end; /* Align menu items to the right */
     align-items: center;
-    padding: 10px 20px;
-    background-color: Transparent;
-    top: 12px;
-    right: 7px;
-    max-width: 100%;
+    padding: 20px; /* Adjust top and right padding as needed */
+    background-color: transparent;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10; /* Ensures the menu stays above other elements */
 }
 
-@logo (max-width: 1536px) {
-    bottom: 85px;
-    right: 75px;
-    display: flex;
-    align-items: left;
-    font-size: 24px;
-    color: white;
-    width: 20%;
-    margin-left: 25px;
-    gap: 600px;
+/* Logo styling - assuming you want the logo to be a part of the HTML not CSS */
+.logo {
+    position: fixed;
+    top: 20px; /* Adjust top padding as needed */
+    left: 20px; /* Adjust left padding as needed */
+    z-index: 10;
 }
 
-@logo img (max-width: 1536px){
-    bottom: 85px;
-    right: 75px;
-    width: 20%;
-    height: auto;
-    transform: translate(-50%, -50%);
-    align-items: left;
-    gap: 600px;
+/* Use a class for logo image if it's in the HTML */
+.logo img {
+    width: auto; /* or your preferred width */
+    height: auto; /* or your preferred height */
 }
 
 .menu-items {
     list-style: none;
     display: flex;
-    align-items: right;
-    gap: 5px;
-    margin-left: 15px;
-    padding-left: 0;
-    top: 5px;
-    right: 5px;
+    gap: 20px; /* Adjust space between menu items */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
 }
 
 .menu-items li a {
@@ -103,31 +46,28 @@ body {
     color: #ffffff;
     font-weight: bold;
     font-size: 18px;
-    gap: 5px;
-    margin-left: 30px;
-    transform: translate(-50%, -50%);
-    top: 7px;
-    right: 10px;
 }
 
-/* Font size adjustments for smaller screens */
+.menu-items li a:hover {
+    text-decoration: underline;
+    color: #4d72a0;
+}
+
+/* Responsive design adjustments */
 @media (max-width: 768px) {
     .menu-items li a { 
-        font-size: 10px;
-        gap: 5px;
-        top: 7px;
-        right: 7px;
+        font-size: 14px;
     }
 }
 
 @media (max-width: 500px) {
     .menu-items li a { 
-        font-size: 8px;
-        top: 5px;
-        gap: 5px;
-        right: 5px; 
+        font-size: 12px;
     }
 }
+
+/* Other styles remain unchanged */
+
 
 .menu-items li a:hover {
     text-decoration: underline;
