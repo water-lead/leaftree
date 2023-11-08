@@ -14,7 +14,7 @@ body {
     max-width: 120%;
     max-height: 100%; /* Minimum height of 100% */
     width: 100vw;
-    height: auto;
+    height: 100vw;
     z-index: -1; /* Behind all other content */
     object-fit: cover; /* Cover the entire viewport */
     transform: translate(-50%, -50%);
