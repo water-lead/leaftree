@@ -40,7 +40,10 @@ function runEngine() {
     };
 
     // Make the API call
-    fetch("/path_to_your_engine_endpoint", {
+    const apiKey = 'AIzaSyAoGe-Pa28bY35fthe2eMSNBz9_69Hy2b8'; // Replace with your actual API key
+    const apiUrl = 'https://confluence-auth-8d9d6.uc.r.appspot.com';
+
+        fetch(apiUrl, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -51,7 +54,8 @@ function runEngine() {
     .then(data => {
         // Handle the OpenAI response here. 
         // For example, display the results on the page
-        document.getElementById("results").innerText = data.text;
+        console.log(data); // For debugging
+        document.getElementById("response").innerText = JSON.stringify(data);
     })
     .catch(error => {
         console.error("Error:", error);
