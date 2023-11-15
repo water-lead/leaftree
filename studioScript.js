@@ -17,6 +17,7 @@ function showIdeaInput1() {
 }
 
 function runEngine() {
+    document.getElementById("loadingIndicator").style.display = "block";
     // Get the input values from your HTML elements (assuming text inputs for simplicity)
     const industry1 = document.getElementById("industry1").value;
     const industry2 = document.getElementById("industry2").value;
@@ -38,7 +39,7 @@ function runEngine() {
         idea4: idea4,
         idea5: idea5,
     };
-    document.getElementById("loadingIndicator").style.display = "block";
+    
     // Make the API call
     const apiKey = 'AIzaSyAoGe-Pa28bY35fthe2eMSNBz9_69Hy2b8'; // Replace with your actual API key
     const apiUrl = 'https://confluence-auth-8d9d6.uc.r.appspot.com';
