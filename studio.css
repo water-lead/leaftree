@@ -234,6 +234,10 @@ align-items: left;
   display: none;
 }
 
+#download-button {
+  display: none;
+}
+
 #init-analyse {
   display: none;
 }
