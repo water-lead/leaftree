@@ -65,7 +65,7 @@ function runEngine() {
         // 1. Convert server response data to a string or HTML
         const responseDataString = JSON.stringify(data, null, 2);
         document.getElementById("loadingIndicator").style.display = "none";
-        document.getElementById("first-studio-display").style.display = "block";
+        document.getElementById('pdf-download-button').style.display = 'block';
 
         // then initiate the jspdf
         const pdf = new jsPDF();
