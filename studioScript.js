@@ -18,6 +18,10 @@ function showIdeaInput1() {
 
 function runEngine() {
     document.getElementById("loadingIndicator").style.display = "block";
+    document.getElementById("first-studio-display").style.display = "none";
+    document.getElementById("enter-industries").style.display = "none";
+    document.getElementById("init-analyse").style.display = "none";
+    document.getElementById("analyse-view").style.display = "none";
     // Get the input values from your HTML elements (assuming text inputs for simplicity)
     const industry1 = document.getElementById("industry1").value;
     const industry2 = document.getElementById("industry2").value;
@@ -61,6 +65,7 @@ function runEngine() {
         // 1. Convert server response data to a string or HTML
         const responseDataString = JSON.stringify(data, null, 2);
         document.getElementById("loadingIndicator").style.display = "none";
+        document.getElementById("first-studio-display").style.display = "block";
 
         // then initiate the jspdf
         const pdf = new jsPDF();
@@ -76,6 +81,7 @@ function runEngine() {
     .catch(error => {
         // Hide the loading indicator even if there's an error
         document.getElementById("loadingIndicator").style.display = "none";
+        document.getElementById("first-studio-display").style.display = "block";
         console.error("Error:", error);
     });
 }
