@@ -38,7 +38,7 @@ function runEngine() {
         idea4: idea4,
         idea5: idea5,
     };
-
+    document.getElementById("loadingIndicator").style.display = "block";
     // Make the API call
     const apiKey = 'AIzaSyAoGe-Pa28bY35fthe2eMSNBz9_69Hy2b8'; // Replace with your actual API key
     const apiUrl = 'https://confluence-auth-8d9d6.uc.r.appspot.com';
@@ -59,6 +59,7 @@ function runEngine() {
         // under console.log (data), add the following
         // 1. Convert server response data to a string or HTML
         const responseDataString = JSON.stringify(data, null, 2);
+        document.getElementById("loadingIndicator").style.display = "none";
 
         // then initiate the jspdf
         const pdf = new jsPDF();
@@ -72,6 +73,8 @@ function runEngine() {
         //pdf.save('Confluence-Output.pdf');
     })
     .catch(error => {
+        // Hide the loading indicator even if there's an error
+        document.getElementById("loadingIndicator").style.display = "none";
         console.error("Error:", error);
     });
 }
