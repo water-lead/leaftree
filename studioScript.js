@@ -55,7 +55,21 @@ function runEngine() {
         // Handle the OpenAI response here. 
         // For example, display the results on the page
         console.log(data); // For debugging
-        document.getElementById("response").innerText = JSON.stringify(data);
+        //then  inside the download pdf function
+        // under console.log (data), add the following
+        // 1. Convert server response data to a string or HTML
+        const responseDataString = JSON.stringify(data, null, 2);
+
+        // then initiate the jspdf
+        const pdf = new jsPDF();
+
+        // this is where you will first make it to be a text
+        pdf.text(responseDataString, 10, 10);
+        const pdfDataUri = pdf.output('datauristring');
+        document.getElementById('pdf-download-button').src = pdfDataUri; 
+        document.getElementById('pdf-download-button').style.display = 'block'; 
+        // this will save the output with a desired name on the user's phone or laptop, and proceed to download
+        //pdf.save('Confluence-Output.pdf');
     })
     .catch(error => {
         console.error("Error:", error);
