@@ -78,6 +78,14 @@ body {
   left: 15px;
 }
 
+#loadingIndicator {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 @media (max-width: 768px) {
   .logo img {
     width: 16%;
