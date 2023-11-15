@@ -46,7 +46,7 @@ function runEngine() {
     
     // Make the API call
     const apiKey = 'AIzaSyAoGe-Pa28bY35fthe2eMSNBz9_69Hy2b8'; // Replace with your actual API key
-    const apiUrl = 'https://confluence-auth-8d9d6.uc.r.appspot.com';
+    const apiUrl = 'https://confluence-auth-8d9d6.uc.r.appspot.com/confluence-analyze';
 
         fetch(apiUrl, {
         method: "POST",
