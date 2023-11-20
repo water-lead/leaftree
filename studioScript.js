@@ -83,6 +83,8 @@ function runEngine() {
 
         // Trigger download of the PDF
         sessionStorage.setItem('pdfData', JSON.stringify(data.response));
+
+        document.getElementById("download-button").style.display = "block";
     })
     .catch(error => {
         console.error("Error:", error);
@@ -300,3 +302,5 @@ document.addEventListener("keydown", function (event) {
     }
   }
 });
+
+document.getElementById('pdf-download-button').addEventListener('click', createAndDownloadPDF);
