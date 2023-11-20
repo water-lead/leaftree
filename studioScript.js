@@ -18,7 +18,7 @@ function showIdeaInput1() {
   document.getElementById("idea1").focus();
 }
 
-function runEngine() {
+async function runEngine() {
     // Get the input values from your HTML elements (assuming text inputs for simplicity)
     const industry1 = document.getElementById("industry1").value;
     const industry2 = document.getElementById("industry2").value;
