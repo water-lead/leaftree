@@ -62,7 +62,7 @@ function runEngine() {
         // 1. Convert server response data to a string or HTML
         
         // add this in that other line
-        var pdf = new jsPDF();
+        var pdf = new window.jsPDF();
         
         // Define the text to be added to the PDF. Adjust this based on how 'data' is structured.
         // Assuming 'data.response' contains the text you want to add to the PDF.
