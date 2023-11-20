@@ -101,13 +101,15 @@ async function createAndDownloadPDF() {
       console.error('No data available for PDF creation.');
       return;
   }
-
   const data = JSON.parse(storedData);
+    console.log("Data for PDF creation:", data);
+    console.log(storedData);
+  
   if (!data || !data.content) {
       console.error('Invalid or missing content for PDF creation.');
       return;
   }
-  console.log(storedData); // Inside createAndDownloadPDF, after retrieving from sessionStorage
+   // Inside createAndDownloadPDF, after retrieving from sessionStorage
   const { PDFDocument, StandardFonts, rgb } = PDFLib;
   const pdfDoc = await PDFDocument.create();
 
