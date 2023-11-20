@@ -1,10 +1,10 @@
-const jsPDF = require('jspdf');
+//const jsPDF = require('jspdf');
 
 //This displays
 function showIndustryInput1() {
   document.getElementById("first-studio-display").style.display = "none";
   document.getElementById("enter-industries").style.display = "block";
-  document.getElementById("init-analyse").style.display = "none"; 
+  document.getElementById("init-analyse").style.display = "none";
   document.getElementById("industry1").style.display = "block";
   document.getElementById("industry2").style.display = "none";
   document.getElementById("industry1").focus(); // Sets focus on the username input field
@@ -62,7 +62,7 @@ function runEngine() {
         // 1. Convert server response data to a string or HTML
         
         // add this in that other line
-        const pdf = new jsPDF();
+        var pdf = new jsPDF();
         
         // Define the text to be added to the PDF. Adjust this based on how 'data' is structured.
         // Assuming 'data.response' contains the text you want to add to the PDF.
