@@ -62,23 +62,50 @@ function runEngine() {
         // 1. Convert server response data to a string or HTML
         
         // add this in that other line
-        var pdf = new jsPDF.jsPDF();
-        
-        // Define the text to be added to the PDF. Adjust this based on how 'data' is structured.
-        // Assuming 'data.response' contains the text you want to add to the PDF.
-        const text = JSON.stringify(data.response, null, 2);
+        // Create a new PDF document
+        const { PDFDocument } = PDFLib;
+        const pdfDoc = await PDFDocument.create();
 
-        // this is where you will first make it to be a text
-        pdf.text(text, 10, 10);
-        const pdfDataUri = pdf.output('datauristring');
-        document.getElementById('pdf-download-button').src = pdfDataUri; 
-        document.getElementById('pdf-download-button').style.display = 'block'; 
-        // this will save the output with a desired name on the user's phone or laptop, and proceed to download
-        pdf.save('Confluence-Output.pdf');
+        // Add a page to the document
+        const page = pdfDoc.addPage();
+        const { width, height } = page.getSize();
+
+        // Add text to the page
+        const fontSize = 12;
+        page.drawText(JSON.stringify(data.response, null, 2), {
+            x: 50,
+            y: height - 4 * fontSize,
+            size: fontSize,
+        });
+
+        // Serialize the PDF to bytes (a Uint8Array)
+        const pdfBytes = await pdfDoc.save();
+
+        // Trigger download of the PDF
+        download(pdfBytes, "Confluence-Output.pdf", "application/pdf");
     })
     .catch(error => {
         console.error("Error:", error);
     });
+}
+
+// Function to trigger download
+function download(data, filename, type) {
+  const file = new Blob([data], { type: type });
+  if (window.navigator.msSaveOrOpenBlob) { // IE10+
+      window.navigator.msSaveOrOpenBlob(file, filename);
+  } else { // Others
+      const a = document.createElement("a");
+      const url = URL.createObjectURL(file);
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => {
+          document.body.removeChild(a);
+          window.URL.revokeObjectURL(url);  
+      }, 0); 
+  }
 }
 
 document.addEventListener("keydown", function (event) {
