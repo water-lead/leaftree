@@ -1,3 +1,5 @@
+//const jsPDF = require('jspdf');
+
 //This displays
 function showIndustryInput1() {
   document.getElementById("first-studio-display").style.display = "none";
@@ -17,11 +19,6 @@ function showIdeaInput1() {
 }
 
 function runEngine() {
-    document.getElementById("loadingIndicator").style.display = "block";
-    document.getElementById("first-studio-display").style.display = "none";
-    document.getElementById("enter-industries").style.display = "none";
-    document.getElementById("init-analyse").style.display = "none";
-    document.getElementById("analyse-view").style.display = "none";
     // Get the input values from your HTML elements (assuming text inputs for simplicity)
     const industry1 = document.getElementById("industry1").value;
     const industry2 = document.getElementById("industry2").value;
@@ -43,7 +40,7 @@ function runEngine() {
         idea4: idea4,
         idea5: idea5,
     };
-    
+
     // Make the API call
     const apiKey = 'AIzaSyAoGe-Pa28bY35fthe2eMSNBz9_69Hy2b8'; // Replace with your actual API key
     const apiUrl = 'https://confluence-auth-8d9d6.uc.r.appspot.com/confluence-analyze';
@@ -63,25 +60,23 @@ function runEngine() {
         //then  inside the download pdf function
         // under console.log (data), add the following
         // 1. Convert server response data to a string or HTML
-        const responseDataString = JSON.stringify(data, null, 2);
-        document.getElementById("loadingIndicator").style.display = "none";
-        document.getElementById('pdf-download-button').style.display = 'block';
-
-        // then initiate the jspdf
+        
+        // add this in that other line
         const pdf = new jsPDF();
+        
+        // Define the text to be added to the PDF. Adjust this based on how 'data' is structured.
+        // Assuming 'data.response' contains the text you want to add to the PDF.
+        const text = JSON.stringify(data.response, null, 2);
 
         // this is where you will first make it to be a text
-        pdf.text(responseDataString, 10, 10);
+        pdf.text(text, 10, 10);
         const pdfDataUri = pdf.output('datauristring');
         document.getElementById('pdf-download-button').src = pdfDataUri; 
         document.getElementById('pdf-download-button').style.display = 'block'; 
         // this will save the output with a desired name on the user's phone or laptop, and proceed to download
-        //pdf.save('Confluence-Output.pdf');
+        pdf.save('Confluence-Output.pdf');
     })
     .catch(error => {
-        // Hide the loading indicator even if there's an error
-        document.getElementById("loadingIndicator").style.display = "none";
-        document.getElementById("first-studio-display").style.display = "block";
         console.error("Error:", error);
     });
 }
