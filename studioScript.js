@@ -18,7 +18,7 @@ function showIdeaInput1() {
   document.getElementById("idea1").focus();
 }
 
-async function runEngine() {
+function runEngine() {
     // Get the input values from your HTML elements (assuming text inputs for simplicity)
     const industry1 = document.getElementById("industry1").value;
     const industry2 = document.getElementById("industry2").value;
@@ -53,7 +53,7 @@ async function runEngine() {
         body: JSON.stringify(payload),
     })
     .then(response => response.json())
-    .then(data => {
+    .then(async data => {
         // Handle the OpenAI response here. 
         // For example, display the results on the page
         console.log(data); // For debugging
