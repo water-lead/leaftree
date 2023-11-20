@@ -148,7 +148,14 @@ async function createAndDownloadPDF() {
   });
 
   const pdfBytes = await pdfDoc.save();
-  download(pdfBytes, "Confluence-Output.pdf", "application/pdf");
+  // Trigger the download
+  const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+  const link = document.createElement('a');
+  link.href = window.URL.createObjectURL(blob);
+  link.download = 'Confluence-Output.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
 
 document.addEventListener("keydown", function (event) {
