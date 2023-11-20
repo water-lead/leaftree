@@ -82,30 +82,58 @@ function runEngine() {
         const pdfBytes = await pdfDoc.save();
 
         // Trigger download of the PDF
-        download(pdfBytes, "Confluence-Output.pdf", "application/pdf");
+        sessionStorage.setItem('pdfData', JSON.stringify(data.response));
     })
     .catch(error => {
         console.error("Error:", error);
     });
 }
 
-// Function to trigger download
-function download(data, filename, type) {
-  const file = new Blob([data], { type: type });
-  if (window.navigator.msSaveOrOpenBlob) { // IE10+
-      window.navigator.msSaveOrOpenBlob(file, filename);
-  } else { // Others
-      const a = document.createElement("a");
-      const url = URL.createObjectURL(file);
-      a.href = url;
-      a.download = filename;
-      document.body.appendChild(a);
-      a.click();
-      setTimeout(() => {
-          document.body.removeChild(a);
-          window.URL.revokeObjectURL(url);  
-      }, 0); 
-  }
+async function createAndDownloadPDF() {
+  const data = JSON.parse(sessionStorage.getItem('pdfData'));
+  if (!data) return;
+
+  const { PDFDocument, StandardFonts, rgb } = PDFLib;
+  const pdfDoc = await PDFDocument.create();
+
+  // Custom Fonts (Example using standard fonts. For custom fonts, you'll need to embed them)
+  const headerFont = await pdfDoc.embedFont(StandardFonts.TimesRomanBold);
+  const bodyFont = await pdfDoc.embedFont(StandardFonts.TimesRoman);
+
+  let page = pdfDoc.addPage();
+  const { width, height } = page.getSize();
+
+  // Header
+  page.setFont(headerFont);
+  page.setFontSize(24);
+  page.drawText("Confluence Studio Results", {
+      x: 50,
+      y: height - 50,
+      color: rgb(0, 0, 0),
+  });
+
+  // Body
+  page.setFont(bodyFont);
+  page.setFontSize(12);
+  let yPosition = height - 80;
+
+  // Split content into designs and ratings
+  const designs = data.content.split("\n\n");
+  designs.forEach(design => {
+      const lines = design.split("\n");
+      lines.forEach(line => {
+          if (yPosition < 50) { // Add new page if not enough space
+              page = pdfDoc.addPage();
+              yPosition = page.getHeight() - 50;
+          }
+          page.drawText(line, { x: 50, y: yPosition });
+          yPosition -= 20;
+      });
+      yPosition -= 10; // Extra space between designs
+  });
+
+  const pdfBytes = await pdfDoc.save();
+  download(pdfBytes, "Confluence-Output.pdf", "application/pdf");
 }
 
 document.addEventListener("keydown", function (event) {
