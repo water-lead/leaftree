@@ -85,6 +85,7 @@ function runEngine() {
         // Trigger download of the PDF
         console.log(data); // Check if 'data' has the expected structure
         sessionStorage.setItem('pdfData', JSON.stringify(data.response));
+        console.log("Data stored in session storage:", data.response);
         document.getElementById("download-button").style.display = "block";
     })
     .catch(error => {
@@ -94,6 +95,8 @@ function runEngine() {
 
 async function createAndDownloadPDF() {
   const storedData = sessionStorage.getItem('pdfData');
+  console.log("Retrieved data:", storedData);
+  
   if (!storedData) {
       console.error('No data available for PDF creation.');
       return;
