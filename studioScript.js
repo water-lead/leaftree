@@ -51,6 +51,7 @@ function runEngine() {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(payload),
+        
     })
     .then(response => response.json())
     .then(async data => {
@@ -82,8 +83,8 @@ function runEngine() {
         const pdfBytes = await pdfDoc.save();
 
         // Trigger download of the PDF
+        console.log(data); // Check if 'data' has the expected structure
         sessionStorage.setItem('pdfData', JSON.stringify(data.response));
-
         document.getElementById("download-button").style.display = "block";
     })
     .catch(error => {
@@ -92,9 +93,18 @@ function runEngine() {
 }
 
 async function createAndDownloadPDF() {
-  const data = JSON.parse(sessionStorage.getItem('pdfData'));
-  if (!data) return;
+  const storedData = sessionStorage.getItem('pdfData');
+  if (!storedData) {
+      console.error('No data available for PDF creation.');
+      return;
+  }
 
+  const data = JSON.parse(storedData);
+  if (!data || !data.content) {
+      console.error('Invalid or missing content for PDF creation.');
+      return;
+  }
+  console.log(storedData); // Inside createAndDownloadPDF, after retrieving from sessionStorage
   const { PDFDocument, StandardFonts, rgb } = PDFLib;
   const pdfDoc = await PDFDocument.create();
 
