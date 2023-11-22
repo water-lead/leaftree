@@ -8,8 +8,6 @@ body {
 /* Styles for the video container */
 #studio-video-bg-desktop {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: 100vw;
   overflow: hidden;
@@ -37,7 +35,6 @@ body {
 @media (min-width: 1536px) {
   #studio-video-bg-desktop {
     position: absolute;
-    transform: translate(-50%, -50%);
     width: 100vw;
     height: 100vw;
     z-index: -1;
@@ -47,7 +44,6 @@ body {
 @media (max-width: 1536px) {
   #studio-video-bg-mobile {
     position: absolute;
-    transform: translate(-50%, -50%);
     width: 100vw;
     height: 100vw;
     z-index: -1;
@@ -60,14 +56,14 @@ body {
   align-items: center;
   font-size: 24px;
   color: white;
-  width: 40%;
+  width: 16%;
   margin-left: 25px;
   top: 20px;
   left: 15px;
 }
 
 .logo img {
-  width: 20%;
+  width: 16%;
   height: auto;
   transform: translate(-50%, -50%);
   top: 20px;
