@@ -37,8 +37,6 @@ body {
 @media (min-width: 1536px) {
   #studio-video-bg-desktop {
     position: absolute;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
     width: 100vw;
     height: 100vw;
@@ -49,8 +47,6 @@ body {
 @media (max-width: 1536px) {
   #studio-video-bg-mobile {
     position: absolute;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
     width: 100vw;
     height: 100vw;
