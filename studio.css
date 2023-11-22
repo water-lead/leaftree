@@ -48,6 +48,13 @@ body {
 }
 
 /* Content styles for studio page page sections */
+.centered {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Landing Page styling */
 .page-section {
     position: absolute;
     bottom: 43%;
@@ -60,117 +67,80 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-  padding: 24px 150px;
+    padding: 3vh 10vw;
 }
 
-.page-section .description {
-  font-weight: regular;
+.page-section .description { 
+  font-weight: regular; 
+  padding:3vh 10vw;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Button styling */
 input {
-  transition: all 0.5s;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  justify-content: center;
-   max-width: 400px;
-  padding: 10px; 
-  margin-bottom: 10px;
-  border: 2px solid #4d72a0;
-  border-radius: 40px;
+    max-width: 400px;
+    top: 55%;
+    left: 50%;
+    padding: 10px; 
+    width: 100vw;
+    margin-bottom: 10px;
+    border: 2px solid #4d72a0;
+    border-radius: 40px;
     font-family: "Syncopate", sans-serif;
     display: flex;
-    top: 50%;
-    left: 0%;
-  padding: 24px 150px;
+    padding: 24px 150px;
     font-size: 20px;
-align-items: left;
+    align-items: left;
+}
+
+form {
+    max-width: 400px;
+    top: 55%;
+    left: 50%;
+    padding: 10px;
+    width: 100vw;
+    margin-bottom: 10px;
+    border: 2px solid #4d72a0;
+    border-radius: 40px;
+    font-family: "Syncopate", sans-serif;
+    display: flex;
+    padding: 24px 150px;
+    font-size: 20px;
+    align-items: left;
+}
+
+button {
+    max-width: 400px;
+    top: 55%;
+    left: 50%;
+    padding: 24px 150px;
+    width: 100vw;
+    background-color: #538BC3;
+    color: #fff;
+    border: 2px solid #ffffff;
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: "Syncopate", sans-serif;
+    display: inline-flex;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;  
 }
 
 /* Heading styles for studio page page sections */
 .page-section h1 {
   font-family: "Aclonica", sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   color: #ffffff;
 }
 @media (max-width: 768px) {
   .page-section h1 {
     font-family: "Aclonica", sans-serif;
-    font-size: 21px;
+    font-size: 20px;
     color: #ffffff;
   }
-}
-
-/* Button styles */
-@media (max-width: 500px) {
-  .page-section button {
-    width: 100%;
-    background-color: #5077a7;
-    color: #ffffff;
-    padding: 12px 30px;
-    border: none;
-    cursor: pointer;
-    border-radius: 35px;
-    transition: color 0.3s, border 0.3s;
-    border: 1.5px solid #ffffff; /* Normal border style */
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: light;
-    font-family: "Syncopate", sans-serif;
-    /*white-space: nowrap;*/
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-  }
-}
-
-/* Prompt and description text styles */
-.page-section .prompt,
-.page-section .description {
-    position: absolute;
-    bottom: 43%;
-    left: 50%;
-    transform: translate(-50%);
-    text-align: left;
-    max-width: 600px;
-    padding: 5px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  padding: 24px 150px;
-}
-
-button {
-  max-width: 600px;
-    top: 50%;
-    left: 50%;
-  padding: 24px 150px;
-  background-color: #538BC3;
-  color: #fff;
-  border: 2px solid #ffffff;
-  border-radius: 40px;
-  cursor: pointer;
-    font-family: "Syncopate", sans-serif;
-    display: inline-flex;
-white-space: nowrap;
-justify-content: center;
-align-items: center;
-font-size: 25px;
-}
-
-form {
-  max-width: 600px;
-    top: 50%;
-    left: 50%;
-  padding: 24px 150px;
-  border: 2px solid #4d72a0;
-  border-radius: 40px;
-  font-family: "Syncopate", sans-serif;
-  display: inline-flex;
-  white-space: nowrap;
-  justify-content: center;
-  align-items: center;
-  font-size: 25px;
 }
 
 #first-studio-display {
