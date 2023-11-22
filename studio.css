@@ -21,43 +21,17 @@ body {
 }
 
 /* Logo styles */
-.logo {
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  color: white;
-  width: 16%;
-  margin-left: 25px;
-  top: 20px;
-  left: 15px;
-}
-
-.logo img {
-  width: 16%;
-  height: auto;
-  transform: translate(-50%, -50%);
-  top: 20px;
-  left: 15px;
-}
-
-@media (max-width: 768px) {
-  .logo img {
-    width: 16%;
-    height: auto;
-    transform: translate(-50%, -50%);
-    top: 16px;
-    left: 12px;
-  }
-}
-
-@media (max-width: 500px) {
-  .logo img {
-    width: 10%;
-    height: auto;
-    transform: translate(-50%, -50%);
-    top: 12px;
-    left: 10px;
-  }
+.menu {
+    display: flex;
+    position: fixed;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1.5vw 2vw; /* Responsive padding */
+    background-color: transparent;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
 }
 
 /* Content styles for studio page page sections */
