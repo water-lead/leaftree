@@ -1,5 +1,3 @@
-//const jsPDF = require('jspdf');
-
 //This displays
 function showIndustryInput1() {
   document.getElementById("first-studio-display").style.display = "none";
@@ -135,7 +133,7 @@ async function createAndDownloadPDF() {
   let yPosition = height - 80;
 
   // Split content into designs and ratings
-  const designs = data.content.split("\n\n");
+  const designs = storedData.content.split("\n\n");
   designs.forEach(design => {
       const lines = design.split("\n");
       lines.forEach(line => {
