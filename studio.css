@@ -75,6 +75,7 @@ body {
   padding:3vh 10vw;
   align-items: center;
   justify-content: center;
+  font-family: "Syncopate", sans-serif;
 }
 
 /* Button styling */
@@ -82,14 +83,13 @@ input {
     max-width: 400px;
     top: 55%;
     left: 50%;
-    padding: 10px; 
+    padding: 1.5vw 1.5vh; 
     width: 100vw;
     margin-bottom: 10px;
     border: 2px solid #4d72a0;
     border-radius: 40px;
     font-family: "Syncopate", sans-serif;
     display: flex;
-    padding: 24px 150px;
     font-size: 20px;
     align-items: left;
 }
@@ -98,23 +98,23 @@ form {
     max-width: 400px;
     top: 55%;
     left: 50%;
-    padding: 10px;
     width: 100vw;
     margin-bottom: 10px;
     border: 2px solid #4d72a0;
     border-radius: 40px;
     font-family: "Syncopate", sans-serif;
     display: flex;
-    padding: 24px 150px;
+    padding: 1.5vw 1.5vh;
     font-size: 20px;
     align-items: left;
+    justify-content: center;
 }
 
 button {
     max-width: 400px;
     top: 55%;
     left: 50%;
-    padding: 24px 150px;
+    padding: 1.5vw 1.5vh;
     width: 100vw;
     background-color: #538BC3;
     color: #fff;
