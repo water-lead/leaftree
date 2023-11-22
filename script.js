@@ -11,8 +11,8 @@ function showPasswordInput() {
 }
 
 async function submitLoginForm() {
-  const username = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+  const email = document.getElementById("loginEmail").value;
+  const password = document.getElementById("loginPassword").value;
 
   const requestBody = {
     email: email,
@@ -20,7 +20,7 @@ async function submitLoginForm() {
   };
 
    try {
-    const response = await fetch("https://sample-login-endpoint/login-route", {
+    const response = await fetch("http://localhost:8080/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
