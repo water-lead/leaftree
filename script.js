@@ -1,3 +1,6 @@
+const email;
+const password;
+
 function showEmailInput() {
   document.getElementById("loginButton").style.display = "none";
   document.getElementById("emailInput").style.display = "block";
@@ -5,14 +8,14 @@ function showEmailInput() {
 }
 
 function showPasswordInput() {
+  email = document.getElementById("loginEmail").value;
   document.getElementById("emailInput").style.display = "none";
   document.getElementById("passwordInput").style.display = "block";
   document.getElementById("password").focus(); // Sets focus on the password input field
 }
 
 async function submitLoginForm() {
-  const email = document.getElementById("loginEmail").value;
-  const password = document.getElementById("loginPassword").value;
+  
 
   const requestBody = {
     email: email,
@@ -56,6 +59,7 @@ document.addEventListener("keydown", function (event) {
     } else if (
       document.getElementById("passwordInput").style.display === "block"
     ) {
+      password = document.getElementById("loginPassword").value;
       submitLoginForm(); // If password input is displayed, submit the login form
     }
   }
