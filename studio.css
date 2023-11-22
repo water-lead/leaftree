@@ -20,43 +20,6 @@ body {
     z-index: -1; /* Behind all other content */
 }
 
-@media (min-width: 768px) {
-  .studio-desktop-v {
-    display: flex;
-  }
-  .studio-mobile-v {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  .studio-desktop-v {
-    display: none;
-  }
-  .studio-mobile-v {
-    display: flex;
-  }
-}
-
-/* Video background styles for the studio page */
-
-@media (min-width: 1536px) {
-  #studio-video-bg-desktop {
-    position: absolute;
-    width: 100vw;
-    height: 100vw;
-    z-index: -1;
-    object-fit: cover;
-  }
-}
-@media (max-width: 1536px) {
-  #studio-video-bg-mobile {
-    position: absolute;
-    width: 100vw;
-    height: 100vw;
-    z-index: -1;
-    object-fit: cover;
-  }
-}
 /* Logo styles */
 .logo {
   display: flex;
