@@ -1,6 +1,6 @@
 const requestBody = {
-    email: email,
-    password: password,
+    email,
+    password,
   };
 
 function showEmailInput() {
