@@ -34,6 +34,19 @@ body {
     z-index: 10;
 }
 
+.logo {
+    position: fixed;
+    top: 1.5vw; /* Responsive padding */
+    left: 1.5vw; /* Responsive padding */
+    z-index: 10;
+}
+
+/* Use a class for logo image if it's in the HTML */
+.logo img {
+    width: 5vw; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+}
+
 /* Content styles for studio page page sections */
 .page-section {
     position: absolute;
