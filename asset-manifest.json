@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/confluence-test/static/js/main.ddacd240.chunk.js",
+    "main.js.map": "/confluence-test/static/js/main.ddacd240.chunk.js.map",
+    "runtime-main.js": "/confluence-test/static/js/runtime-main.fa6de46a.js",
+    "runtime-main.js.map": "/confluence-test/static/js/runtime-main.fa6de46a.js.map",
+    "index.html": "/confluence-test/index.html"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fa6de46a.js",
+    "static/js/main.ddacd240.chunk.js"
+  ]
+}
