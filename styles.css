@@ -5,18 +5,30 @@ body {
     background: #ffffff;
 }
 
-#desktop-v, #mobile-v {
+#desktop-v {
     position: fixed; /* Fixed position to cover the viewport */
     top: 0;
     left: 0;
     min-width: 100%; /* Minimum width of 100% */
     min-height: 100%; /* Minimum height of 100% */
-    width: auto;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
     z-index: -1; /* Behind all other content */
     object-fit: cover; /*
 }
 
+#mobile-v {
+    position: fixed; /* Fixed position to cover the viewport */
+    top: 0;
+    left: 0;
+    min-width: 100%; /* Minimum width of 100% */
+    min-height: 100%; /* Minimum height of 100% */
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Behind all other content */
+    object-fit: cover; /*
+}
+    
 @media (min-width: 768px) {
   .desktop-v {
     display: flex;
@@ -44,12 +56,6 @@ body {
     background-color: transparent;
     top: 0;
     right: 0;
-    width: 100%;
-    z-index: 10;
+    width: 100vw;
+    z-index: 1;
 }
-
-#industry1 {
-  display: none;
-  margin-left: 25%;
-}
-
