@@ -1,5 +1,5 @@
 //This displays
-function showIndustryInput1() {
+function showInformation() {
   document.getElementById("principles-Display").style.display = "none";
   document.getElementById("form-submission").style.display = "block";
   document.getElementById("emailButton").style.display = "none";
