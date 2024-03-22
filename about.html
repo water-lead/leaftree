@@ -17,16 +17,16 @@
 
 <body>
 
-    <!-- Background Video -->
-    <div class="studio-desktop-v">
-        <video id="studio-video-bg-desktop" autoplay muted loop>
-            <source src="studio-video.mp4" type="video/mp4">
-        </video>
+    <!-- Background Image -->
+    <div class="bout-us-mobile">
+        <image id="about-us-desktop">
+            <source src="about-us.png" type="image/png">
+        </image>
     </div>
-   <!-- <div class="studio-mobile-v">
-        <video id="studio-video-bg-mobile" autoplay muted loop>
-            <source src="studio-video-m.mp4" type="video/mp4">
-        </video>
+   <!-- <div class="bout-us-mobile">
+        <image id="about-us-mobile">
+            <source src="about-us-m.png" type="image/png">
+        </image>
     </div> -->
 
     <!-- Navigation Menu -->
@@ -50,45 +50,11 @@
                         <button onclick="showIndustryInput1()">START</button>
                     </div>
                 </div>
-
-                <div id="enter-industries">
-                    <p id="enter">Enter the industries you want to analyze:</p>
-                    <div>
-                        <input type="text" id="industry1" placeholder="Ex: Travel"  />
-                      
-                        <input type="text" id="industry2" placeholder="Ex: Clothing" />
-                    </div>
-                </div>
-
                 <div id="congrats-view">
                     <h1>Congrats on completing the First Step</h1>
                     <button id="proceedButton" onclick="showIdeaInput1()">PROCEED</button>
                 </div>
-                        
-                <div id="init-analyse">
-                    <p class="description">We have captured the focus industries, next, we need to fine-tune our engine with specific concepts/ideas. You are required to enter at least two.</p>
-                    <input type="text" id="idea1" placeholder="Ex: Travel"  />
-                    
-                    <input type="text" id="idea2" placeholder="Ex: Idea2" />
-
-                    <input type="text" id="idea3" placeholder="Ex: Idea3"  />
-                    
-                    <input type="text" id="idea4" placeholder="Ex: Idea4" />
-
-                    <input type="text" id="idea5" placeholder="Ex: Idea5"  />
-                </div>
-                
-                <div id="analyse-view">
-                    <h1>Please wait while the engine mixes your ideas</h1>
-                    <button id="analyseButton" onclick="runEngine()">ANALYZE</button>
-                </div>
-
-                <div id="download-button">
-                    <button id="pdf-download-button">DOWNLOAD PDF</button>
-                </div>
-                
-             </div>   
-        </section>
+               
     </div>
     <script src="https://unpkg.com/pdf-lib@latest/dist/pdf-lib.min.js"></script>
     <script src="studioScript.js"></script>
