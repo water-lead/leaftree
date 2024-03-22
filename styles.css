@@ -14,7 +14,7 @@ body {
     width: 100vw;
     height: 100vh;
     z-index: -1; /* Behind all other content */
-    object-fit: cover; /*
+    object-fit: cover; 
 }
 
 #mobile-v {
