@@ -6,55 +6,99 @@ body {
 }
 
 /* Styles for the video container */
-#studio-video-bg-desktop {
-  position: fixed; /* Fixed position to cover the viewport */
-    top: 0;
-    left: 0;
-    object-fit: cover; /* Cover the entire viewport */
-    min-width: 100%; /* Minimum width of 100% */
-    min-height: 100%;
-    max-width: 100%;
-    max-height: 100%; /* Minimum height of 100% */
+#principles-desktop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vw;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .principles-desktop {
+    display: flex;
+  }
+  .principles-mobile {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .principles-desktop {
+    display: none;
+  }
+  .principles-mobile {
+    display: flex;
+  }
+}
+
+/* Video background styles for the studio page */
+
+@media (min-width: 1536px) {
+  #principles-desktop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100vw;
     height: 100vw;
-    z-index: -1; /* Behind all other content */
+    z-index: -1;
+    object-fit: cover;
+  }
 }
-
+@media (max-width: 1536px) {
+  #principles-mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vw;
+    z-index: -1;
+    object-fit: cover;
+  }
+}
 /* Logo styles */
-.menu {
-    display: flex;
-    position: fixed;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 1.5vw 2vw; /* Responsive padding */
-    background-color: transparent;
-    top: 0;
-    right: 0;
-    width: 100%;
-    z-index: 10;
-}
-
 .logo {
-    position: fixed;
-    top: 1.5vw; /* Responsive padding */
-    left: 1.5vw; /* Responsive padding */
-    z-index: 10;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  width: 40%;
+  margin-left: 25px;
+  top: 20px;
+  left: 15px;
 }
 
-/* Use a class for logo image if it's in the HTML */
 .logo img {
-    width: 5vw; /* Responsive width */
-    height: auto; /* Maintain aspect ratio */
+  width: 20%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  top: 20px;
+  left: 15px;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 16%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    top: 16px;
+    left: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo img {
+    width: 10%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    top: 12px;
+    left: 10px;
+  }
 }
 
 /* Content styles for studio page page sections */
-.centered {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-/* Landing Page styling */
 .page-section {
     position: absolute;
     bottom: 43%;
@@ -67,80 +111,117 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3vh 10vw;
+  padding: 24px 150px;
 }
 
-.page-section .description { 
-  font-weight: regular; 
-  padding:3vh 10vw;
-  align-items: center;
-  justify-content: center;
-  font-family: "Syncopate", sans-serif;
+.page-section .description {
+  font-weight: regular;
 }
 
 /* Button styling */
 input {
-    max-width: 400px;
-    top: 55%;
-    left: 50%;
-    padding: 1.5vw 1.5vh; 
-    width: 100vw;
-    margin-bottom: 10px;
-    border: 2px solid #4d72a0;
-    border-radius: 40px;
+  transition: all 0.5s;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+   max-width: 400px;
+  padding: 10px; 
+  margin-bottom: 10px;
+  border: 2px solid #4d72a0;
+  border-radius: 40px;
     font-family: "Syncopate", sans-serif;
     display: flex;
+    top: 50%;
+    left: 0%;
+  padding: 24px 150px;
     font-size: 20px;
-    align-items: left;
-}
-
-form {
-    max-width: 400px;
-    top: 55%;
-    left: 50%;
-    width: 100vw;
-    margin-bottom: 10px;
-    border: 2px solid #4d72a0;
-    border-radius: 40px;
-    font-family: "Syncopate", sans-serif;
-    display: flex;
-    padding: 1.5vw 1.5vh;
-    font-size: 20px;
-    align-items: left;
-    justify-content: center;
-}
-
-button {
-    max-width: 400px;
-    top: 55%;
-    left: 50%;
-    padding: 1.5vw 1.5vh;
-    width: 100vw;
-    background-color: #538BC3;
-    color: #fff;
-    border: 2px solid #ffffff;
-    border-radius: 40px;
-    cursor: pointer;
-    font-family: "Syncopate", sans-serif;
-    display: inline-flex;
-    white-space: nowrap;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5vw;  
+align-items: left;
 }
 
 /* Heading styles for studio page page sections */
 .page-section h1 {
   font-family: "Aclonica", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   color: #ffffff;
 }
 @media (max-width: 768px) {
   .page-section h1 {
     font-family: "Aclonica", sans-serif;
-    font-size: 20px;
+    font-size: 21px;
     color: #ffffff;
   }
+}
+
+/* Button styles */
+@media (max-width: 500px) {
+  .page-section button {
+    width: 100%;
+    background-color: #5077a7;
+    color: #ffffff;
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 35px;
+    transition: color 0.3s, border 0.3s;
+    border: 1.5px solid #ffffff; /* Normal border style */
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: light;
+    font-family: "Syncopate", sans-serif;
+    /*white-space: nowrap;*/
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+}
+
+/* Prompt and description text styles */
+.page-section .prompt,
+.page-section .description {
+    position: absolute;
+    bottom: 43%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: left;
+    max-width: 600px;
+    padding: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  padding: 24px 150px;
+}
+
+button {
+  max-width: 600px;
+    top: 50%;
+    left: 50%;
+  padding: 24px 150px;
+  background-color: #538BC3;
+  color: #fff;
+  border: 2px solid #ffffff;
+  border-radius: 40px;
+  cursor: pointer;
+    font-family: "Syncopate", sans-serif;
+    display: inline-flex;
+white-space: nowrap;
+justify-content: center;
+align-items: center;
+font-size: 25px;
+}
+
+form {
+  max-width: 600px;
+    top: 50%;
+    left: 50%;
+  padding: 24px 150px;
+  border: 2px solid #4d72a0;
+  border-radius: 40px;
+  font-family: "Syncopate", sans-serif;
+  display: inline-flex;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
 }
 
 #first-studio-display {
@@ -173,32 +254,6 @@ button {
   margin-left: 25%;
 }
 
-#skip {
-  display: none;
-}
-
-#idea1 {
-  display: none;
-  margin-left: 25%;
-}
-
-#idea2 {
-  display: none;
-  margin-left: 25%;
-}
-#idea3 {
-  display: none;
-  margin-left: 25%;
-}
-#idea4 {
-  display: none;
-  margin-left: 25%;
-}
-#idea5 {
-  display: none;
-  margin-left: 25%;
-}
-
 #industries-div {
   display: none;
 }
@@ -206,9 +261,4 @@ button {
 #industry1 {
   display: none;
   margin-left: 25%;
-}
-
-#download-button {
-  display: none;
-  /* ...other styles... */
 }
