@@ -224,23 +224,15 @@ form {
   font-size: 25px;
 }
 
-#first-studio-display {
+#principles-Display {
   display: block;
 }
 
-#enter-industries {
+#enter-information {
   display: none;
 }
 
-#congrats-view {
-  display: none;
-}
-
-#analyse-view {
-  display: none;
-}
-
-#init-analyse {
+#form-submission {
   display: none;
 }
 
@@ -249,16 +241,16 @@ form {
   font-family: "Aclonica", sans-serif;
 }
 
-#industry2 {
+#name {
+  display: none;
+  margin-left: 25%;
+}
+
+#email {
   display: flex;
   margin-left: 25%;
 }
 
-#industries-div {
+#information-div {
   display: none;
-}
-
-#industry1 {
-  display: none;
-  margin-left: 25%;
 }
