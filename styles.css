@@ -29,33 +29,55 @@ body {
     object-fit: cover; /*
 }
     
-@media (min-width: 768px) {
-  .desktop-v {
-    display: flex;
-  }
-  .mobile-v {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  .desktop-v {
-    display: none;
-  }
-  .mobile-v {
-    display: flex;
-  }
+/* Logo styling - assuming you want the logo to be a part of the HTML not CSS */
+.logo {
+    position: fixed;
+    top: 1.5vw; /* Responsive padding */
+    left: 1.5vw; /* Responsive padding */
+    z-index: 10;
 }
 
-/* Menu styling */
-.menu {
+/* Use a class for logo image if it's in the HTML */
+.logo img {
+    width: 5vw; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.menu-items {
+    list-style: none;
     display: flex;
-    position: fixed;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 1.5vw 2vw; /* Responsive padding */
-    background-color: transparent;
-    top: 0;
-    right: 0;
-    width: 100vw;
-    z-index: 1;
+    gap: 2vw; /* Responsive gap */
+    margin: 0;
+    padding: 0;
+}
+
+.menu-items li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2vw; /* Responsive font size */
+}
+
+.menu-items li a:hover {
+    text-decoration: underline;
+    color: #4d72a0;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .menu-items li a { 
+        font-size: 2.5vw;
+    }
+    .logo img {
+        width: 10vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .menu-items li a { 
+        font-size: 3.5vw;
+    }
+    .logo img {
+        width: 12vw;
+    }
 }
