@@ -11,8 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#ac5989',
+          }
+        }
+      }
+    }
+  </script>
+    <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
 </head>
 <body class="font-syncopate bg-white overflow-hidden">
+    <div class="lg:content-auto">
     <!-- Background Video -->
     <div class="background-video">
         <video id="desktop-v" autoplay muted loop>
@@ -22,7 +41,6 @@
             <source src="MobileLT.mp4" type="video/mp4">
         </video>
     </div>
-
     <!-- Navigation Menu -->
     <nav class="menu">
         <div class="logo">
