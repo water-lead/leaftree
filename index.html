@@ -11,9 +11,75 @@
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
+    
     <script>
     tailwind.config = {
       theme: {
+          screens: {
+              
+      'mobile': '540px',
+      => @media (min-width: 640px) { 
+       .desktop-v {
+    display: none;
+  }
+        .laptop-v {
+    display: none;
+  }
+       .tablet-v {
+    display: none;
+  }
+  .mobile-v {
+    display: flex;
+  }
+}   
+              
+      'tablet': '640px',
+      => @media (min-width: 640px) {
+      .desktop-v {
+    display: none;
+  }
+        .laptop-v {
+    display: none;
+  }
+       .tablet-v {
+    display: flex;
+  }
+  .mobile-v {
+    display: none;
+  }    
+      }
+
+      'laptop': '1024px',
+      => @media (min-width: 1024px) { 
+      .desktop-v {
+    display: none;
+  }
+        .laptop-v {
+    display: flex;
+  }
+       .tablet-v {
+    display: none;
+  }
+  .mobile-v {
+    display: none;
+  }    
+      }
+
+      'desktop': '1280px',
+      => @media (min-width: 1280px) { 
+.desktop-v {
+    display: flex;
+  }
+        .laptop-v {
+    display: none;
+  }
+       .tablet-v {
+    display: none;
+  }
+  .mobile-v {
+    display: none;
+  }  
+      }
         extend: {
           colors: {
             clifford: '#ac5989',
@@ -22,6 +88,7 @@
       }
     }
   </script>
+    
     <style type="text/tailwindcss">
     @layer utilities {
       .content-auto {
@@ -30,17 +97,25 @@
     }
   </style>
 </head>
+    
 <body class="font-syncopate bg-white overflow-hidden">
     <div class="lg:content-auto">
     <!-- Background Video -->
     <div class="background-video">
         <video id="desktop-v" autoplay muted loop>
+            <source src="WidescreenLT.mp4" type="video/mp4">
+        </video>
+        <video id="laptop-v" autoplay muted loop>
             <source src="LaptopLT.mp4" type="video/mp4">
+        </video>
+        <video id="tablet-v" autoplay muted loop>
+            <source src="TabletLT.mp4" type="video/mp4">
         </video>
         <video id="mobile-v" autoplay muted loop>
             <source src="MobileLT.mp4" type="video/mp4">
         </video>
     </div>
+        
     <!-- Navigation Menu -->
     <nav class="menu">
         <div class="logo">
