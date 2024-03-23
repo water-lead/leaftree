@@ -5,59 +5,29 @@ body {
     background: #ffffff;
 }
 
-#desktop-v {
-    position: fixed; /* Fixed position to cover the viewport */
+/* Fixed background video or image */
+.background-media {
+    position: fixed;
     top: 0;
     left: 0;
-    min-width: 100vw; /* Minimum width of 100% */
-    min-height: 100vh; /* Minimum height of 100% */
-    width: 100vw;
-    height: 100vh;
-    z-index: -1; /* Behind all other content */
-    object-fit: cover; 
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
 }
 
-#mobile-v {
-    position: fixed; /* Fixed position to cover the viewport */
-    top: 0;
-    left: 0;
-    min-width: 100vw; /* Minimum width of 100% */
-    min-height: 100vh; /* Minimum height of 100% */
-    width: 100vw;
-    height: 100vh;
-    z-index: -1; /* Behind all other content */
-    object-fit: cover; /*
-}
-    
-/* Logo styling - assuming you want the logo to be a part of the HTML not CSS */
+/* Logo styling */
 .logo {
     position: fixed;
-    top: 1.5vw; /* Responsive padding */
-    left: 1.5vw; /* Responsive padding */
+    top: 1.5rem; /* Use rem for better scaling */
+    left: 1.5rem;
     z-index: 10;
 }
 
-/* Use a class for logo image if it's in the HTML */
+/* Responsive logo size */
 .logo img {
-    width: 5vw; /* Responsive width */
-    height: auto; /* Maintain aspect ratio */
-}
-
-@media (min-width: 768px) {
-  .desktop-v {
-    display: flex;
-  }
-  .mobile-v {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  .desktop-v {
-    display: none;
-  }
-  .mobile-v {
-    display: flex;
-  }
+    width: 10%; /* Use percentage for scalability */
+    height: auto;
 }
 
 /* Menu styling */
@@ -66,9 +36,29 @@ body {
     position: fixed;
     justify-content: flex-end;
     align-items: center;
-    padding: 1.5vw 2vw; /* Responsive padding */
+    padding: 1rem; /* Use rem for better scaling */
     background-color: transparent;
     top: 0;
     right: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 1;
+}
+
+/* Media queries for different screen sizes */
+@media (min-width: 1024px) { /* Desktops and larger tablets */
+    .background-media #desktop-v {
+        display: block;
+    }
+    .background-media #mobile-v {
+        display: none;
+    }
+}
+
+@media (max-width: 1023px) { /* Tablets and mobile devices */
+    .background-media #desktop-v {
+        display: none;
+    }
+    .background-media #mobile-v {
+        display: block;
+    }
+}
