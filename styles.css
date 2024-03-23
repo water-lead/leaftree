@@ -10,10 +10,10 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
+    z-index: -1;
 }
 
 /* Logo styling */
@@ -30,18 +30,28 @@ body {
     height: auto;
 }
 
-/* Menu styling */
 .menu {
     display: flex;
+    justify-content: space-around; /* This will distribute space around items */
+    align-items: center; /* This will center items vertically */
     position: fixed;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 1rem; /* Use rem for better scaling */
-    background-color: transparent;
     top: 0;
     right: 0;
     width: 100%;
+    padding: 1rem;
+    background-color: transparent;
     z-index: 1;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff; /* Adjust the color as needed */
+    padding: 0.5rem;
+}
+
+/* Add this to ensure the menu links are displayed inline */
+.menu li {
+    display: inline-block;
 }
 
 /* Media queries for different screen sizes */
