@@ -20,7 +20,7 @@
       'mobile': '540px',
       => @media (min-width: 540px) { 
        .mobile-v {
-    display: none;
+    display: flex;
   }
         .laptop-v {
     display: none;
@@ -28,21 +28,21 @@
        .tablet-v {
     display: none;
   }
-  .mobile-v {
-    display: flex;
+  .desktop-v {
+    display: none;
   }
 }   
               
       'tablet': '640px',
       => @media (min-width: 640px) {
       .tablet-v {
-    display: none;
+    display: flex;
   }
         .laptop-v {
     display: none;
   }
-       .tablet-v {
-    display: flex;
+       .desktop-v {
+    display: none;
   }
   .mobile-v {
     display: none;
@@ -52,10 +52,10 @@
       'laptop': '1024px',
       => @media (min-width: 1024px) { 
       .laptop-v {
-    display: none;
-  }
-        .laptop-v {
     display: flex;
+  }
+        .desktop-v {
+    display: none;
   }
        .tablet-v {
     display: none;
@@ -101,16 +101,19 @@
 <body class="font-syncopate bg-white overflow-hidden">
     <div class="lg:content-auto">
     <!-- Background Video -->
-    <div class="background-video">
+    <div class="desktop-background-video">
         <video id="desktop-v" autoplay muted loop>
             <source src="WidescreenLT.mp4" type="video/mp4">
         </video>
+        <div class="laptop-background-video">
         <video id="laptop-v" autoplay muted loop>
             <source src="LaptopLT.mp4" type="video/mp4">
         </video>
+            <div class="tablet-background-video">
         <video id="tablet-v" autoplay muted loop>
             <source src="TabletLT.mp4" type="video/mp4">
         </video>
+                <div class="mobile-background-video">
         <video id="mobile-v" autoplay muted loop>
             <source src="MobileLT.mp4" type="video/mp4">
         </video>
