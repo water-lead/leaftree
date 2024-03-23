@@ -104,17 +104,17 @@
 <body class="font-syncopate bg-white overflow-hidden">
     <div class="lg:content-auto">
     <!-- Background Video -->
-    <div class="desktop-background-video hidden 2xl:block">
+    <div class="desktop-background-video hidden sm:block lg:block">
         <video id="desktop-v" autoplay muted loop>
             <source src="WidescreenLT.mp4" type="video/mp4">
         </video>
         </div>
-        <div class="laptop-background-video hidden lg:block">
+        <div class="laptop-background-video hidden 2xl:block sm:block">
         <video id="laptop-v" autoplay muted loop>
             <source src="LaptopLT.mp4" type="video/mp4">
         </video>
             </div>
-            <div class="tablet-background-video hidden sm:block">
+            <div class="tablet-background-video hidden lg: block sm:block">
         <video id="tablet-v" autoplay muted loop>
             <source src="TabletLT.mp4" type="video/mp4">
         </video>
@@ -126,11 +126,11 @@
     </div>
         </div>
     <!-- Navigation Menu -->
-    <nav class="flex flex-row items-center justify-center gap-5">
+    <nav class="menu">
         <div class="logo">
             <img src="Logo.gif" alt="Logo">
         </div>
-        <ul class="menu-items">
+        <ul class="menu-items flex flex-row items-center justify-right gap-5">
             <li><a href="about.html">About Us</a></li>
             <li><a href="principles.html">Our Principles</a></li>
             <li><a href="mailto:bomi@leaftree.fund">Contact</a></li>
