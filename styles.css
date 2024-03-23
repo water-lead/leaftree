@@ -103,7 +103,7 @@ body {
     align-items: right; /* This will center items vertically */
     position: fixed;
     top: 0;
-    right: 0;
+    right: 10;
     width: 100%;
     padding: 1rem;
     background-color: transparent;
@@ -113,6 +113,7 @@ body {
 .menu a {
     text-decoration: none;
     color: #a5c989; /* Adjust the color as needed */
+    font-style: bold;
     padding: 0.5rem;
 }
 
