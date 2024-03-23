@@ -6,12 +6,16 @@ body {
 }
 
 #background-media {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
+    position: fixed; /* Fixed position to cover the viewport */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    width: 100vw;
+    height: 56.25vw; /* Given a 16:9 aspect ratio, 56.25vw height will correspond to 100vw width */
+    min-height: 100vh;
+    min-width: 177.77vh; /* 177.77vh width will correspond to 100vh height */
+    object-fit: cover; /* Cover the entire viewport */
+    transform: translate(-50%, -50%); /* Offset the video to the center from its top-left corner */
+    z-index: -1; /* Behind all other content */
 }
 
 #background-media > video {
