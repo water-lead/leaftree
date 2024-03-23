@@ -10,8 +10,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 120vw;
-    height: 105vh;
+    width: 80vw;
+    height: 75vh;
     object-fit: cover;
     z-index: -1;
 }
