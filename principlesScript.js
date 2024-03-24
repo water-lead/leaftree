@@ -1,5 +1,5 @@
 //This displays
-function showInformation() {
+function acceptEmail() {
   document.getElementById("principles-Display").style.display = "none";
   document.getElementById("form-submission").style.display = "block";
   document.getElementById("emailButton").style.display = "none";
@@ -9,7 +9,7 @@ function showInformation() {
 document.addEventListener("keydown", function (event) {
   if (event.key === "ArrowRight") {
     if (
-      document.getElementById("form-submission").style.display === "block" &&
+      document.getElementById("enter-information").style.display === "block" &&
       document.getElementById("email").style.display === "block"
     ) {
       document.getElementById("enter-information").style.display = "none";
