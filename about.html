@@ -1,43 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <script src="aboutScript.js" defer></script>
     <link rel="stylesheet" href="about.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/148636323?s=48&v=4" type="image/x-icon" sizes="32x32">
+    
+    <script>
+    tailwind.config = {
+      theme: {
+          screens: {
+      'mobile-background-video': '540px',
+      => @media (min-width: 540px) { 
+       .mobile-v {
+    display: flex;
+        h: 100dvh;
+  }
+        .laptop-v {
+    display: none;
+  }
+       .tablet-v {
+    display: none;
+  }
+  .desktop-v {
+    display: none;
+  }
+}   
+              
+      'tablet-background-video': '640px',
+      => @media (min-width: 640px) {
+      .tablet-v {
+    display: flex;
+          h: 100dvh;
+  }
+        .laptop-v {
+    display: none;
+  }
+       .desktop-v {
+    display: none;
+  }
+  .mobile-v {
+    display: none;
+  }    
+      }
+
+      'laptop-background-video': '1024px',
+      => @media (min-width: 1024px) { 
+      .laptop-v {
+    display: flex;
+          h: 100dvh;
+  }
+        .desktop-v {
+    display: none;
+  }
+       .tablet-v {
+    display: none;
+  }
+  .mobile-v {
+    display: none;
+  }    
+      }
+
+      'desktop-background-video': '1280px',
+      => @media (min-width: 1280px) { 
+.desktop-v {
+    display: flex;
+          h: 100dvh;
+  }
+        .laptop-v {
+    display: none;
+  }
+       .tablet-v {
+    display: none;
+  }
+  .mobile-v {
+    display: none;
+  }  
+      }
+        extend: {
+          colors: {
+            clifford: '#ac5989',
+          }
+        }
+      }
+    }
+  </script>
+    
+    <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
 </head>
-
-<body>
-
-    <!-- Background Image -->
-    <div class="about-us-desktop">
-        <image id="about-us-desktop">
-            <source src="about-us-d.png" type="image/png">
-        </image>
+    
+<body class="font-syncopate bg-white overflow-hidden">
+    <div class="lg:content-auto">
+    <!-- Background Video -->
+    <div class="desktop-background-video hidden sm:block lg:block">
+        <video id="desktop-v" autoplay muted loop>
+            <source src="WidescreenAU.mp4" type="video/mp4">
+        </video>
+        </div>
+        <!--div class="laptop-background-video hidden 2xl:block sm:block">
+        <video id="laptop-v" autoplay muted loop>
+            <source src="LaptopAU.mp4" type="video/mp4">
+        </video>
+            </div>
+            <div class="tablet-background-video hidden lg: block sm:block">
+        <video id="tablet-v" autoplay muted loop>
+            <source src="TabletAU.mp4" type="video/mp4">
+        </video>
+    </div-->
+                <div class="mobile-background-video block sm:hidden">
+        <video id="mobile-v" autoplay muted loop>
+            <source src="MobileAU.mp4" type="video/mp4">
+        </video>
     </div>
-   <!-- <div class="about-us-mobile">
-        <image id="about-us-mobile">
-            <source src="about-us-m.png" type="image/png">
-        </image>
-    </div> -->
-
+        </div>
     <!-- Navigation Menu -->
     <nav class="menu">
         <div class="logo">
             <a href="index.html">
-            <img src="Logo.png" alt="Token Studio Logo">
+            <img src="Logo.gif" alt="Logo">
             </a>
-            <li><a href="about.html">ABOUT US</a></li>
-            <li><a href="principles.html">OUR PRINCIPLES</a></li>
-            <li><a href="mailto:bomi@leaftree.fund">CONTACT</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="principles.html">Our Principles</a></li>
         </div>
     </nav>
     <script src="aboutScript.js"></script>
