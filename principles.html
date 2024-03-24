@@ -22,18 +22,46 @@
       => @media (min-width: 540px) { 
        .principles-mobile {
     display: flex;
-        h: 100vw;
+        h: 100dvh;
   }
   .principles-desktop {
     display: none;
   }
 }   
-      
+
+          'principles-tablet': '640px',
+      => @media (min-width: 640px) {
+      .principles-desktop {
+    display: flex;
+          h: 100dvh;
+  }
+        .principles-mobile {
+    display: none;
+  }   
+      }
+
+      'principles-desktop': '1024px',
+      => @media (min-width: 1024px) { 
+      .principles-desktop {
+    display: flex;
+          h: 100dvh;
+  }
+        .principles-desktop {
+    display: none;
+  }
+       .principles-desktop {
+    display: none;
+  }
+  .principles-desktop {
+    display: none;
+  }    
+      }
+         
       'principles-desktop': '1280px',
       => @media (min-width: 1280px) { 
 .principles-desktop {
     display: flex;
-          h: 100vw;
+          h: 100dvh;
   }
   .principles-mobile {
     display: none;
