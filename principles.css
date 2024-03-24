@@ -22,7 +22,7 @@ body {
 .menu {
     display: flex;
     justify-content: space-around; /* This will distribute space around items */
-    align-items: right; /* This will center items vertically */
+    align-items: right;
     position: fixed;
     top: 0;
     right: 10;
@@ -39,7 +39,6 @@ body {
     padding: 0.5rem;
 }
 
-/* Add this to ensure the menu links are displayed inline */
 .menu li {
     display: inline-block;
 }
