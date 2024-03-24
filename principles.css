@@ -87,7 +87,7 @@ body {
 }
 
 @media (max-width: 500px) {
-.page-section {
+.page-section emailButton {
   max-width: 600px;
   top: 80%;
   left: 50%;
