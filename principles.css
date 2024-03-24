@@ -45,8 +45,7 @@ body {
 }
 
 /* Prompt and description text styles */
-.page-section .prompt,
-.page-section .description {
+.page-section {
     position: absolute;
     bottom: 43%;
     left: 50%;
@@ -61,12 +60,12 @@ body {
   padding: 24px 150px;
 }
 
-button {
+emailButton {
   max-width: 600px;
     top: 50%;
     left: 50%;
   padding: 24px 150px;
-  background-color: #538BC3;
+  background-color: #ac5989;
   color: #fff;
   border: 2px solid #ffffff;
   border-radius: 40px;
@@ -79,7 +78,7 @@ align-items: center;
 font-size: 25px;
 }
 
-form {
+form-submission {
   max-width: 600px;
     top: 50%;
     left: 50%;
