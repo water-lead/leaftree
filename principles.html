@@ -16,15 +16,72 @@
     tailwind.config = {
       theme: {
           screens: {
-      'principles-widescreen': '1280px',
-      => @media (min-width: 1280px) { 
-       .principles-widescreen {
+      'mobile-background-video': '540px',
+      => @media (min-width: 540px) { 
+       .mobile-v {
     display: flex;
         h: 100dvh;
   }
-        .principles-desktop {
+        .laptop-v {
     display: none;
   }
+       .tablet-v {
+    display: none;
+  }
+  .desktop-v {
+    display: none;
+  }
+}   
+              
+      'tablet-background-video': '640px',
+      => @media (min-width: 640px) {
+      .tablet-v {
+    display: flex;
+          h: 100dvh;
+  }
+        .laptop-v {
+    display: none;
+  }
+       .desktop-v {
+    display: none;
+  }
+  .mobile-v {
+    display: none;
+  }    
+      }
+
+      'laptop-background-video': '1024px',
+      => @media (min-width: 1024px) { 
+      .laptop-v {
+    display: flex;
+          h: 100dvh;
+  }
+        .desktop-v {
+    display: none;
+  }
+       .tablet-v {
+    display: none;
+  }
+  .mobile-v {
+    display: none;
+  }    
+      }
+
+      'desktop-background-video': '1280px',
+      => @media (min-width: 1280px) { 
+.desktop-v {
+    display: flex;
+          h: 100dvh;
+  }
+        .laptop-v {
+    display: none;
+  }
+       .tablet-v {
+    display: none;
+  }
+  .mobile-v {
+    display: none;
+  }  
       }
         extend: {
           colors: {
@@ -44,21 +101,30 @@
   </style>
 </head>
     
-
-    <body>
-    <!-- Background Image -->
+<body class="font-syncopate bg-white overflow-hidden">
     <div class="lg:content-auto">
-    <div class="principles-desktop hidden">
-        <img id="principles-desktop">
-            <source src="Principles.png" type="img/png">
-        </img>
+    <!-- Background Video -->
+    <div class="desktop-background-video hidden sm:block lg:block">
+        <video id="desktop-v" autoplay muted loop>
+            <source src="WidescreenLT.mp4" type="video/mp4">
+        </video>
+        </div>
+        <!--div class="laptop-background-video hidden 2xl:block sm:block">
+        <video id="laptop-v" autoplay muted loop>
+            <source src="LaptopLT.mp4" type="video/mp4">
+        </video>
+            </div>
+            <div class="tablet-background-video hidden lg: block sm:block">
+        <video id="tablet-v" autoplay muted loop>
+            <source src="TabletLT.mp4" type="video/mp4">
+        </video>
+    </div-->
+                <div class="mobile-background-video block sm:hidden">
+        <video id="mobile-v" autoplay muted loop>
+            <source src="MobileLT.mp4" type="video/mp4">
+        </video>
     </div>
-   <div class="principles-widecreen">
-        <img id="principles-widescreen">
-            <source src="Principles.png" type="img/png">
-        </img>
-    </div>
-
+        </div>
     <!-- Navigation Menu -->
     <nav class="menu">
         <div class="logo">
@@ -69,30 +135,5 @@
             <li><a href="principles.html">Our Principles</a></li>
         </ul>
     </nav>
-
-    <div class="principles">
-        <section class="page-section">
-            <div id="page">
-            <div>
-                <div id="principles-Display">
-
-                <div id="emailButton">
-                        <button onclick="acceptEmail()">Request Presentation</button>
-                    </div>
-                    
-                <div id="enter-information">
-                    <div>
-                        <input type="text" id="name" placeholder="Enter your Full Name"  />
-                        <input type="text" id="email" placeholder="Enter your Email" />
-                    </div>
-                </div>
-
-                </div>
-                <div id="form-submission">
-                    <h1>Your Information has been received & you will be contacted shortly</h1>
-                </div>
-               
-    </div>
-    <!--script src="principlesScript.js"></script-->
 </body>
 </html>
