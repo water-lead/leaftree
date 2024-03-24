@@ -84,12 +84,12 @@ body {
   font-size: 25px;
 }
 
-    .emailButton {
+  .emailButton {
   transition: all 0.5s;
   background-color: #ac5989;
   width: 45%;
   position: fixed;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 18px 130px;
@@ -123,8 +123,13 @@ form {
   border-color: #ffffff;
   cursor: pointer;
   font-weight: bold;
+  display: block;
   width: 100px;
 }
+
+#emailButton {
+  display: block;
+}    
     
 #principles-Display {
   display: block;
