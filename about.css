@@ -7,9 +7,10 @@ body {
 
 /* Logo styling */
 .logo {
+    display: flex;
     position: fixed;
-    top: 1.5rem; /* Use rem for better scaling */
-    left: 1.5rem;
+    top: 0 rem; /* Use rem for better scaling */
+    left: 0.5rem;
     z-index: 10;
 }
 
@@ -21,15 +22,15 @@ body {
 
 .menu {
     display: flex;
-    justify-content: space-around; /* This will distribute space around items */
-    align-items: right; /* This will center items vertically */
     position: fixed;
-    top: 0;
-    right: 10;
-    width: 100%;
-    padding: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1.5vw 2vw; /* Responsive padding */
     background-color: transparent;
-    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
 }
 
 .menu a {
@@ -39,88 +40,26 @@ body {
     padding: 0.5rem;
 }
 
-/* Add this to ensure the menu links are displayed inline */
 .menu li {
     display: inline-block;
 }
 
-/* Prompt and description text styles */
-.page-section .prompt,
-.page-section .description {
-    position: absolute;
-    bottom: 43%;
-    left: 50%;
-    transform: translate(-50%);
-    text-align: left;
-    max-width: 600px;
-    padding: 5px;
-    color: white;
+.menu-items {
+    list-style: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
-  padding: 24px 150px;
+    gap: 2vw; /* Responsive gap */
+    margin: 0;
+    padding: 0;
 }
 
-button {
-  max-width: 600px;
-    top: 50%;
-    left: 50%;
-  padding: 24px 150px;
-  background-color: #538BC3;
-  color: #fff;
-  border: 2px solid #ffffff;
-  border-radius: 40px;
-  cursor: pointer;
-    font-family: "Syncopate", sans-serif;
-    display: inline-flex;
-white-space: nowrap;
-justify-content: center;
-align-items: center;
-font-size: 25px;
+.menu-items li a {
+    text-decoration: none;
+    color: #a5c989;
+    font-weight: bold;
+    font-size: 1.2vw; /* Responsive font size */
 }
 
-form {
-  max-width: 600px;
-    top: 50%;
-    left: 50%;
-  padding: 24px 150px;
-  border: 2px solid #4d72a0;
-  border-radius: 40px;
-  font-family: "Syncopate", sans-serif;
-  display: inline-flex;
-  white-space: nowrap;
-  justify-content: center;
-  align-items: center;
-  font-size: 25px;
-}
-
-#principles-Display {
-  display: block;
-}
-
-#enter-information {
-  display: none;
-}
-
-#form-submission {
-  display: none;
-}
-
-#enter {
-  font-size: 28px;
-  font-family: "Aclonica", sans-serif;
-}
-
-#name {
-  display: none;
-  margin-left: 25%;
-}
-
-#email {
-  display: flex;
-  margin-left: 25%;
-}
-
-#information-div {
-  display: none;
+.menu-items li a:hover {
+    text-decoration: underline;
+    color: #a5c989;
 }
