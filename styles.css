@@ -34,7 +34,6 @@ body {
     display: flex;
     position: fixed;
     align-items: center;
-    justify-content: flex-end;
     background-color: transparent;
     padding: 1.5vw 2vw; /* Responsive padding */
     top: -0.5 rm; /* Use rem for better scaling */
