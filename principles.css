@@ -52,7 +52,7 @@ body {
 /* Prompt and description text styles */
 .page-section {
     position: absolute;
-    bottom: 43%;
+    bottom: 20%;
     left: 50%;
     transform: translate(-50%);
     text-align: left;
@@ -62,7 +62,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-  padding: 24px 150px;
+    padding: 24px 150px;
 }
 
 @media (max-width: 500px) {
@@ -82,6 +82,24 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 25px;
+}
+
+    .emailButton {
+  transition: all 0.5s;
+  background-color: #ac5989;
+  width: 45%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 18px 130px;
+  border-radius: 40px;
+  border: 1.5px solid;
+  font-size: 30px;
+  font-family: "Syncopate", sans-serif;
+  display: block;
+  justify-content: center;
+  align-items: center;
 }
 
 form {
@@ -107,7 +125,7 @@ form {
   font-weight: bold;
   width: 100px;
 }
-
+    
 #principles-Display {
   display: block;
 }
