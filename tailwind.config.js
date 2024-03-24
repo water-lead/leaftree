@@ -4,7 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        clifford: '#ac5989',
+        'green': '#ac5989',
+      },
+      spacing: {
+        '8xl': '96rem',
+        '9xl': '128rem',
       },
       borderWidth: {
         '3': '3px',
