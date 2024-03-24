@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Principles</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="principles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
-
-     <script>
+    
+    <script>
     tailwind.config = {
       theme: {
           screens: {
       'principles-widescreen': '1280px',
+      => @media (min-width: 1280px) { 
+       .principles-widescreen {
+    display: flex;
+        h: 100dvh;
+  }
+        .principles-desktop {
+    display: none;
+  }
       }
         extend: {
           colors: {
@@ -36,16 +43,17 @@
     }
   </style>
 </head>
+    
 
     <body>
     <!-- Background Image -->
     <div class="lg:content-auto">
-    <div class="principles-desktop">
+    <div class="principles-desktop hidden">
         <img id="principles-desktop">
             <source src="Principles.png" type="img/png">
         </img>
     </div>
-   <div class="principles-widecreen block">
+   <div class="principles-widecreen">
         <img id="principles-widescreen">
             <source src="Principles.png" type="img/png">
         </img>
