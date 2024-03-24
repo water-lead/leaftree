@@ -9,7 +9,7 @@ function showNameInput() {
 
 function showEmailInput() {
   return new Promise((resolve) => {
-    requestBody.email = document.getElementById("loginEmail").value;
+    requestBody.name = document.getElementById("fullName").value;
     document.getElementById("nameEntry").style.display = "none";
     document.getElementById("emailEntry").style.display = "block";
     document.getElementById("email").focus();
@@ -19,7 +19,7 @@ function showEmailInput() {
 
 function showInfoInput() {
   return new Promise((resolve) => {
-    requestBody.email = document.getElementById("loginEmail").value;
+    requestBody.email = document.getElementById("email").value;
     document.getElementById("emailEntry").style.display = "none";
     document.getElementById("infoEntry").style.display = "block";
     document.getElementById("info").focus();
