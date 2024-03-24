@@ -65,7 +65,8 @@ body {
   padding: 24px 150px;
 }
 
-button {
+@media (max-width: 500px) {
+.page-section button {
   max-width: 600px;
   top: 80%;
   left: 50%;
@@ -96,6 +97,15 @@ form {
   font-size: 25px;
   align-items: left;
   justify-content: center;
+}
+
+.emailButton {
+  background-color: #ac5989;
+  color: #ffffff;
+  border-color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100px;
 }
 
 #principles-Display {
