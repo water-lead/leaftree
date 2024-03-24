@@ -84,47 +84,66 @@ body {
   font-size: 25px;
 }
 
-  .emailButton {
-  transition: all 0.5s;
-  background-color: #ac5989;
-  width: 45%;
-  position: fixed;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 18px 130px;
-  border-radius: 40px;
-  border: 1.5px solid;
-  font-size: 30px;
-  font-family: "Syncopate", sans-serif;
-  display: block;
-  justify-content: center;
-  align-items: center;
+  .page-section .description { font-weight: regular; }
+
+/* Button styling */
+
+input {
+    max-width: 400px;
+    top: 80%;
+    left: 50%;
+    padding: 10px; 
+    width: 100vw;
+    margin-bottom: 10px;
+    border: 2px solid #ac5989;
+    border-radius: 40px;
+    font-family: "Syncopate", sans-serif;
+    display: flex;
+    padding: 24px 150px;
+    font-size: 20px;
+    align-items: left;
 }
 
 form {
-  max-width: 600px;
-  top: 80%;
-  left: 50%;
-  padding: 24px 150px;
-  border: 1px solid #ac5989;
-  border-radius: 40px;
-  font-family: "Syncopate", sans-serif;
-  display: flex;
-  padding: 1.5vw 1.5vh;
-  font-size: 25px;
-  align-items: left;
-  justify-content: center;
+    max-width: 400px;
+    top: 80%;
+    left: 50%;
+    padding: 10px;
+    width: 100vw;
+    margin-bottom: 10px;
+    border: 2px solid #ac5989;
+    border-radius: 40px;
+    font-family: "Syncopate", sans-serif;
+    display: flex;
+    padding: 24px 150px;
+    font-size: 20px;
+    align-items: left;
 }
 
-.emailButton {
-  background-color: #ac5989;
-  color: #ffffff;
-  border-color: #ffffff;
-  cursor: pointer;
-  font-weight: bold;
-  display: block;
-  width: 100px;
+button {
+    max-width: 400px;
+    top: 80%;
+    left: 50%;
+    padding: 24px 150px;
+    width: 100vw;
+    background-color: #ac5989;
+    color: #fff;
+    border: 2px solid #ffffff;
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: "Syncopate", sans-serif;
+    display: inline-flex;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;  
+}
+
+.notification {
+    top: 80%;
+    left: 50%;
+    margin-top: 10px;
+    color: #000000;
 }
 
 #emailButton {
