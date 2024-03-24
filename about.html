@@ -5,92 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="about.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
-    
-    <script>
-    tailwind.config = {
-      theme: {
-          screens: {
-      'mobile-background-video': '540px',
-      => @media (min-width: 540px) { 
-       .mobile-v {
-    display: flex;
-        h: 100dvh;
-  }
-        .laptop-v {
-    display: none;
-  }
-       .tablet-v {
-    display: none;
-  }
-  .desktop-v {
-    display: none;
-  }
-}   
-              
-      'tablet-background-video': '640px',
-      => @media (min-width: 640px) {
-      .tablet-v {
-    display: flex;
-          h: 100dvh;
-  }
-        .laptop-v {
-    display: none;
-  }
-       .desktop-v {
-    display: none;
-  }
-  .mobile-v {
-    display: none;
-  }    
-      }
-
-      'laptop-background-video': '1024px',
-      => @media (min-width: 1024px) { 
-      .laptop-v {
-    display: flex;
-          h: 100dvh;
-  }
-        .desktop-v {
-    display: none;
-  }
-       .tablet-v {
-    display: none;
-  }
-  .mobile-v {
-    display: none;
-  }    
-      }
-
-      'desktop-background-video': '1280px',
-      => @media (min-width: 1280px) { 
-.desktop-v {
-    display: flex;
-          h: 100dvh;
-  }
-        .laptop-v {
-    display: none;
-  }
-       .tablet-v {
-    display: none;
-  }
-  .mobile-v {
-    display: none;
-  }  
-      }
-        extend: {
-          colors: {
-            clifford: '#ac5989',
-          }
-        }
-      }
-    }
-  </script>
     
     <style type="text/tailwindcss">
     @layer utilities {
