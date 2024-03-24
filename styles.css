@@ -7,9 +7,10 @@ body {
 
 /* Logo styling */
 .logo {
+    display: flex;
     position: fixed;
-    top: 1.5rem; /* Use rem for better scaling */
-    left: 1.5rem;
+    top: 0 rem; /* Use rem for better scaling */
+    left: 0.5rem;
     z-index: 10;
 }
 
@@ -21,15 +22,15 @@ body {
 
 .menu {
     display: flex;
-    justify-content: space-around; /* This will distribute space around items */
-    align-items: right; /* This will center items vertically */
     position: fixed;
-    top: 0;
-    right: 10;
-    width: 100%;
-    padding: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1.5vw 2vw; /* Responsive padding */
     background-color: transparent;
-    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
 }
 
 .menu a {
@@ -39,7 +40,26 @@ body {
     padding: 0.5rem;
 }
 
-/* Add this to ensure the menu links are displayed inline */
 .menu li {
     display: inline-block;
+}
+
+.menu-items {
+    list-style: none;
+    display: flex;
+    gap: 2vw; /* Responsive gap */
+    margin: 0;
+    padding: 0;
+}
+
+.menu-items li a {
+    text-decoration: none;
+    color: #a5c989;
+    font-weight: bold;
+    font-size: 1.2vw; /* Responsive font size */
+}
+
+.menu-items li a:hover {
+    text-decoration: underline;
+    color: #a5c989;
 }
