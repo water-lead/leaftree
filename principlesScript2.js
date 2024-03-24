@@ -27,6 +27,29 @@ function showInfoInput() {
   });
 }
 
+async function submitInfoForm() {
+    try {
+        // Assume you have functions to fetch data from each form and store it in the database asynchronously
+        const nameEntry = await showNameInput(); // Replace storeFormData1 with your actual function
+        const emailEntry = await showEmailInput(); // Replace storeFormData2 with your actual function
+        const infoEntry = await showInfoInput(); // Replace storeFormData3 with your actual function
+
+        // Check if all forms were successfully stored in the database
+        if (nameEntry.success && emailEntry.success && infoEntry.success) {
+            const notification = document.getElementById("notification");
+            notification.style.display = "block";
+            notification.innerText = "Thank you for your interest! Your information has been received & you will be contacted shortly.";
+        } else {
+            throw new Error("Form data could not be submitted.");
+        }
+    } catch (error) {
+        console.error("An error occurred:", error);
+        const notification = document.getElementById("notification");
+        notification.style.display = "block";
+        notification.innerText = "The form could not be submitted, please try again.";
+    }
+}
+
 document.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     if (document.getElementById("emailButton").style.display === "block") {
