@@ -33,7 +33,7 @@ body {
 .logo {
     display: flex;
     position: fixed;
-    top: 0; /* Use rem for better scaling */
+    top: -0.5 rem; /* Use rem for better scaling */
     left: 0.5rem;
     z-index: 10;
 }
