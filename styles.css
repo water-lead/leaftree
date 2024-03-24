@@ -33,8 +33,13 @@ body {
 .logo {
     display: flex;
     position: fixed;
-    top: -0.5 rem; /* Use rem for better scaling */
-    left: 0.5rem;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: transparent;
+    padding: 1.5vw 2vw; /* Responsive padding */
+   /* top: -0.5 rem; /* Use rem for better scaling */
+    /* left: 0.5rem; */
+    width: 100%;
     z-index: 10;
 }
 
