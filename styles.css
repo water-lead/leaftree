@@ -36,7 +36,7 @@ body {
     align-items: center;
     background-color: transparent;
     padding: 1.5vw 2vw; /* Responsive padding */
-    top: -0.5 rm; /* Use rem for better scaling */
+    top: -0.5rem; /* Use rem for better scaling */
     left: 0.5rem;
     width: 100%;
     z-index: 10;
