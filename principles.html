@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Principles</title>
     <link rel="stylesheet" href="principles.css">
+    <script src="principlesScript2.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
@@ -135,28 +136,27 @@
             <li><a href="principles.html">Our Principles</a></li>
         </div>
     </nav>
-
-    <script src="principlesScript.js"></script>
     
     <div class="principles">
-        <section class="page-section">
-            <div id="page"></div>
-                <div id="principles-Display">
+        <section class="page-section" id="principles-Display">
                 <div id="emailButton">
-                        <button onclick="acceptEmail()">Request Presentation</button>
+                <button onclick="acceptEmail()">Request Presentation</button>
                     </div>
-                    </div>
-                <div id="enter-information">
-                    <div>
-                        <input type="text" id="name" placeholder="Enter your Full Name"  />
-                        <input type="text" id="email" placeholder="Enter your Email" />
-                        <input type="text" id="info" placeholder="How did you hear about LeafTree?" />
-                    </div>
+                    <div id="nameInput" style="display: none;">
+        <input type="text" id="nameEntry" placeholder="Enter your Full Name" />
+      </div>
+                        <div id="emailInput" style="display: none;">
+        <input type="text" id="emailEntry" placeholder="Enter your Email" />
+      </div>
+            <div id="infoInput" style="display: none;">
+        <input type="text" id="infoEntry" placeholder="How did you hear about LeafTree?" />
+      </div>
                 </div>
                 <div id="form-submission">
                     <p id="enter">Thank you for your interest! Your Information has been received & you will be contacted shortly.</p>
                 </div>
 </section>
+    <script src="principlesScript2.js"></script>
 </div>
 </body>
 </html>
