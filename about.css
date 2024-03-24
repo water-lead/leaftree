@@ -63,3 +63,44 @@ body {
     text-decoration: underline;
     color: #a5c989;
 }
+
+.centered {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Prompt and description text styles */
+.page-section {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: left;
+    max-width: 600px;
+    padding: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh 10vw;
+}
+
+@media (max-width: 500px) {
+.page-section button {
+  max-width: 600px;
+  top: 80%;
+  left: 50%;
+  padding: 24px 150px;
+  background-color: #ac5989;
+  color: #fff;
+  border: 1px solid #ffffff;
+  border-radius: 40px;
+  cursor: pointer;
+  font-family: "Syncopate", sans-serif;
+  display: inline-flex;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
