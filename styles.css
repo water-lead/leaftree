@@ -44,7 +44,7 @@ body {
 
 /* Responsive logo size */
 .logo img {
-    width: 10%; /* Use percentage for scalability */
+    width: 25%; /* Use percentage for scalability */
     height: auto;
 }
 
