@@ -16,9 +16,9 @@
     tailwind.config = {
       theme: {
           screens: {
-      'mobile-background-video': '540px',
+      'mobile-background-img': '540px',
       => @media (min-width: 540px) { 
-       .mobile-v {
+       .mobile {
     display: flex;
         h: 100dvh;
   }
@@ -33,7 +33,7 @@
   }
 }   
               
-      'tablet-background-video': '640px',
+      'tablet-background-img': '640px',
       => @media (min-width: 640px) {
       .tablet-v {
     display: flex;
@@ -50,7 +50,7 @@
   }    
       }
 
-      'laptop-background-video': '1024px',
+      'laptop-background-img': '1024px',
       => @media (min-width: 1024px) { 
       .laptop-v {
     display: flex;
@@ -67,9 +67,9 @@
   }    
       }
 
-      'desktop-background-video': '1280px',
+      'desktop-background-img': '1280px',
       => @media (min-width: 1280px) { 
-.desktop-v {
+.desktop {
     display: flex;
           h: 100dvh;
   }
@@ -103,26 +103,26 @@
     
 <body class="font-syncopate bg-white overflow-hidden">
     <div class="lg:content-auto">
-    <!-- Background Video -->
-    <div class="desktop-background-video hidden sm:block lg:block">
-        <video id="desktop-v" autoplay muted loop>
-            <source src="WidescreenLT.mp4" type="video/mp4">
-        </video>
+    <!-- Background img -->
+    <div class="desktop-background-img hidden sm:block lg:block">
+        <img id="desktop" autoplay muted loop>
+            <source src="Princples.png" type="img/png">
+        </img>
         </div>
-        <!--div class="laptop-background-video hidden 2xl:block sm:block">
-        <video id="laptop-v" autoplay muted loop>
-            <source src="LaptopLT.mp4" type="video/mp4">
-        </video>
+        <!--div class="laptop-background-img hidden 2xl:block sm:block">
+        <img id="laptop-v" autoplay muted loop>
+            <source src="LaptopLT.mp4" type="img/mp4">
+        </img>
             </div>
-            <div class="tablet-background-video hidden lg: block sm:block">
-        <video id="tablet-v" autoplay muted loop>
-            <source src="TabletLT.mp4" type="video/mp4">
-        </video>
+            <div class="tablet-background-img hidden lg: block sm:block">
+        <img id="tablet-v" autoplay muted loop>
+            <source src="TabletLT.mp4" type="img/mp4">
+        </img>
     </div-->
-                <div class="mobile-background-video block sm:hidden">
-        <video id="mobile-v" autoplay muted loop>
-            <source src="MobileLT.mp4" type="video/mp4">
-        </video>
+                <div class="mobile-background-img block sm:hidden">
+        <img id="mobile" autoplay muted loop>
+            <source src="Principles-m.png" type="img/png">
+        </img>
     </div>
         </div>
     <!-- Navigation Menu -->
