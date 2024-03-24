@@ -44,6 +44,12 @@ body {
     display: inline-block;
 }
 
+.centered {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 /* Prompt and description text styles */
 .page-section {
     position: absolute;
@@ -60,7 +66,7 @@ body {
   padding: 24px 150px;
 }
 
-emailButton {
+button {
   max-width: 600px;
     top: 50%;
     left: 50%;
@@ -78,19 +84,19 @@ align-items: center;
 font-size: 25px;
 }
 
-form-submission {
+form {
   max-width: 600px;
     top: 50%;
     left: 50%;
   padding: 24px 150px;
-  border: 2px solid #4d72a0;
+  border: 2px solid #ac5989;
   border-radius: 40px;
   font-family: "Syncopate", sans-serif;
-  display: inline-flex;
-  white-space: nowrap;
-  justify-content: center;
-  align-items: center;
-  font-size: 25px;
+  display: flex;
+    padding: 1.5vw 1.5vh;
+    font-size: 20px;
+    align-items: left;
+    justify-content: center;
 }
 
 #principles-Display {
@@ -103,11 +109,6 @@ form-submission {
 
 #form-submission {
   display: none;
-}
-
-#enter {
-  font-size: 28px;
-  font-family: "Aclonica", sans-serif;
 }
 
 #name {
