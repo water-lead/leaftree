@@ -21,15 +21,15 @@ body {
 
 .menu {
     display: flex;
-    justify-content: space-around; /* This will distribute space around items */
-    align-items: right;
     position: fixed;
-    top: 0;
-    right: 10;
-    width: 100%;
-    padding: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1.5vw 2vw; /* Responsive padding */
     background-color: transparent;
-    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
 }
 
 .menu a {
@@ -41,6 +41,26 @@ body {
 
 .menu li {
     display: inline-block;
+}
+
+.menu-items {
+    list-style: none;
+    display: flex;
+    gap: 2vw; /* Responsive gap */
+    margin: 0;
+    padding: 0;
+}
+
+.menu-items li a {
+    text-decoration: none;
+    color: #a5c989;
+    font-weight: bold;
+    font-size: 1.2vw; /* Responsive font size */
+}
+
+.menu-items li a:hover {
+    text-decoration: underline;
+    color: #a5c989;
 }
 
 .centered {
@@ -62,7 +82,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 24px 150px;
+    padding: 3vh 10vw;
 }
 
 @media (max-width: 500px) {
@@ -84,7 +104,7 @@ body {
   font-size: 25px;
 }
 
-  .page-section .description { font-weight: regular; }
+.page-section .description { font-weight: regular; }
 
 /* Button styling */
 
@@ -144,34 +164,4 @@ button {
     left: 50%;
     margin-top: 10px;
     color: #000000;
-}
-
-#emailButton {
-  display: block;
-}    
-    
-#principles-Display {
-  display: block;
-}
-
-#enter-information {
-  display: none;
-}
-
-#form-submission {
-  display: none;
-}
-
-#name {
-  display: none;
-  margin-left: 25%;
-}
-
-#email {
-  display: flex;
-  margin-left: 25%;
-}
-
-#information-div {
-  display: none;
 }
