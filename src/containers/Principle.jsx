@@ -15,7 +15,7 @@ function determineSrc(type) {
  )
 }
 
-const scriptUrl = "https://script.google.com/a/macros/waterdesigns.io/s/AKfycbxWuSPhgJ8uMKCjDPzQafAQADM2kNUR6pvUULGb9_acYdfvuVI6hnv62woohGAHogQ_1Q/exec";
+const scriptUrl = "https://script.google.com/macros/s/AKfycbyPtpfpH3kALRcy7X8mPodlF8EUQZVklkWj-x6cA-29yo7cLEwY5v60DJ_i9OVNJCOAWw/exec";
 
 function Form1({ fullName, setFullName, setFormTo }) {
   const handleInputChange = (e) => {
