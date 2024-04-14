@@ -15,20 +15,20 @@ function determineSrc(type) {
  )
 }
 
+const scriptUrl = "https://script.google.com/a/macros/waterdesigns.io/s/AKfycbxWuSPhgJ8uMKCjDPzQafAQADM2kNUR6pvUULGb9_acYdfvuVI6hnv62woohGAHogQ_1Q/exec";
+
 function Form1({ fullName, setFullName, setFormTo }) {
-  const formRef = useRef(null);
-  const scriptUrl = "https://script.google.com/a/macros/waterdesigns.io/s/AKfycbxWuSPhgJ8uMKCjDPzQafAQADM2kNUR6pvUULGb9_acYdfvuVI6hnv62woohGAHogQ_1Q/exec";
   const handleInputChange = (e) => {
     setFullName(e.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fullName ? setFormTo(2) : '';
+    fullName ? setFormTo(2) : "";
   };
 
   return (
-    <form onSubmit={handleSubmit} ref={formRef}>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         className="form-input form-input-new"
@@ -41,19 +41,17 @@ function Form1({ fullName, setFullName, setFormTo }) {
 }
 
 function Form2({ email, setEmail, setFormTo }) {
-  const formRef = useRef(null);
-  const scriptUrl = "https://script.google.com/a/macros/waterdesigns.io/s/AKfycbxWuSPhgJ8uMKCjDPzQafAQADM2kNUR6pvUULGb9_acYdfvuVI6hnv62woohGAHogQ_1Q/exec";
   const handleInputChange = (e) => {
     setEmail(e.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    validator.isEmail(email) ? setFormTo(3) : '';
+    validator.isEmail(email) ? setFormTo(3) : "";
   };
 
   return (
-    <form onSubmit={handleSubmit} ref={formRef}>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         className="form-input form-input-new"
@@ -65,112 +63,112 @@ function Form2({ email, setEmail, setFormTo }) {
   );
 }
 
-function Form3({ referral, setReferral, Payload }) {
-  const formRef = useRef(null);
-  const scriptUrl = "https://script.google.com/a/macros/waterdesigns.io/s/AKfycbxWuSPhgJ8uMKCjDPzQafAQADM2kNUR6pvUULGb9_acYdfvuVI6hnv62woohGAHogQ_1Q/exec";
-  const [onSnack, setOnsnack] = useState(false);
+function Form3({ referral, setReferral, Payload, setOnsnack }) {
   const handleInputChange = (e) => {
     setReferral(e.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    referral ? console.log(Payload) : '';
+    referral ? console.log(Payload) : "";
     setOnsnack(true);
-    setTimeout(() => (window.location.href = '/'), 8000);
+    setTimeout(() => (window.location.href = "/"), 8000);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        className="form-input form-input-new"
+        placeholder="How did you hear about LeafTree?"
+        value={referral}
+        onChange={(e) => handleInputChange(e)}
+      />
+    </form>
+  );
+}
+
+export default function Principle() {
+  const GetScreenWidth = window.innerWidth;
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [referral, setReferral] = useState("");
+  const [onForm, setOnForm] = useState(false);
+  const [formOn, setFormOn] = useState(1);
+  const [onSnack, setOnSnack] = useState(false);
+
+  const Payload = { fullName, email, referral };
+
+  const determineParams = () => {
+    if (GetScreenWidth <= 480) {
+      return "m";
+    } else if (GetScreenWidth <= 768) {
+      return "l";
+    } else {
+      return "w";
+    }
   };
 
   return (
     <>
-      {!onSnack ? (
-        <form onSubmit={handleSubmit} ref={formRef}>
-          <input
-            type="text"
-            className="form-input form-input-new"
-            placeholder="How did you hear about LeafTree?"
-            value={referral}
-            onChange={(e) => handleInputChange(e)}
-          />
-        </form>
-      ) : (
-        <input
-          type="text"
-          id="popup"
-          disabled={true}
-          style={{ color: 'white' }}
-          placeholder="Your information has been submitted."
-        />
-      )}
-    </>
-  );
-}
-
-
-
-export default function Principle() {
-  const GetScreenWidth = window.innerWidth;
-  const [fullName, setFullName] = useState(''); 
-  const [email, setEmail] = useState('');
-  const [referral, setReferral] = useState('');
-  const Payload = {
-    fullName,
-    email,
-    referral
-  }
-
-  const determineParams = ()=> {
-    if (GetScreenWidth <= 480) {
-       return "m"
-    } else if (GetScreenWidth <= 768) {
-       return "l"
-    } else if (GetScreenWidth <= 1200) {
-       return "w"
-    }  else {
-       return "w"
-    }
-  }
-  const [onForm, setonForm] = useState(false)
-  const [formOn, setFormOn] = useState(1)
-  return (
-    <>
       <Nav />
-       <div id="openBtnCont"  style={{
-          bottom: GetScreenWidth >= 1260  && 
-          GetScreenWidth <= 1487 === true ?
-          "13%" : "8%"
-        }}>
-      {!onForm ?
-      <button id="openBtn" className="form-input form-input-new" onClick={()=> setonForm(true)}>Request Presentation</button> :
-      <>
-      { 
-       formOn === 1 ? 
-         <Form1 fullName={fullName}    
-                setFullName={setFullName} 
-                setFormTo={setFormOn} 
-        /> :
-      formOn === 2 ?
-         <Form2 email={email}    
-                setEmail={setEmail} 
-                setFormTo={setFormOn} 
-        /> :
-      formOn === 3 ? 
-         <Form3 referral={referral}    
-                setReferral={setReferral} 
+      <div
+        id="openBtnCont"
+        style={{
+          bottom:
+            GetScreenWidth >= 1260 && GetScreenWidth <= 1487 === true
+              ? "13%"
+              : "8%",
+        }}
+      >
+        {!onForm ? (
+          <button
+            id="openBtn"
+            className="form-input form-input-new"
+            onClick={() => setOnForm(true)}
+          >
+            Request Presentation
+          </button>
+        ) : (
+          <>
+            {formOn === 1 ? (
+              <Form1
+                fullName={fullName}
+                setFullName={setFullName}
+                setFormTo={setFormOn}
+                scriptUrl={scriptUrl}
+              />
+            ) : formOn === 2 ? (
+              <Form2
+                email={email}
+                setEmail={setEmail}
+                setFormTo={setFormOn}
+                scriptUrl={scriptUrl}
+              />
+            ) : formOn === 3 ? (
+              <Form3
+                referral={referral}
+                setReferral={setReferral}
                 Payload={Payload}
-        /> :
-        ""
-      }
-      </>
-      }
+                setOnsnack={setOnSnack}
+                scriptUrl={scriptUrl}
+              />
+            ) : (
+              ""
+            )}
+          </>
+        )}
       </div>
-       {GetScreenWidth <= 480 && <div id="blur">
-        <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
-      </div>}
+      {GetScreenWidth <= 480 && (
+        <div id="blur">
+          <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
+        </div>
+      )}
       <div id="HomescreeVideoContainer">
         <video id="HomescreenVideo" autoPlay muted loop>
-            <source src={determineSrc(determineParams())} type="video/mp4" />
+          <source src={determineSrc(determineParams())} type="video/mp4" />
         </video>
-      </div> 
+      </div>
     </>
-  )
+  );
 }
