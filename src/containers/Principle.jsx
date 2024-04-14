@@ -5,6 +5,7 @@ import MinSrc from "../assets/WhatsApp Video 2024-04-11 at 20.45.02 (2).mp4";
 import "../App.css";
 import { useState } from "react";
 import validator from "validator";
+import { v4 as uuidv4 } from 'uuid';
 
 function determineSrc(type) {
   return (
