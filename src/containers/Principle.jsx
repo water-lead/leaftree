@@ -76,35 +76,30 @@ function Form3({ referral, setReferral, setOnsnack, onSubmit }) {
     setTimeout(() => (window.location.href = "/"), 8000);
   }
   return (
-    <>
-    { !onSnack ?
-    <>   
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        className="form-input form-input-new"
-        placeholder="How did you hear about LeafTree?"
-        value={referral}
-        onChange={(e) => handleInputChange(e)}
-      />
-    </form>
-    return (
-     <input 
-        type="text" 
-        id="popup"
-        disabled={true}
-        style={{color:"white"}}    
-        // id={"openBtn"}
-        className="form-input form-input-new" 
-        placeholder="Your information has been submitted." 
+  !onSnack ?
+  <form onSubmit={handleSubmit}>
+    <input
+      type="text"
+      className="form-input form-input-new"
+      placeholder="How did you hear about LeafTree?"
+      value={referral}
+      onChange={(e) => handleInputChange(e)}
     />
-      )
-      }
-    )
-          }
+  </form>
+  :
+  <input 
+     type="text" 
+     id="popup"
+     disabled={true}
+     style={{color:"white"}}    
+     // id={"openBtn"}
+     className="form-input form-input-new" 
+     placeholder="Your information has been submitted." 
+  />
+);
 
 export default function Principle() {
-  function GetScreenWidth(window.innerWidth);
+  const GetScreenWidth = window.innerWidth;
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [referral, setReferral] = useState("");
