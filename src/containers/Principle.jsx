@@ -96,6 +96,7 @@ export default function Principle() {
     method: "POST",
     body: formData
   })
+ }
   const GetScreenWidth = window.innerWidth;
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
