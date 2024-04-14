@@ -13,8 +13,8 @@ export default function Nav() {
         </Link>
       </li>
       <div className="menu-items">
-        <Link to="/about" className='menu-items-link'>About Us</Link>
-        <Link to="/principle" className='menu-items-link'>Our Principles</Link>
+        <Link to="/about us" className='menu-items-link'>About Us</Link>
+        <Link to="/our principles" className='menu-items-link'>Our Principles</Link>
       </div>
     </nav>
   </>
