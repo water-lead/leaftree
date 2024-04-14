@@ -96,7 +96,6 @@ function Form3({ referral, setReferral, onSubmit, setOnsnack }) {
         placeholder="Your information has been submitted." 
     />
    )};
-}
 
 export default function Principle() {
   const GetScreenWidth = window.innerWidth;
