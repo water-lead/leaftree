@@ -84,6 +84,18 @@ function Form3({ referral, setReferral, onSubmit, setOnsnack }) {
       />
     </form>
   );
+
+ return : 
+     <input 
+        type="text" 
+        id="popup"
+        disabled={true}
+        style={{color:"white"}}    
+        // id={"openBtn"}
+        className="form-input form-input-new" 
+        placeholder="Your information has been submitted." 
+    />
+   }
 }
 
 export default function Principle() {
@@ -95,7 +107,7 @@ export default function Principle() {
   const [formOn, setFormOn] = useState(1);
   const [onSnack, setOnSnack] = useState(false);
 
-  const scriptUrl = "https://script.google.com/macros/s/AKfycbxwgJ0azliHSHbQy_mpnnotbkm0eoVS4rtZGLVMFETn-Yt8jp9SaOGAmY4IB4xs6QG2Xg/exec";
+  const scriptUrl = "https://script.google.com/macros/s/AKfycbx1-lYJGqjW-sxzj8syRo-E0xknHxQvkyuda6cvKzomAugpTnTcVWr1eupziAyLiKMqrg/exec";
 
   const determineParams = () => {
     if (GetScreenWidth <= 480) {
