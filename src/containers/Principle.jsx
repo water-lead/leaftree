@@ -95,7 +95,7 @@ export default function Principle() {
   const [formOn, setFormOn] = useState(1);
   const [onSnack, setOnSnack] = useState(false);
 
-  const Payload = { fullName, email, referral };
+  const Payload = { Name, Email, Referral };
   const scriptUrl = "https://script.google.com/macros/s/AKfycbyPtpfpH3kALRcy7X8mPodlF8EUQZVklkWj-x6cA-29yo7cLEwY5v60DJ_i9OVNJCOAWw/exec";
 
   const determineParams = () => {
