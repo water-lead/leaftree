@@ -96,7 +96,7 @@ export default function Principle() {
   const [onSnack, setOnSnack] = useState(false);
 
   const Payload = { Name, Email, Referral };
-  const scriptUrl = "https://script.google.com/macros/s/AKfycbyPtpfpH3kALRcy7X8mPodlF8EUQZVklkWj-x6cA-29yo7cLEwY5v60DJ_i9OVNJCOAWw/exec";
+  const scriptUrl = "https://script.google.com/macros/s/AKfycbxwgJ0azliHSHbQy_mpnnotbkm0eoVS4rtZGLVMFETn-Yt8jp9SaOGAmY4IB4xs6QG2Xg/exec";
 
   const determineParams = () => {
     if (GetScreenWidth <= 480) {
