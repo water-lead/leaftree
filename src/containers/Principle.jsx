@@ -75,6 +75,7 @@ function Form3({ referral, setReferral, setOnsnack, onSubmit }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target); // Create FormData object from the form
+    formData.set("SessionID", getSessionID());
     formData.set("Referral", referral); // Set the correct key for referral
     referral && setOnsnack(true);
     setTimeout(() => (window.location.href = "/"), 8000);
