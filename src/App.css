@@ -26,6 +26,7 @@ body {
       font-family: "Syncopate", sans-serif;
 }
 
+@media () {
 .menu {
       position: fixed;
       top: 0;
@@ -61,6 +62,15 @@ body {
 .menu-items-link:hover {
       text-decoration: underline;
 }
+}
+@media (min-width: 768px) {
+  .menu {
+    /* Increase font size and adjust padding for better visibility on desktops */
+    font-size: 20px;
+    padding: 15px 30px;
+  }
+}
+
 #HomescreeVideoContainer {
       position: relative;
       /* padding-bottom: -100.25em; */
