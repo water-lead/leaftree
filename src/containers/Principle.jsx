@@ -15,8 +15,6 @@ function determineSrc(type) {
   );
 }
 
-const scriptUrl = "https://script.google.com/macros/s/AKfycbwjQigVPHC0pSsE3aCZ8DRv-3aPhw9BI4UkspVseVrafwaZmoJ-5RX3YxjBCBZhuw3FVQ/exec";
-
 function Form1({fullName, setFullName, setFormTo}) {
   const handleInputChange = (e) => {
     setFullName(e.target.value);
@@ -71,7 +69,7 @@ function Form3({referral, setReferral, Payload}) {
     formData.append('email', Payload.email);
     formData.append('referral', referral);
     
-    fetch(scriptUrl, {
+    fetch("https://script.google.com/macros/s/AKfycbwjQigVPHC0pSsE3aCZ8DRv-3aPhw9BI4UkspVseVrafwaZmoJ-5RX3YxjBCBZhuw3FVQ/exec", {
       method: "POST",
       body: formData
     })
