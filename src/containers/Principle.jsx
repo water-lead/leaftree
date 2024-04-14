@@ -82,16 +82,16 @@ function Form3({referral, setReferral, Payload}) {
     /> 
     </form>
     <
-    const scriptUrl = "https://script.google.com/a/macros/waterdesigns.io/s/AKfycbxWuSPhgJ8uMKCjDPzQafAQADM2kNUR6pvUULGb9_acYdfvuVI6hnv62woohGAHogQ_1Q/exec"
-    const handleSubmit = (e) => {
+    const scriptUrl = "https://script.google.com/a/macros/waterdesigns.io/s/AKfycbxWuSPhgJ8uMKCjDPzQafAQADM2kNUR6pvUULGb9_acYdfvuVI6hnv62woohGAHogQ_1Q/exec">
+    <const handleSubmit = (e) => {
     e.preventDefault()>
     fetch(scriptUrl, { method: 'POST', body: new FormData(formRef.current) })
         .then(res => {
             console.log("SUCCESSFULLY SUBMITTED");
         })
         .catch(err => console.log(err));
-     }
-     /> : 
+     };
+     : 
      <input 
         type="text" 
         id="popup"
