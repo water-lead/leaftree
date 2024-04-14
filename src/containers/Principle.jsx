@@ -85,7 +85,7 @@ function Form3({ referral, setReferral, onSubmit, setOnsnack }) {
     </form>
   );
 
- return : 
+ return (
      <input 
         type="text" 
         id="popup"
@@ -95,7 +95,7 @@ function Form3({ referral, setReferral, onSubmit, setOnsnack }) {
         className="form-input form-input-new" 
         placeholder="Your information has been submitted." 
     />
-   }
+   )};
 }
 
 export default function Principle() {
