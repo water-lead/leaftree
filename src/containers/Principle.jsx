@@ -85,7 +85,8 @@ function Form3({ referral, setReferral, setOnsnack, onSubmit }) {
         onChange={(e) => handleInputChange(e)}
       />
     </form>
-    return(
+    )
+    return (
      <input 
         type="text" 
         id="popup"
