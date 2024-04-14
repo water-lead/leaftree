@@ -1,18 +1,18 @@
-import Nav from "../component/Nav.jsx"
-import MobileSrc from "../assets/WhatsApp Video 2024-04-11 at 20.45.02 (1).mp4"
-import WideSrc from "../assets/WidescreenOP.mp4"
-import MinSrc from "../assets/WhatsApp Video 2024-04-11 at 20.45.02 (2).mp4"
-import "../App.css"
+import Nav from "../component/Nav.jsx";
+import MobileSrc from "../assets/WhatsApp Video 2024-04-11 at 20.45.02 (1).mp4";
+import WideSrc from "../assets/WidescreenOP.mp4";
+import MinSrc from "../assets/WhatsApp Video 2024-04-11 at 20.45.02 (2).mp4";
+import "../App.css";
 import { useState } from "react";
 import validator from "validator";
 
 function determineSrc(type) {
- return (
- type === "w" ? WideSrc :
- type === "l" ? MinSrc : 
- type = "m" ? MobileSrc :
- ""
- )
+  return (
+    type === "w" ? WideSrc :
+    type === "l" ? MinSrc : 
+    type === "m" ? MobileSrc :
+    ""
+  );
 }
 
 function Form1({ fullName, setFullName, setFormTo, onSubmit }) {
@@ -22,7 +22,10 @@ function Form1({ fullName, setFullName, setFormTo, onSubmit }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fullName ? setFormTo(2) : "";
+    const formData = new FormData(event.target); // Create FormData object from the form
+    formData.set("Name", fullName); // Set the correct key for fullName
+    onSubmit(formData); // Pass form data to onSubmit function
+    fullName && setFormTo(2);
   };
 
   return (
@@ -45,7 +48,10 @@ function Form2({ email, setEmail, setFormTo, onSubmit }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    validator.isEmail(email) ? setFormTo(3) : "";
+    const formData = new FormData(event.target); // Create FormData object from the form
+    formData.set("Email", email); // Set the correct key for email
+    validator.isEmail(email) && setFormTo(3);
+    onSubmit(formData); // Pass form data to onSubmit function
   };
 
   return (
@@ -61,16 +67,18 @@ function Form2({ email, setEmail, setFormTo, onSubmit }) {
   );
 }
 
-function Form3({ referral, setReferral, onSubmit, setOnsnack }) {
+function Form3({ referral, setReferral, setOnsnack, onSubmit }) {
   const handleInputChange = (e) => {
     setReferral(e.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    referral ? console.log(onSubmit) : "";
-    setOnsnack(true);
+    const formData = new FormData(event.target); // Create FormData object from the form
+    formData.set("Referral", referral); // Set the correct key for referral
+    referral && setOnsnack(true);
     setTimeout(() => (window.location.href = "/"), 8000);
+    onSubmit(formData); // Pass form data to onSubmit function
   };
 
   return (
@@ -96,6 +104,7 @@ function Form3({ referral, setReferral, onSubmit, setOnsnack }) {
         placeholder="Your information has been submitted." 
     />
    )};
+}
 
 export default function Principle() {
   const GetScreenWidth = window.innerWidth;
