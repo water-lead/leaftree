@@ -99,6 +99,7 @@ function Form3({ referral, setReferral, setOnsnack, onSubmit }) {
         className="form-input form-input-new" 
         placeholder="Your information has been submitted." 
     />
+      }
     )
           }
 
