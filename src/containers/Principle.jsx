@@ -65,9 +65,9 @@ function Form3({referral, setReferral, Payload}) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData();
-    formData.append('fullName', Payload.fullName);
-    formData.append('email', Payload.email);
-    formData.append('referral', referral);
+    formData.append('Name', Payload.fullName);
+    formData.append('Email', Payload.email);
+    formData.append('Referral', referral);
     
     fetch("https://script.google.com/macros/s/AKfycbwjQigVPHC0pSsE3aCZ8DRv-3aPhw9BI4UkspVseVrafwaZmoJ-5RX3YxjBCBZhuw3FVQ/exec", {
       method: "POST",
