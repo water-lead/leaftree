@@ -138,10 +138,12 @@ export default function Principle() {
   const handleFormSubmit = (formData) => {
     handleSubmit(formData);
     setOnForm(false); // Close the form after submission if needed
+    setFormOn(formOn + 1); // Move to the next form
   };
 
   return (
     <>
+      <Nav /> {/* Render the Nav component */}
       <div
         id="openBtnCont"
         style={{
