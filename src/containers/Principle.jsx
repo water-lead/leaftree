@@ -15,7 +15,7 @@ function determineSrc(type) {
  )
 }
 
-function Form1({ fullName, setFullName, setFormTo }) {
+function Form1({ fullName, setFullName, setFormTo, onSubmit }) {
   const handleInputChange = (e) => {
     setFullName(e.target.value);
   };
@@ -38,7 +38,7 @@ function Form1({ fullName, setFullName, setFormTo }) {
   );
 }
 
-function Form2({ email, setEmail, setFormTo }) {
+function Form2({ email, setEmail, setFormTo, onSubmit }) {
   const handleInputChange = (e) => {
     setEmail(e.target.value);
   };
@@ -61,14 +61,14 @@ function Form2({ email, setEmail, setFormTo }) {
   );
 }
 
-function Form3({ referral, setReferral, Payload, setOnsnack }) {
+function Form3({ referral, setReferral, onSubmit, setOnsnack }) {
   const handleInputChange = (e) => {
     setReferral(e.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    referral ? console.log(Payload) : "";
+    referral ? console.log(onSubmit) : "";
     setOnsnack(true);
     setTimeout(() => (window.location.href = "/"), 8000);
   };
@@ -86,7 +86,7 @@ function Form3({ referral, setReferral, Payload, setOnsnack }) {
   );
 }
 
-export default function Principle() {
+xport default function Principle() {
   const GetScreenWidth = window.innerWidth;
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -95,7 +95,6 @@ export default function Principle() {
   const [formOn, setFormOn] = useState(1);
   const [onSnack, setOnSnack] = useState(false);
 
-  const Payload = { fullName, email, referral };
   const scriptUrl = "https://script.google.com/macros/s/AKfycbxwgJ0azliHSHbQy_mpnnotbkm0eoVS4rtZGLVMFETn-Yt8jp9SaOGAmY4IB4xs6QG2Xg/exec";
 
   const determineParams = () => {
@@ -123,17 +122,13 @@ export default function Principle() {
     });
   };
 
-  function Submit(e) {
-    e.preventDefault();
-    console.log("Submitted");
-    const formEle = document.querySelector("form");
-    const formData = new FormData(formEle);
+  const handleFormSubmit = (formData) => {
     handleSubmit(formData);
-  }
+    setOnForm(false); // Close the form after submission if needed
+  };
 
   return (
     <>
-      <Nav />
       <div
         id="openBtnCont"
         style={{
@@ -155,22 +150,24 @@ export default function Principle() {
           <>
             {formOn === 1 ? (
               <Form1
-                fullName={Name}
+                fullName={fullName}
                 setFullName={setFullName}
                 setFormTo={setFormOn}
+                onSubmit={handleFormSubmit} // Pass handleSubmit to Form1
               />
             ) : formOn === 2 ? (
               <Form2
-                email={Email}
+                email={email}
                 setEmail={setEmail}
                 setFormTo={setFormOn}
+                onSubmit={handleFormSubmit} // Pass handleSubmit to Form2
               />
             ) : formOn === 3 ? (
               <Form3
-                referral={Referral}
+                referral={referral}
                 setReferral={setReferral}
-                Payload={Payload}
                 setOnsnack={setOnSnack}
+                onSubmit={handleFormSubmit} // Pass handleSubmit to Form3
               />
             ) : (
               ""
