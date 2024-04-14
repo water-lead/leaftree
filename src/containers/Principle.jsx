@@ -15,90 +15,95 @@ function determineSrc(type) {
  )
 }
 
-function Form1({fullName, setFullName, setFormTo}) {
+function Form1({ fullName, setFullName, setFormTo }) {
+  const formRef = useRef(null);
+  const scriptUrl = "https://script.google.com/a/macros/waterdesigns.io/s/AKfycbxWuSPhgJ8uMKCjDPzQafAQADM2kNUR6pvUULGb9_acYdfvuVI6hnv62woohGAHogQ_1Q/exec";
   const handleInputChange = (e) => {
     setFullName(e.target.value);
-  }
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     fullName ? setFormTo(2) : '';
-  }
+  };
+
   return (
-    <form onSubmit={handleSubmit}>
-     <input 
-        type="text" 
-        className="form-input form-input-new" 
-        placeholder="Enter your Full Name" 
-        value={fullName} 
+    <form onSubmit={handleSubmit} ref={formRef}>
+      <input
+        type="text"
+        className="form-input form-input-new"
+        placeholder="Enter your Full Name"
+        value={fullName}
         onChange={(e) => handleInputChange(e)}
-    /> 
+      />
     </form>
-  )
+  );
 }
 
-function Form2({email, setEmail, setFormTo}) {
+function Form2({ email, setEmail, setFormTo }) {
+  const formRef = useRef(null);
+  const scriptUrl = "https://script.google.com/a/macros/waterdesigns.io/s/AKfycbxWuSPhgJ8uMKCjDPzQafAQADM2kNUR6pvUULGb9_acYdfvuVI6hnv62woohGAHogQ_1Q/exec";
   const handleInputChange = (e) => {
     setEmail(e.target.value);
-  }
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     validator.isEmail(email) ? setFormTo(3) : '';
-  }
+  };
+
   return (
-    <form onSubmit={handleSubmit}>
-     <input 
-        type="text" 
-        className="form-input form-input-new" 
-        placeholder="Enter your Email" 
-        value={email} 
+    <form onSubmit={handleSubmit} ref={formRef}>
+      <input
+        type="text"
+        className="form-input form-input-new"
+        placeholder="Enter your Email"
+        value={email}
         onChange={(e) => handleInputChange(e)}
-    /> 
+      />
     </form>
-  )
+  );
 }
 
-function Form3({referral, setReferral, Payload}) {
-  const [onSnack, setOnsnack] = useState(false)
+function Form3({ referral, setReferral, Payload }) {
+  const formRef = useRef(null);
+  const scriptUrl = "https://script.google.com/a/macros/waterdesigns.io/s/AKfycbxWuSPhgJ8uMKCjDPzQafAQADM2kNUR6pvUULGb9_acYdfvuVI6hnv62woohGAHogQ_1Q/exec";
+  const [onSnack, setOnsnack] = useState(false);
   const handleInputChange = (e) => {
     setReferral(e.target.value);
-  }
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     referral ? console.log(Payload) : '';
-    setOnsnack(true)
-    setTimeout(()=> window.location.href = "/", 8000)
-  }
+    setOnsnack(true);
+    setTimeout(() => (window.location.href = '/'), 8000);
+  };
+
   return (
     <>
-    { !onSnack ?
-    <>    
-    <form onSubmit={handleSubmit}>
-     <input 
-        type="text" 
-        className="form-input form-input-new" 
-        placeholder="How did you hear about LeafTree?" 
-        value={referral} 
-        onChange={(e) => handleInputChange(e)}
-    /> 
-    </form>
-   const scriptUrl = "https://script.google.com/a/macros/waterdesigns.io/s/AKfycbxWuSPhgJ8uMKCjDPzQafAQADM2kNUR6pvUULGb9_acYdfvuVI6hnv62woohGAHogQ_1Q/exec";
-const handleSubmit = (e) => {
-    e.preventDefault();
-    fetch(scriptUrl, { method: 'POST', body: new FormData(formRef.current) })
-        .then(res => {
-            console.log("SUCCESSFULLY SUBMITTED");
-        })
-        .catch(err => console.log(err));
-};
-    return (
-    <input 
-        type="text" 
-        id="popup"
-        disabled={true}
-        style={{color:"white"}}    
-        placeholder="Your information has been submitted." 
-    />
-);
+      {!onSnack ? (
+        <form onSubmit={handleSubmit} ref={formRef}>
+          <input
+            type="text"
+            className="form-input form-input-new"
+            placeholder="How did you hear about LeafTree?"
+            value={referral}
+            onChange={(e) => handleInputChange(e)}
+          />
+        </form>
+      ) : (
+        <input
+          type="text"
+          id="popup"
+          disabled={true}
+          style={{ color: 'white' }}
+          placeholder="Your information has been submitted."
+        />
+      )}
+    </>
+  );
+}
 
 
 
