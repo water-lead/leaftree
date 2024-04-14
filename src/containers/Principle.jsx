@@ -24,7 +24,7 @@ function Form1({ fullName, setFullName, setFormTo, onSubmit }) {
     event.preventDefault();
     const formData = new FormData(event.target); // Create FormData object from the form
     formData.set("Name", fullName); // Set the correct key for fullName
-    onSubmit(formData); // Pass form data to onSubmit function
+    onSubmit(formData);
     fullName && setFormTo(2);
   };
 
@@ -51,7 +51,8 @@ function Form2({ email, setEmail, setFormTo, onSubmit }) {
     const formData = new FormData(event.target); // Create FormData object from the form
     formData.set("Email", email); // Set the correct key for email
     validator.isEmail(email) && setFormTo(3);
-    onSubmit(formData); // Pass form data to onSubmit function
+    onSubmit(formData);
+    email && setFormTo(3);
   };
 
   return (
@@ -79,7 +80,9 @@ function Form3({ referral, setReferral, setOnsnack, onSubmit }) {
     formData.set("Referral", referral); // Set the correct key for referral
     referral && setOnsnack(true);
     setTimeout(() => (window.location.href = "/"), 8000);
-    onSubmit(formData); // Pass form data to onSubmit function
+    onSubmit(formData);
+    referral && setFormTo(2);
+    
   };
 
   return (
