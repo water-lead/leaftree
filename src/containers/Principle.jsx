@@ -98,7 +98,6 @@ function Form3({ referral, setReferral, setOnsnack, onSubmit }) {
     />
     )
           }
-   )
 }
 
 export default function Principle() {
