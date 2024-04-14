@@ -15,8 +15,6 @@ function determineSrc(type) {
  )
 }
 
-const scriptUrl = "https://script.google.com/macros/s/AKfycbyPtpfpH3kALRcy7X8mPodlF8EUQZVklkWj-x6cA-29yo7cLEwY5v60DJ_i9OVNJCOAWw/exec";
-
 function Form1({ fullName, setFullName, setFormTo }) {
   const handleInputChange = (e) => {
     setFullName(e.target.value);
@@ -89,6 +87,15 @@ function Form3({ referral, setReferral, Payload, setOnsnack }) {
 }
 
 export default function Principle() {
+ function Submit(e){
+  const formEle = document.querySelector("form")
+  e.preventDefault()
+  console.log("Submitted")
+  const formData = new formData(formEle)
+  fetch("https://script.google.com/macros/s/AKfycbyPtpfpH3kALRcy7X8mPodlF8EUQZVklkWj-x6cA-29yo7cLEwY5v60DJ_i9OVNJCOAWw/exec")
+  method: "POST",
+  body: formData
+ }
   const GetScreenWidth = window.innerWidth;
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
