@@ -88,7 +88,6 @@ function Form3({ referral, setReferral, setOnsnack, onSubmit }) {
         onChange={(e) => handleInputChange(e)}
       />
     </form>
-    )
     return (
      <input 
         type="text" 
@@ -99,6 +98,7 @@ function Form3({ referral, setReferral, setOnsnack, onSubmit }) {
         className="form-input form-input-new" 
         placeholder="Your information has been submitted." 
     />
+      )
       }
     )
           }
