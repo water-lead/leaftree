@@ -85,7 +85,6 @@ function Form3({ referral, setReferral, setOnsnack, onSubmit }) {
         onChange={(e) => handleInputChange(e)}
       />
     </form>
-    </>
      <input 
         type="text" 
         id="popup"
@@ -96,7 +95,6 @@ function Form3({ referral, setReferral, setOnsnack, onSubmit }) {
         placeholder="Your information has been submitted." 
     />
           }
-          </>
    )
 }
 
