@@ -95,7 +95,7 @@ export default function Principle() {
   const [formOn, setFormOn] = useState(1);
   const [onSnack, setOnSnack] = useState(false);
 
-  const Payload = { Name, Email, Referral };
+  const Payload = { fullName, email, referral };
   const scriptUrl = "https://script.google.com/macros/s/AKfycbxwgJ0azliHSHbQy_mpnnotbkm0eoVS4rtZGLVMFETn-Yt8jp9SaOGAmY4IB4xs6QG2Xg/exec";
 
   const determineParams = () => {
@@ -155,19 +155,19 @@ export default function Principle() {
           <>
             {formOn === 1 ? (
               <Form1
-                fullName={fullName}
+                fullName={Name}
                 setFullName={setFullName}
                 setFormTo={setFormOn}
               />
             ) : formOn === 2 ? (
               <Form2
-                email={email}
+                email={Email}
                 setEmail={setEmail}
                 setFormTo={setFormOn}
               />
             ) : formOn === 3 ? (
               <Form3
-                referral={referral}
+                referral={Referral}
                 setReferral={setReferral}
                 Payload={Payload}
                 setOnsnack={setOnSnack}
