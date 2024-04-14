@@ -19,16 +19,14 @@ function determineSrc(type) {
 function Form1({ fullName, setFullName, setFormTo, onSubmit }) {
   const handleInputChange = (e) => {
     setFullName(e.target.value);
-  };
-
+  }
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target); // Create FormData object from the form
     formData.set("Name", fullName); // Set the correct key for fullName
     onSubmit(formData);
     fullName && setFormTo(2);
-  };
-
+  }
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -39,23 +37,19 @@ function Form1({ fullName, setFullName, setFormTo, onSubmit }) {
         onChange={(e) => handleInputChange(e)}
       />
     </form>
-  );
+  )
 }
 
 function Form2({ email, setEmail, setFormTo, onSubmit }) {
   const handleInputChange = (e) => {
     setEmail(e.target.value);
-  };
-
+  }
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target); // Create FormData object from the form
     formData.set("Email", email); // Set the correct key for email
     validator.isEmail(email) && setFormTo(3);
-    onSubmit(formData);
-    email && setFormTo(3);
-  };
-
+  }
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -66,14 +60,13 @@ function Form2({ email, setEmail, setFormTo, onSubmit }) {
         onChange={(e) => handleInputChange(e)}
       />
     </form>
-  );
+  )
 }
 
 function Form3({ referral, setReferral, setOnsnack, onSubmit }) {
   const handleInputChange = (e) => {
     setReferral(e.target.value);
-  };
-
+  }
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target); // Create FormData object from the form
@@ -81,11 +74,7 @@ function Form3({ referral, setReferral, setOnsnack, onSubmit }) {
     formData.set("Referral", referral); // Set the correct key for referral
     referral && setOnsnack(true);
     setTimeout(() => (window.location.href = "/"), 8000);
-    onSubmit(formData);
-    referral && setFormTo(2);
-    
-  };
-
+  }
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -96,9 +85,7 @@ function Form3({ referral, setReferral, setOnsnack, onSubmit }) {
         onChange={(e) => handleInputChange(e)}
       />
     </form>
-  );
-
- return (
+    </>
      <input 
         type="text" 
         id="popup"
@@ -108,7 +95,10 @@ function Form3({ referral, setReferral, setOnsnack, onSubmit }) {
         className="form-input form-input-new" 
         placeholder="Your information has been submitted." 
     />
-   )};
+          }
+          </>
+   )
+}
 
 export default function Principle() {
   const GetScreenWidth = window.innerWidth;
