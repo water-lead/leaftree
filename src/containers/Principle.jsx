@@ -104,7 +104,7 @@ function Form3({ referral, setReferral, setOnsnack, onSubmit }) {
           }
 
 export default function Principle() {
-  function GetScreenWidth = window.innerWidth;
+  function GetScreenWidth(window.innerWidth);
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [referral, setReferral] = useState("");
