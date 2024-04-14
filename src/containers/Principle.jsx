@@ -86,7 +86,7 @@ function Form3({ referral, setReferral, onSubmit, setOnsnack }) {
   );
 }
 
-xport default function Principle() {
+export default function Principle() {
   const GetScreenWidth = window.innerWidth;
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
