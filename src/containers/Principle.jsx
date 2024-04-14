@@ -87,16 +87,6 @@ function Form3({ referral, setReferral, Payload, setOnsnack }) {
 }
 
 export default function Principle() {
- function Submit(e){
-  const formEle = document.querySelector("form")
-  e.preventDefault()
-  console.log("Submitted")
-  const formData = new formData(formEle)
-  fetch("https://script.google.com/macros/s/AKfycbyPtpfpH3kALRcy7X8mPodlF8EUQZVklkWj-x6cA-29yo7cLEwY5v60DJ_i9OVNJCOAWw/exec", {
-    method: "POST",
-    body: formData
-  })
- }
   const GetScreenWidth = window.innerWidth;
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -106,6 +96,7 @@ export default function Principle() {
   const [onSnack, setOnSnack] = useState(false);
 
   const Payload = { fullName, email, referral };
+  const scriptUrl = "https://script.google.com/macros/s/AKfycbyPtpfpH3kALRcy7X8mPodlF8EUQZVklkWj-x6cA-29yo7cLEwY5v60DJ_i9OVNJCOAWw/exec";
 
   const determineParams = () => {
     if (GetScreenWidth <= 480) {
@@ -116,6 +107,29 @@ export default function Principle() {
       return "w";
     }
   };
+
+  const handleSubmit = (formData) => {
+    fetch(scriptUrl, {
+      method: "POST",
+      body: formData
+    })
+    .then(response => {
+      // Handle success
+      console.log("Form data submitted successfully:", response);
+    })
+    .catch(error => {
+      // Handle error
+      console.error("Error submitting form data:", error);
+    });
+  };
+
+  function Submit(e) {
+    e.preventDefault();
+    console.log("Submitted");
+    const formEle = document.querySelector("form");
+    const formData = new FormData(formEle);
+    handleSubmit(formData);
+  }
 
   return (
     <>
@@ -144,14 +158,12 @@ export default function Principle() {
                 fullName={fullName}
                 setFullName={setFullName}
                 setFormTo={setFormOn}
-                scriptUrl={scriptUrl}
               />
             ) : formOn === 2 ? (
               <Form2
                 email={email}
                 setEmail={setEmail}
                 setFormTo={setFormOn}
-                scriptUrl={scriptUrl}
               />
             ) : formOn === 3 ? (
               <Form3
@@ -159,7 +171,6 @@ export default function Principle() {
                 setReferral={setReferral}
                 Payload={Payload}
                 setOnsnack={setOnSnack}
-                scriptUrl={scriptUrl}
               />
             ) : (
               ""
