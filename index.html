@@ -1,60 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeafTree</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="tailwind.config.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
-
-    <style type="text/tailwindcss">
-    @layer utilities {
-      .content-auto {
-        content-visibility: auto;
-      }
-    }
-  </style>
-</head>
-    
-<body class="font-syncopate bg-white overflow-hidden">
-    <div class="lg:content-auto">
-    <!-- Background Video -->
-    <div class="desktop-background-video hidden sm:block lg:block">
-        <video id="desktop-v" autoplay muted loop>
-            <source src="WidescreenLT.mp4" type="video/mp4">
-        </video>
-        </div>
-        <!--div class="laptop-background-video hidden 2xl:block sm:block">
-        <video id="laptop-v" autoplay muted loop>
-            <source src="LaptopLT.mp4" type="video/mp4">
-        </video>
-            </div>
-            <div class="tablet-background-video hidden lg: block sm:block">
-        <video id="tablet-v" autoplay muted loop>
-            <source src="TabletLT.mp4" type="video/mp4">
-        </video>
-    </div-->
-                <div class="mobile-background-video block sm:hidden">
-        <video id="mobile-v" autoplay muted loop>
-            <source src="MobileLT.mp4" type="video/mp4">
-        </video>
-    </div>
-        </div>
-    
-    <!-- Navigation Menu -->
-<nav class="menu flex flex-row items-center justify-right gap-5">
-     <li><a href="index.html" class="logo"><img src="Logo.gif" alt="Logo"></a><li>
-    <ul class="menu-items">
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="principles.html">Our Principles</a></li>
-    </ul>
-</nav>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaftree</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
