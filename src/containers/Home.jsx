@@ -41,7 +41,6 @@ export default function Home() {
   
   return (
     <>
-      <Nav />
       {GetScreenWidth <= 480 && <div id="blur">
         <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
       </div>}
@@ -61,7 +60,6 @@ export default function Home() {
           <Link to="/how-we-invest">How We Invest</Link>
           {/* Add more menu items as needed */}
         </div>
-      )}
-      
+      )} 
   );
 }
