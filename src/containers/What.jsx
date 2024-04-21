@@ -1,10 +1,10 @@
 import Nav from "../component/Nav.jsx";
-import WideSrc from "../assets/WidescreenOP.png";
+import wideSrceen from "../assets/WidescreenOP.png";
 // Import other image sources if needed
 import "../App.css";
 import { useState } from "react";
 
-export default function Principle() {
+export default function What() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const determineParams = () => {
@@ -18,7 +18,7 @@ export default function Principle() {
   };
 
   const determineSrc = (type) => {
-    return type === "w" ? WideSrc : "";
+    return type === "w" ? wideSrceen : "";
     // Add other sources if needed
   };
 
