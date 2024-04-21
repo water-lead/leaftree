@@ -178,9 +178,21 @@ export default function How() {
         <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
       </div>}
       <div id="HowscreenVideoContainer">
-        <video autoPlay muted id="background-video" playsInline>
-          <source src={determineSrc(determineParams())} type="video/mp4" />
-        </video>
+        <video
+  autoPlay
+  muted
+  style={{
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+  }}
+>
+  <source src={wideSrceenSrc} type="video/mp4" />
+</video>
+
 
         <Link to="/what-we-believe" className="navigation-arrow">
           <NextScreen />
