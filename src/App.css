@@ -28,7 +28,7 @@ body {
 
 .menu {
       position: fixed;
-      top: 0;
+      top: 10;
       left: 0;
       right: 0;
       width: 100%;
@@ -40,7 +40,7 @@ body {
       z-index: 1;
 }
 .logo {
-      width: 100px;
+      width: 150px;
       background-color: transparent;
 }
 .menu-items {
@@ -57,6 +57,7 @@ body {
       font-weight: bold;
       font-size: 16px;
       font-family: "bold";
+      width: 150vw;
 }
 .menu-items-link:hover {
       text-decoration: underline;
