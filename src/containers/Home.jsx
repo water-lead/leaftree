@@ -59,9 +59,9 @@ export default function Home() {
       {/* Render your menu items based on isMenuCollapsed */}
       {isMenuCollapsed && (
         <div className="menu-items">
-          <Link to="/how-we-invest">How</Link>
-          <Link to="/what-we-believe">What</Link>
-          <Link to="/who-we-are">Who</Link>
+          <Link to="/how we invest">How</Link>
+          <Link to="/what we believe">What</Link>
+          <Link to="/who we are">Who</Link>
           <Link to="/jobs">Jobs</Link>
         </div>
       )}
