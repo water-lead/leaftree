@@ -182,7 +182,7 @@ export default function How() {
         <source src={determineSrc(determineParams())} type="video/mp4" />
       </video>
 
-        <Link to="/what we believe" className="navigation-arrow">
+        <Link to="/what-we-believe" className="navigation-arrow">
         <NextScreen />
       </Link>
     </>
