@@ -4,7 +4,7 @@ import widescreenSrc from "../assets/WidescreenLT.mp4"
 //import TabletscreenSrc from "../assets/TabletLT.mp4"
 //import LaptopscreenSrc from "../assets/LaptopLT.mp4"
 //import MobilescreenSrc from "../assets/MobileLT.mp4"
-import { MdKeyboardArrowRight } from 'react-icons/md';
+import NextScreen from '../assets/icons8-move-right-100.png';
 import "../App.css"
  
 function determineSrc(type) {
@@ -45,7 +45,7 @@ export default function Home() {
       </video>
 
   <Link to="/how we invest" className="navigation-arrow">
-        <MdKeyboardArrowRight />
+        <NextScreen />
       </Link>
     </>
   );
