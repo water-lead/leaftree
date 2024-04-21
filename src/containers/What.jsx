@@ -19,9 +19,13 @@ function determineSrc(type) {
         <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
       </div>}
       <div id="HomescreenBackgroundContainer">
-        <img id="HomescreenBackground">
-          <source src={determineSrc(determineParams())} type="v=img/png" />
-        </img>
+        <picture>
+          <img
+            id="HomescreenBackground"
+            src={determineSrc(determineParams())}
+            alt="Background"
+          />
+        </picture>
       </div> 
     </>
   )
