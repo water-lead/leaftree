@@ -15,7 +15,7 @@ function determineSrc(type) {
   )
 }
 
-export default function Home() {
+export default function How() {
   const GetScreenWidth = window.innerWidth;
 
   const determineParams = () => {
@@ -177,8 +177,8 @@ export default function Home() {
       {GetScreenWidth <= 480 && <div id="blur">
         <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
       </div>}
-      <div id="HomescreenVideoContainer">
-        <video id="HomescreenVideo" autoPlay muted loop>
+      <div id="#HowscreenVideoContainer">
+        <video id="#Howscreen" autoPlay muted>
           <source src={determineSrc(determineParams())} type="video/mp4" />
         </video>
       </div> 
