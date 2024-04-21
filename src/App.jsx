@@ -11,9 +11,9 @@ function App() {
     <>
       <Routes>
        <Route exact path="/" element={<Home />} />
-       <Route exact path="/how we invest" element={<How />} />
-       <Route exact path="/what we believe" element={<What />} />
-       <Route exact path="/who we are" element={<Who />} />
+       <Route exact path="/how-we-invest" element={<How />} />
+       <Route exact path="/what-we-believe" element={<What />} />
+       <Route exact path="/who-we-are" element={<Who />} />
        <Route exact path="/jobs" element={<Jobs />} />
       </Routes>
     </>
