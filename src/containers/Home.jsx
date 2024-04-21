@@ -1,9 +1,9 @@
 // import { useEffect, useState } from "react"
 import Nav from "../component/Nav.jsx"
 import widescreenSrc from "../assets/WidescreenLT.mp4"
-import TabletscreenSrc from "../assets/TabletLT.mp4"
-import LaptopscreenSrc from "../assets/LaptopLT.mp4"
-import MobilescreenSrc from "../assets/MobileLT.mp4"
+//import TabletscreenSrc from "../assets/TabletLT.mp4"
+//import LaptopscreenSrc from "../assets/LaptopLT.mp4"
+//import MobilescreenSrc from "../assets/MobileLT.mp4"
 import "../App.css"
  
 function determineSrc(type) {
