@@ -1,9 +1,9 @@
 import Nav from "../component/Nav.jsx";
 import wideSrceenSrc from "../assets/WidescreenHOW.mp4"; // Update the path
-// import MinSrc from "../assets/WhatsApp Video 2024-04-11 at 20.45.02 (2).mp4";
 import "../App.css";
 import { useState } from "react";
 import validator from "validator";
+import { Link } from "react-router-dom";
 
 function determineSrc(type) {
   return (
@@ -177,16 +177,15 @@ export default function How() {
       {GetScreenWidth <= 480 && <div id="blur">
         <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
       </div>}
-      <div id="#HowscreenVideoContainer">
+      <div id="HowscreenVideoContainer">
         <video autoPlay muted id="background-video" playsInline>
-        <source src={determineSrc(determineParams())} type="video/mp4" />
-      </video>
+          <source src={determineSrc(determineParams())} type="video/mp4" />
+        </video>
 
         <Link to="/what-we-believe" className="navigation-arrow">
-        <NextScreen />
-      </Link>
-    </>
+          <NextScreen />
+        </Link>
       </div> 
-    </>
+    <>
   )
 }
