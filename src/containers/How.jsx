@@ -1,21 +1,21 @@
 import Nav from "../component/Nav.jsx";
-//import MobileSrc from "../assets/WhatsApp Video 2024-04-11 at 20.45.02 (1).mp4";
-import WideSrc from "../assets/WidescreenHOW.mp4";
-//import MinSrc from "../assets/WhatsApp Video 2024-04-11 at 20.45.02 (2).mp4";
+import WideSrc from "../assets/WidescreenHOW.mp4"; // Update the path
+// import MinSrc from "../assets/WhatsApp Video 2024-04-11 at 20.45.02 (2).mp4";
 import "../App.css";
 import { useState } from "react";
 import validator from "validator";
 
 function determineSrc(type) {
-  return (
-    type === "w" ? WideSrc :
-    type === "l" ? MinSrc : 
-    type === "m" ? MobileSrc :
-    ""
-  );
+  switch (type) {
+    case "w":
+      return WideSrc;
+    // Add case for other types if needed
+    default:
+      return "";
+  }
 }
 
-function Form1({fullName, setFullName, setFormTo}) {
+function Form1({ fullName, setFullName, setFormTo }) {
   const handleInputChange = (e) => {
     setFullName(e.target.value);
   }
@@ -36,7 +36,7 @@ function Form1({fullName, setFullName, setFormTo}) {
   )
 }
 
-function Form2({email, setEmail, setFormTo}) {
+function Form2({ email, setEmail, setFormTo }) {
   const handleInputChange = (e) => {
     setEmail(e.target.value);
   }
@@ -57,7 +57,7 @@ function Form2({email, setEmail, setFormTo}) {
   )
 }
 
-function Form3({referral, setReferral, Payload}) {
+function Form3({ referral, setReferral, Payload }) {
   const [onSnack, setOnsnack] = useState(false)
   const handleInputChange = (e) => {
     setReferral(e.target.value);
@@ -175,8 +175,8 @@ export default function Principle() {
         <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
       </div>}
       <div id="HomescreenVideoContainer">
-        <video id="HomescreenVideo"muted autoplay>
-          <source src={determineSrc(determineParams())} type="v=video/mp4" />
+        <video id="HomescreenVideo" muted autoPlay loop>
+          <source src={determineSrc(determineParams())} type="video/mp4" />
         </video>
       </div> 
     </>
