@@ -1,7 +1,7 @@
 import Nav from "../component/Nav.jsx";
-import MobileSrc from "../assets/WhatsApp Video 2024-04-11 at 20.45.02 (1).mp4";
-import WideSrc from "../assets/WidescreenOP.mp4";
-import MinSrc from "../assets/WhatsApp Video 2024-04-11 at 20.45.02 (2).mp4";
+//import MobileSrc from "../assets/WhatsApp Video 2024-04-11 at 20.45.02 (1).mp4";
+import WideSrc from "../assets/WidescreenOP.png";
+//import MinSrc from "../assets/WhatsApp Video 2024-04-11 at 20.45.02 (2).mp4";
 import "../App.css";
 import { useState } from "react";
 import validator from "validator";
@@ -174,10 +174,10 @@ export default function Principle() {
       {GetScreenWidth <= 480 && <div id="blur">
         <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
       </div>}
-      <div id="HomescreeVideoContainer">
-        <video id="HomescreenVideo" autoPlay muted loop>
-          <source src={determineSrc(determineParams())} type="video/mp4" />
-        </video>
+      <div id="HomescreenBackgroundContainer">
+        <img id="HomescreenBackground">
+          <source src={determineSrc(determineParams())} type="v=img/png" />
+        </img>
       </div> 
     </>
   )
