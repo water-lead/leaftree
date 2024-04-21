@@ -39,27 +39,29 @@ export default function Home() {
     setIsMenuCollapsed(!isMenuCollapsed);
   };
   
-  return (
-    <>
-      {GetScreenWidth <= 480 && <div id="blur">
+return (
+  <>
+    {GetScreenWidth <= 480 && (
+      <div id="blur">
         <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
-      </div>}
-      <video autoPlay muted id="background-video" playsInline>
-        <source src={determineSrc(determineParams())} type="video/mp4" />
-      </video>
+      </div>
+    )}
+    <video autoPlay muted id="background-video" playsInline>
+      <source src={determineSrc(determineParams())} type="video/mp4" />
+    </video>
 
-  {/* Toggle menu icon */}
-      <button onClick={toggleMenu} className="navigation-arrow">
-        <img src={NextScreen} alt="Next" />
-      </button>
+    {/* Toggle menu icon */}
+    <button onClick={toggleMenu} className="navigation-arrow">
+      <img src={NextScreen} alt="Next" />
+    </button>
 
-      {/* Render your menu items based on isMenuCollapsed */}
-      {isMenuCollapsed && (
-        <div className="menu-items">
-          {/* Your menu items go here */}
-          <Link to="/how-we-invest">How We Invest</Link>
-          {/* Add more menu items as needed */}
-        </div>
-      )} 
-  );
-}
+    {/* Render your menu items based on isMenuCollapsed */}
+    {isMenuCollapsed && (
+      <div className="menu-items">
+        {/* Your menu items go here */}
+        <Link to="/how-we-invest">How We Invest</Link>
+        {/* Add more menu items as needed */}
+      </div>
+    )}
+  </>
+);
