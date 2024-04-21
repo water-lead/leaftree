@@ -6,132 +6,130 @@ import { useState } from "react";
 import validator from "validator";
 
 function determineSrc(type) {
- return (
- type === "w" ? widescreenSrc :
- type === "t" ? TabletscreenSrc :
- type === "l" ? LaptopscreenSrc : 
- type = "m" ? MobilescreenSrc :
- ""
- )
+  return (
+    type === "w" ? WideSrc :
+    type === "t" ? TabletscreenSrc :
+    type === "l" ? LaptopscreenSrc : 
+    type === "m" ? MobilescreenSrc :
+    ""
+  )
 }
 
 export default function Home() {
   const GetScreenWidth = window.innerWidth;
 
-  const determineParams = ()=> {
+  const determineParams = () => {
     if (GetScreenWidth <= 480) {
-       return "m"
+      return "m"
     } else if (GetScreenWidth <= 768) {
-       return "t"
+      return "t"
     } else if (GetScreenWidth <= 1200) {
-       return "w"
+      return "w"
     } else if (GetScreenWidth <= 900) {
-       return "l"
+      return "l"
     } else {
-       return "w"
+      return "w"
     }
   }
 
-function Form1({ fullName, setFullName, setFormTo }) {
-  const handleInputChange = (e) => {
-    setFullName(e.target.value);
-  }
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    fullName ? setFormTo(2) : '';
-  }
-  return (
-    <form onSubmit={handleSubmit}>
-      <input 
-        type="text" 
-        className="form-input form-input-new" 
-        placeholder="Enter your Full Name" 
-        value={fullName} 
-        onChange={(e) => handleInputChange(e)}
-      /> 
-    </form>
-  )
-}
-
-function Form2({ email, setEmail, setFormTo }) {
-  const handleInputChange = (e) => {
-    setEmail(e.target.value);
-  }
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    validator.isEmail(email) ? setFormTo(3) : '';
-  }
-  return (
-    <form onSubmit={handleSubmit}>
-      <input 
-        type="text" 
-        className="form-input form-input-new" 
-        placeholder="Enter your Email" 
-        value={email} 
-        onChange={(e) => handleInputChange(e)}
-      /> 
-    </form>
-  )
-}
-
-function Form3({ referral, setReferral, Payload }) {
-  const [onSnack, setOnsnack] = useState(false)
-  const handleInputChange = (e) => {
-    setReferral(e.target.value);
-  }
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const formData = new FormData();
-    formData.append('Name', Payload.fullName);
-    formData.append('Email', Payload.email);
-    formData.append('Referral', referral);
-    
-    fetch("https://script.google.com/macros/s/AKfycbwjQigVPHC0pSsE3aCZ8DRv-3aPhw9BI4UkspVseVrafwaZmoJ-5RX3YxjBCBZhuw3FVQ/exec", {
-      method: "POST",
-      body: formData
-    })
-    .then(response => {
-      // Handle success
-      console.log("Form data submitted successfully:", response);
-    })
-    .catch(error => {
-      // Handle error
-      console.error("Error submitting form data:", error);
-    });
-    
-    setOnsnack(true);
-    setTimeout(() => (window.location.href = "/"), 8000);
-  }
-  return (
-    <>
-    { !onSnack ?
-    <>    
-    <form onSubmit={handleSubmit}>
-      <input 
-        type="text" 
-        className="form-input form-input-new" 
-        placeholder="How did you hear about LeafTree?" 
-        value={referral} 
-        onChange={(e) => handleInputChange(e)}
-      /> 
-    </form>
-    </> : 
-    <input 
-      type="text" 
-      id="popup"
-      disabled={true}
-      style={{color:"white"}}    
-      // id={"openBtn"}
-      className="form-input form-input-new" 
-      placeholder="Your information has been submitted." 
-    />
+  function Form1({ fullName, setFullName, setFormTo }) {
+    const handleInputChange = (e) => {
+      setFullName(e.target.value);
     }
-    </>
-  )
-}
-
-export default function Principle() {
-  const GetScreenWidth = window.innerWidth;
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      fullName ? setFormTo(2) : '';
+    }
+    return (
+      <form onSubmit={handleSubmit}>
+        <input 
+          type="text" 
+          className="form-input form-input-new" 
+          placeholder="Enter your Full Name" 
+          value={fullName} 
+          onChange={(e) => handleInputChange(e)}
+        /> 
+      </form>
+    )
+  }
+  
+  function Form2({ email, setEmail, setFormTo }) {
+    const handleInputChange = (e) => {
+      setEmail(e.target.value);
+    }
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      validator.isEmail(email) ? setFormTo(3) : '';
+    }
+    return (
+      <form onSubmit={handleSubmit}>
+        <input 
+          type="text" 
+          className="form-input form-input-new" 
+          placeholder="Enter your Email" 
+          value={email} 
+          onChange={(e) => handleInputChange(e)}
+        /> 
+      </form>
+    )
+  }
+  
+  function Form3({ referral, setReferral, Payload }) {
+    const [onSnack, setOnsnack] = useState(false)
+    const handleInputChange = (e) => {
+      setReferral(e.target.value);
+    }
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      const formData = new FormData();
+      formData.append('Name', Payload.fullName);
+      formData.append('Email', Payload.email);
+      formData.append('Referral', referral);
+      
+      fetch("https://script.google.com/macros/s/AKfycbwjQigVPHC0pSsE3aCZ8DRv-3aPhw9BI4UkspVseVrafwaZmoJ-5RX3YxjBCBZhuw3FVQ/exec", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => {
+        // Handle success
+        console.log("Form data submitted successfully:", response);
+      })
+      .catch(error => {
+        // Handle error
+        console.error("Error submitting form data:", error);
+      });
+      
+      setOnsnack(true);
+      setTimeout(() => (window.location.href = "/"), 8000);
+    }
+    return (
+      <>
+      { !onSnack ?
+      <>    
+      <form onSubmit={handleSubmit}>
+        <input 
+          type="text" 
+          className="form-input form-input-new" 
+          placeholder="How did you hear about LeafTree?" 
+          value={referral} 
+          onChange={(e) => handleInputChange(e)}
+        /> 
+      </form>
+      </> : 
+      <input 
+        type="text" 
+        id="popup"
+        disabled={true}
+        style={{color:"white"}}    
+        // id={"openBtn"}
+        className="form-input form-input-new" 
+        placeholder="Your information has been submitted." 
+      />
+      }
+      </>
+    )
+  }
+  
   const [fullName, setFullName] = useState(''); 
   const [email, setEmail] = useState('');
   const [referral, setReferral] = useState('');
@@ -140,19 +138,7 @@ export default function Principle() {
     email,
     referral
   }
-
-  const determineParams = () => {
-    if (GetScreenWidth <= 480) {
-      return "m";
-    } else if (GetScreenWidth <= 768) {
-      return "l";
-    } else if (GetScreenWidth <= 1200) {
-      return "w";
-    }  else {
-      return "w";
-    }
-  }
-
+  
   const [onForm, setonForm] = useState(false)
   const [formOn, setFormOn] = useState(1)
 
@@ -192,7 +178,7 @@ export default function Principle() {
         <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
       </div>}
       <div id="HomescreenVideoContainer">
-        <video id="HomescreenVideo" muted autoPlay loop>
+        <video id="HomescreenVideo" autoPlay muted loop>
           <source src={determineSrc(determineParams())} type="video/mp4" />
         </video>
       </div> 
