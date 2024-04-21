@@ -1,12 +1,12 @@
+import React from 'react';
 import '../App.css';
 import Logo from '../assets/Logo.gif';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import MenuIcon from '../assets/icons8-menu-64.png'; // Import the menu icon image
 import NextScreen from '../assets/icons8-move-right-100.png'; // Import the right arrow icon image
 
 export default function Nav() {
- return (
-   <>
+  return (
     <nav className="menu">
       <ul className="menu-items">
         <li>
@@ -25,6 +25,5 @@ export default function Nav() {
         </li>
       </ul>
     </nav>
-  <>
- );
+  );
 }
