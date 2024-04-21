@@ -1,35 +1,38 @@
-// import React from "react"
-import Nav from "../component/Nav.jsx"
-import Widescreen from "../assets/WidescreenAU.png"
-//import MobileScreen from "../assets/WhatsApp Video 2024-04-11 at 20.45.02.mp4"
-import "../App.css"
+import Nav from "../component/Nav.jsx";
+import Widescreen from "../assets/WidescreenAU.png";
+// Import MobileScreen if needed
+import "../App.css";
+import { useState } from "react";
 
 function determineSrc(type) {
- return (
- type === "w" ? Widescreen :
- type === "m" ? MobileScreen :
- ""
- )
+  switch (type) {
+    case "w":
+      return Widescreen;
+    // Add case for MobileScreen if needed
+    default:
+      return "";
+  }
 }
 
 export default function About() {
-  const GetScreenWidth = window.innerWidth;
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
-  const determineParams = ()=> {
-    if (GetScreenWidth <= 480) {
-       return "m"
+  const determineParams = () => {
+    if (screenWidth <= 480) {
+      return "m";
     } else {
-       return "w"
+      return "w";
     }
-  }
+  };
 
   return (
     <>
       <Nav />
-      {GetScreenWidth <= 480 && <div id="blur">
-        <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
-      </div>
-      }
+      {screenWidth <= 480 && (
+        <div id="blur">
+          <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
+        </div>
+      )}
       <div id="HomescreenBackgroundContainer">
         <picture>
           <img
@@ -42,3 +45,4 @@ export default function About() {
     </>
   );
 }
+
