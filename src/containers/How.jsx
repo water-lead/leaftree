@@ -104,32 +104,32 @@ export default function Home() {
     }
     return (
       <>
-      { !onSnack ?
-      <>    
-      <form onSubmit={handleSubmit}>
-        <input 
-          type="text" 
-          className="form-input form-input-new" 
-          placeholder="How did you hear about LeafTree?" 
-          value={referral} 
-          onChange={(e) => handleInputChange(e)}
-        /> 
-      </form>
-      </> : 
-      <input 
-        type="text" 
-        id="popup"
-        disabled={true}
-        style={{color:"white"}}    
-        // id={"openBtn"}
-        className="form-input form-input-new" 
-        placeholder="Your information has been submitted." 
-      />
-      }
+        { !onSnack ?
+          <>    
+            <form onSubmit={handleSubmit}>
+              <input 
+                type="text" 
+                className="form-input form-input-new" 
+                placeholder="How did you hear about LeafTree?" 
+                value={referral} 
+                onChange={(e) => handleInputChange(e)}
+              /> 
+            </form>
+          </> : 
+          <input 
+            type="text" 
+            id="popup"
+            disabled={true}
+            style={{color:"white"}}    
+            // id={"openBtn"}
+            className="form-input form-input-new" 
+            placeholder="Your information has been submitted." 
+          />
+        }
       </>
     )
   }
-  
+
   const [fullName, setFullName] = useState(''); 
   const [email, setEmail] = useState('');
   const [referral, setReferral] = useState('');
@@ -151,27 +151,27 @@ export default function Home() {
         "13%" : "8%"
       }}>
         {!onForm ?
-        <button id="openBtn" className="form-input form-input-new" onClick={() => setonForm(true)}>Request Presentation</button> :
-        <>
-        { 
-          formOn === 1 ? 
-          <Form1 fullName={fullName}    
-            setFullName={setFullName} 
-            setFormTo={setFormOn} 
-          /> :
-          formOn === 2 ?
-          <Form2 email={email}    
-            setEmail={setEmail} 
-            setFormTo={setFormOn} 
-          /> :
-          formOn === 3 ? 
-          <Form3 referral={referral}    
-            setReferral={setReferral} 
-            Payload={Payload}
-          /> :
-          ""
-        }
-        </>
+          <button id="openBtn" className="form-input form-input-new" onClick={() => setonForm(true)}>Request Presentation</button> :
+          <>
+            { 
+              formOn === 1 ? 
+              <Form1 fullName={fullName}    
+                setFullName={setFullName} 
+                setFormTo={setFormOn} 
+              /> :
+              formOn === 2 ?
+              <Form2 email={email}    
+                setEmail={setEmail} 
+                setFormTo={setFormOn} 
+              /> :
+              formOn === 3 ? 
+              <Form3 referral={referral}    
+                setReferral={setReferral} 
+                Payload={Payload}
+              /> :
+              ""
+            }
+          </>
         }
       </div>
       {GetScreenWidth <= 480 && <div id="blur">
