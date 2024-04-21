@@ -28,7 +28,8 @@ export default function About() {
       <Nav />
       {GetScreenWidth <= 480 && <div id="blur">
         <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
-      </div>}
+      </div>
+      }
       <div id="HomescreenBackgroundContainer">
         <picture>
           <img
@@ -39,5 +40,5 @@ export default function About() {
         </picture>
       </div>
     </>
-  )
+  );
 }
