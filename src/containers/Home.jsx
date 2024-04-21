@@ -31,6 +31,14 @@ export default function Home() {
     }
   };
 
+    // State for menu collapse
+  const [isMenuCollapsed, setIsMenuCollapsed] = useState(false);
+
+  // Toggle menu function
+  const toggleMenu = () => {
+    setIsMenuCollapsed(!isMenuCollapsed);
+  };
+  
   return (
     <>
       <Nav />
@@ -41,9 +49,19 @@ export default function Home() {
         <source src={determineSrc(determineParams())} type="video/mp4" />
       </video>
 
-      <Link to="/how-we-invest" className="navigation-arrow"> {/* Make sure to use correct path */}
+  {/* Toggle menu icon */}
+      <button onClick={toggleMenu} className="navigation-arrow">
         <img src={NextScreen} alt="Next" />
-      </Link>
-    <>
+      </button>
+
+      {/* Render your menu items based on isMenuCollapsed */}
+      {isMenuCollapsed && (
+        <div className="menu-items">
+          {/* Your menu items go here */}
+          <Link to="/how-we-invest">How We Invest</Link>
+          {/* Add more menu items as needed */}
+        </div>
+      )}
+    </>
   );
 }
