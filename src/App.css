@@ -41,6 +41,7 @@ body {
 }
 .logo {
       width: 150px;
+      left: 5;
       background-color: transparent;
 }
 .menu-items {
@@ -57,7 +58,8 @@ body {
       font-weight: bold;
       font-size: 16px;
       font-family: "bold";
-      width: 150vw;
+      top: 10;
+      z-index: 2;
 }
 .menu-items-link:hover {
       text-decoration: underline;
