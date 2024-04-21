@@ -39,7 +39,7 @@ export default function Home() {
       {GetScreenWidth <= 480 && <div id="blur">
         <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
       </div>}
-      <video autoPlay muted loop id="background-video" playsInline>
+      <video autoPlay muted id="background-video" playsInline>
         <source src={determineSrc(determineParams())} type="video/mp4" />
       </video>
     </>
