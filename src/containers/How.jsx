@@ -1,5 +1,5 @@
 import Nav from "../component/Nav.jsx";
-import WideSrc from "../assets/WidescreenHOW.mp4"; // Update the path
+import wideSrceenSrc from "../assets/WidescreenHOW.mp4"; // Update the path
 // import MinSrc from "../assets/WhatsApp Video 2024-04-11 at 20.45.02 (2).mp4";
 import "../App.css";
 import { useState } from "react";
@@ -7,7 +7,7 @@ import validator from "validator";
 
 function determineSrc(type) {
   return (
-    type === "w" ? WideSrc :
+    type === "w" ? wideSrceenSrc :
     type === "t" ? TabletscreenSrc :
     type === "l" ? LaptopscreenSrc : 
     type === "m" ? MobilescreenSrc :
