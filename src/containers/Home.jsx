@@ -1,39 +1,36 @@
-// import { useEffect, useState } from "react"
-import Nav from "../component/Nav.jsx"
-import widescreenSrc from "../assets/WidescreenLT.mp4"
-//import TabletscreenSrc from "../assets/TabletLT.mp4"
-//import LaptopscreenSrc from "../assets/LaptopLT.mp4"
-//import MobilescreenSrc from "../assets/MobileLT.mp4"
+import { Link } from "react-router-dom"; // Import Link from React Router
+import Nav from "../component/Nav.jsx";
+import widescreenSrc from "../assets/WidescreenLT.mp4";
 import NextScreen from '../assets/icons8-move-right-100.png';
-import "../App.css"
- 
+import "../App.css";
+
 function determineSrc(type) {
- return (
- type === "w" ? widescreenSrc :
- type === "t" ? TabletscreenSrc :
- type === "l" ? LaptopscreenSrc : 
- type = "m" ? MobilescreenSrc :
- ""
- )
+  return (
+    type === "w" ? widescreenSrc :
+    type === "t" ? TabletscreenSrc :
+    type === "l" ? LaptopscreenSrc : 
+    type === "m" ? MobilescreenSrc :
+    ""
+  );
 }
 
 export default function Home() {
   const GetScreenWidth = window.innerWidth;
 
-  const determineParams = ()=> {
+  const determineParams = () => {
     if (GetScreenWidth <= 480) {
-       return "m"
+      return "m";
     } else if (GetScreenWidth <= 768) {
-       return "t"
+      return "t";
     } else if (GetScreenWidth <= 1200) {
-       return "w"
+      return "w";
     } else if (GetScreenWidth <= 900) {
-       return "l"
+      return "l";
     } else {
-       return "w"
+      return "w";
     }
-  }
-  
+  };
+
   return (
     <>
       <Nav />
@@ -44,13 +41,9 @@ export default function Home() {
         <source src={determineSrc(determineParams())} type="video/mp4" />
       </video>
 
-  <Link to="/how we invest" className="navigation-arrow">
-        <NextScreen />
+      <Link to="/how-we-invest" className="navigation-arrow"> {/* Make sure to use correct path */}
+        <img src={NextScreen} alt="Next" />
       </Link>
-    </>
-  );
-}
-     
     <>
-  )
+  );
 }
