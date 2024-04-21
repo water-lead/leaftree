@@ -27,6 +27,6 @@ function determineSrc(type) {
           />
         </picture>
       </div> 
-    </>
+
   )
 }
