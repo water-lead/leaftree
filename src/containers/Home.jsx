@@ -62,6 +62,6 @@ export default function Home() {
           {/* Add more menu items as needed */}
         </div>
       )}
-    </>
+      
   );
 }
