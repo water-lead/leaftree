@@ -4,6 +4,7 @@ import widescreenSrc from "../assets/WidescreenLT.mp4"
 //import TabletscreenSrc from "../assets/TabletLT.mp4"
 //import LaptopscreenSrc from "../assets/LaptopLT.mp4"
 //import MobilescreenSrc from "../assets/MobileLT.mp4"
+import { MdKeyboardArrowRight } from 'react-icons/md';
 import "../App.css"
  
 function determineSrc(type) {
@@ -42,6 +43,14 @@ export default function Home() {
       <video autoPlay muted id="background-video" playsInline>
         <source src={determineSrc(determineParams())} type="video/mp4" />
       </video>
+
+  <Link to="/how we invest" className="navigation-arrow">
+        <MdKeyboardArrowRight />
+      </Link>
+    </>
+  );
+}
+     
     </>
   )
 }
