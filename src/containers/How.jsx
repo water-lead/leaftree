@@ -6,14 +6,31 @@ import { useState } from "react";
 import validator from "validator";
 
 function determineSrc(type) {
-  switch (type) {
-    case "w":
-      return WideSrc;
-    // Add case for other types if needed
-    default:
-      return "";
-  }
+ return (
+ type === "w" ? widescreenSrc :
+ type === "t" ? TabletscreenSrc :
+ type === "l" ? LaptopscreenSrc : 
+ type = "m" ? MobilescreenSrc :
+ ""
+ )
 }
+
+export default function Home() {
+  const GetScreenWidth = window.innerWidth;
+
+  const determineParams = ()=> {
+    if (GetScreenWidth <= 480) {
+       return "m"
+    } else if (GetScreenWidth <= 768) {
+       return "t"
+    } else if (GetScreenWidth <= 1200) {
+       return "w"
+    } else if (GetScreenWidth <= 900) {
+       return "l"
+    } else {
+       return "w"
+    }
+  }
 
 function Form1({ fullName, setFullName, setFormTo }) {
   const handleInputChange = (e) => {
