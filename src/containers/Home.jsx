@@ -58,9 +58,10 @@ return (
     {/* Render your menu items based on isMenuCollapsed */}
     {isMenuCollapsed && (
       <div className="menu-items">
-        {/* Your menu items go here */}
-        <Link to="/how-we-invest">How We Invest</Link>
-        {/* Add more menu items as needed */}
+        <Link to="/how-we-invest">How</Link>
+        <Link to="/what-we-believe">What</Link>
+        <Link to="/who-we-are">Who</Link>
+        <Link to="/jobs">Jobs</Link>
       </div>
     )}
   </>
