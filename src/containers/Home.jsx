@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom"; // Import Link from React Router
 import Nav from "../component/Nav.jsx";
 import widescreenSrc from "../assets/WidescreenLT.mp4";
@@ -31,38 +32,39 @@ export default function Home() {
     }
   };
 
-    // State for menu collapse
+  // State for menu collapse
   const [isMenuCollapsed, setIsMenuCollapsed] = useState(false);
 
   // Toggle menu function
   const toggleMenu = () => {
     setIsMenuCollapsed(!isMenuCollapsed);
   };
-  
-return (
-  <>
-    {GetScreenWidth <= 480 && (
-      <div id="blur">
-        <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
-      </div>
-    )}
-    <video autoPlay muted id="background-video" playsInline>
-      <source src={determineSrc(determineParams())} type="video/mp4" />
-    </video>
 
-    {/* Toggle menu icon */}
-    <button onClick={toggleMenu} className="navigation-arrow">
-      <img src={NextScreen} alt="Next" />
-    </button>
+  return (
+    <>
+      {GetScreenWidth <= 480 && (
+        <div id="blur">
+          <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
+        </div>
+      )}
+      <video autoPlay muted id="background-video" playsInline>
+        <source src={determineSrc(determineParams())} type="video/mp4" />
+      </video>
 
-    {/* Render your menu items based on isMenuCollapsed */}
-    {isMenuCollapsed && (
-      <div className="menu-items">
-        <Link to="/how-we-invest">How</Link>
-        <Link to="/what-we-believe">What</Link>
-        <Link to="/who-we-are">Who</Link>
-        <Link to="/jobs">Jobs</Link>
-      </div>
-    )}
-  </>
-);
+      {/* Toggle menu icon */}
+      <button onClick={toggleMenu} className="navigation-arrow">
+        <img src={NextScreen} alt="Next" />
+      </button>
+
+      {/* Render your menu items based on isMenuCollapsed */}
+      {isMenuCollapsed && (
+        <div className="menu-items">
+          <Link to="/how-we-invest">How</Link>
+          <Link to="/what-we-believe">What</Link>
+          <Link to="/who-we-are">Who</Link>
+          <Link to="/jobs">Jobs</Link>
+        </div>
+      )}
+    </>
+  );
+}
