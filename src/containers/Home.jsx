@@ -41,7 +41,7 @@ export default function Home() {
         <source src={determineSrc(determineParams())} type="video/mp4" />
       </video>
 
-      <Link to="/how-we-invest" className="navigation-arrow"> {/* Make sure to use correct path */}
+      <Link to="/how we invest" className="navigation-arrow"> {/* Make sure to use correct path */}
         <img src={NextScreen} alt="Next" />
       </Link>
     <>
