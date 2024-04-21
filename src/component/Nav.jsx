@@ -3,7 +3,7 @@ import '../App.css'
 import Logo from '../assets/Logo.gif'
 import { Link } from "react-router-dom"
 import Menu from '../assets/icons8-menu-64.png'; // Import the menu icon from react-icons/fa
-import { MdKeyboardArrowRight } from 'react-icons/md'; // Import the right arrow icon from react-icons/md
+import NextScreen from '../assets/icons8-move-right-100.png'; // Import the right arrow icon from react-icons/md
 
 export default function Nav() {
  return (
@@ -15,7 +15,7 @@ export default function Nav() {
         </Link>
       </li>
       <div className="menu-items">
-          <img src="{Menu}" alt="Menu" className="{menu}" /> {/* Use your custom menu icon */}
+          <img src="{Menu}" alt="Menu" className="menu" /> {/* Use your custom menu icon */}
   </div>
   <div className="menu-items">
         <Link to="/how we invest" className='menu-items-link'>How</Link>
