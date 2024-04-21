@@ -13,8 +13,10 @@ export default function Nav() {
         </Link>
       </li>
       <div className="menu-items">
-        <Link to="/about us" className='menu-items-link'>About Us</Link>
-        <Link to="/our principles" className='menu-items-link'>Our Principles</Link>
+        <Link to="/how we invest" className='menu-items-link'>How</Link>
+        <Link to="/what we believe" className='menu-items-link'>What</Link>
+        <Link to="/who we are" className='menu-items-link'>Who</Link>
+        <Link to="/jobs" className='menu-items-link'>Jobs</Link>
       </div>
     </nav>
   </>
