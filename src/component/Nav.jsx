@@ -27,17 +27,17 @@ export default function Nav() {
       {isMenuOpen && (
         <ul className="dropdown-menu">
           <li>
-            <Link to="/how-we-invest" className="menu-items-link">
+            <Link to="/how we invest" className="menu-items-link">
               How
             </Link>
           </li>
           <li>
-            <Link to="/what-we-believe" className="menu-items-link">
+            <Link to="/what we believe" className="menu-items-link">
               What
             </Link>
           </li>
           <li>
-            <Link to="/who-we-are" className="menu-items-link">
+            <Link to="/who we are" className="menu-items-link">
               Who
             </Link>
           </li>
