@@ -3,7 +3,7 @@ import Home from "./containers/Home.jsx"
 import How from "./containers/How.jsx"
 import What from "./containers/What.jsx"
 import Who from "./containers/Who.jsx"
-import Jobs from "./containers/Jobs.html"
+import Jobs from "./containers/Jobs.jsx"
 
 function App() {
 
