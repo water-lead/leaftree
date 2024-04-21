@@ -101,6 +101,16 @@ body {
       background-color: transparent;
 }
 
+#HomescreenBackground picture {
+  position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 10%;
+      width: 100vw;
+      height: 100vh;
+}
+
 #HomescreeVideoContainer video {
       position: absolute;
       top: 0;
