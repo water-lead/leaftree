@@ -26,7 +26,7 @@ body {
       font-family: "Syncopate", sans-serif;
 }
 
-#HomescreeVideoContainer {
+#HomescreenVideoContainer {
       position: relative;
       /* padding-bottom: -100.25em; */
       height: 100vh;
@@ -102,16 +102,16 @@ body {
 }
 
 #WhatscreenBackground picture {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
   position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 10%;
-      width: 100vw;
-      height: 100vh;
+  top: 10px; /* Add some top padding */
+  left: 10px; /* Add some left padding */
+  margin: 20px; /* Add some margin around the image */
 }
 
-#WhatscreenVideo {
+#HomescreenVideo {
   position: absolute;
   top: 0;
   left: 0;
@@ -120,7 +120,7 @@ body {
   object-fit: cover;
 }
 
-#HomescreeVideoContainer video {
+#HomescreenVideoContainer video {
       position: absolute;
       top: 0;
       left: 0;
