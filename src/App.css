@@ -87,8 +87,16 @@ body {
 
 .menu-items-link {
   text-decoration: none;
-  color: #000;
-  font-weight: bold;
+  color: #007AFF; /* Change the text color to blue */
+  font-size: 18px; /* Increase the font size */
+  font-family: 'bold'; /* Change the font family to bold */
+  padding: 10px;
+  display: block;
+  border-bottom: 1px solid #fff; /* Add a white border-bottom */
+}
+
+.menu-items-link:last-child {
+  border-bottom: none; /* Remove the border-bottom from the last menu item */
 }
 
 .logo-link {
