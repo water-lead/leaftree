@@ -3,6 +3,7 @@ import wideScreenSrc from "../assets/WidescreenWHAT.png";
 // Import other image sources if needed
 import "../App.css";
 import { useState } from "react";
+import NextScreen from '../assets/icons8-move-right-100.png';
 
 function determineSrc(type) {
   return (
@@ -47,6 +48,10 @@ export default function What() {
             alt="Background"
           />
         </picture>
+        <button onClick={toggleMenu} className="navigation-arrow">
+        <img src={NextScreen} alt="Next" />
+      </button>
+    </>
       </div> 
     </>
   );
