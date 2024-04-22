@@ -144,8 +144,8 @@ body {
 #openBtnCont {
       /*position: absolute;*/
       z-index: 1;
-      bottom: 50%;
-      top: 75%;
+      /*bottom: 50%;*/
+      top: 50%;
       left: 16.5%;
       right: 0px;
       width: 30%;
