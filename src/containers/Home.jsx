@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Nav from "../component/Nav.jsx"; // Make sure to import Nav if needed
 import widescreenSrc from "../assets/WidescreenLT.mp4";
-import NextScreen from '../assets/nextPage.png';
+import NextScreen from '../assets/nextPage.gif';
 import "../App.css";
 
 function determineSrc(type) {
