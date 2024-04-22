@@ -23,10 +23,10 @@ export default function Home() {
       return "m";
     } else if (GetScreenWidth <= 768) {
       return "t";
-    } else if (GetScreenWidth <= 1200) {
-      return "w";
     } else if (GetScreenWidth <= 900) {
       return "l";
+    } else if (GetScreenWidth <= 1200) {
+      return "w";    
     } else {
       return "w";
     }
