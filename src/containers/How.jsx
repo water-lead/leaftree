@@ -21,7 +21,7 @@ function How() {
   );
 }
 
-export default How;
+//export default How;
 
 export default function How() {
   const GetScreenWidth = window.innerWidth;
