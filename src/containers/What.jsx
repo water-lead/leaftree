@@ -8,9 +8,9 @@ import NextScreen from '../assets/icons8-move-right-100.png';
 function determineSrc(type) {
   return (
     type === "w" ? wideScreenSrc :
-    type === "t" ? TabletscreenSrc :
-    type === "l" ? LaptopscreenSrc : 
-    type === "m" ? MobilescreenSrc :
+    type === "t" ? TabletscreenSrc : // Import TabletscreenSrc if needed
+    type === "l" ? LaptopscreenSrc : // Import LaptopscreenSrc if needed
+    type === "m" ? MobilescreenSrc : // Import MobilescreenSrc if needed
     ""
   );
 }
@@ -26,7 +26,7 @@ export default function What() {
     } else if (GetScreenWidth <= 900) {
       return "l";
     } else if (GetScreenWidth <= 1200) {
-      return "w";  
+      return "w";
     } else {
       return "w";
     }
@@ -54,9 +54,10 @@ export default function What() {
         </picture>
         <button onClick={toggleMenu} className="navigation-arrow">
           <Link to="/who we are" className="navigation-arrow">
-          <img src={NextScreen} alt="Next" />
-        </>
-      </> 
+            <img src={NextScreen} alt="Next" />
+          </Link>
+        </button>
+      </div>
     </>
   );
 }
