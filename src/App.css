@@ -153,8 +153,8 @@ body {
       bottom: 15%;
       left: 5%;
       right: 0;
-      width: 50%;
-      left: 50%;
+      width: 40%;
+      left: 10%;
       transform: translateX(-50%);
 }
 #openBtn {
@@ -175,7 +175,7 @@ body {
       width:  90%;
       height:  33vh;
       position: absolute;
-      left: 50%;
+      left: 10%;
       top: 50%;
       transform: translate(-50%, -50%);
       display: flex;
