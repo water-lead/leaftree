@@ -1,5 +1,5 @@
 import Nav from "../component/Nav.jsx";
-import wideSrceenSrc from "../assets/WidescreenWHAT.png";
+import wideScreenSrc from "../assets/WidescreenWHAT.png";
 // Import other image sources if needed
 import "../App.css";
 import { useState } from "react";
@@ -22,10 +22,10 @@ export default function What() {
       return "m";
     } else if (GetScreenWidth <= 768) {
       return "t";
-    } else if (GetScreenWidth <= 1200) {
-      return "w";
-    } else if (GetScreenWidth <= 900) {
+      } else if (GetScreenWidth <= 900) {
       return "l";
+    } else if (GetScreenWidth <= 1200) {
+      return "w";  
     } else {
       return "w";
     }
