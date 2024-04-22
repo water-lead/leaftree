@@ -55,15 +55,6 @@
   }
 } 
 
-.canva-embed-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #ffffff;
-}
-
-
 @font-face {
       font-family: 'bold';
       font-style: normal;
@@ -89,22 +80,6 @@ body {
       padding: 0;
       box-sizing: border-box;
       font-family: "Syncopate", sans-serif;
-}
-
-.navigation-arrow {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  height: 3%;
-  width: 3%;
-  z-index: 3;
-  /* Other styles as needed */
-}
-
-@media (max-width: 768px) {
-  .navigation-arrow {
-    bottom: 60px; /* Adjust the distance from the bottom for smaller screens */
-  }
 }
 
 .menu {
@@ -168,99 +143,11 @@ body {
       background-color: transparent;
 }
 
-#WhatscreenBackgroundContainer {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  object-fit: cover;
-  z-index: -1;
-}
-
-/* Adjust the background image */
-#WhatscreenBackground {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-#WhoscreenBackgroundContainer {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%; /* Adjusted to 100% */
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  object-fit: cover;
-  z-index: -1;
-      
-}
-
-#WhoscreenBackground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 80%;
-  object-fit: cover;
-  margin: 0;
-  padding: 0;
-}
-
-#HomescreenVideoContainer video {
-      position: relative;
-      /* padding-bottom: -100.25em; */
-      height: 100vh;
-      width: 100vw;
-      overflow: hidden;
-      z-index: -1;
-}
-
-#HomescreenVideo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-#HowscreenVideoContainer video {
-      position: relative;
-      /* padding-bottom: -100.25em; */
-      height: 100vh;
-      width: 100vw;
-      overflow: hidden;
-      z-index: -1;
-}
-
-#HowscreenVideo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.NextScreen {
-      width: 10p%;
-      height: 10%;
-      right: 15px;
-      background-color: transparent;
-}
-
 #openBtnCont {
       position: absolute;
       z-index: 1;
-      bottom: 8%;
-      left: 0;
+      bottom: 15%;
+      left: 5%;
       right: 0;
       width: 50%;
       left: 50%;
