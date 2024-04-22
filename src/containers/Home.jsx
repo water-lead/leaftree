@@ -31,7 +31,9 @@ export default function Home() {
       return "w";
     }
   };
-
+   
+  <Nav />
+  
   return (
     <>
       {GetScreenWidth <= 480 && (
