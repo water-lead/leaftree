@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "../component/Nav.jsx";
+//import Nav from "../component/Nav.jsx";
 import "../App.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
