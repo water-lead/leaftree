@@ -1,60 +1,22 @@
+import React from "react";
 import Nav from "../component/Nav.jsx";
-import wideScreenSrc from "../assets/WidescreenWHO.png";
-// Import other image sources if needed
 import "../App.css";
 import { useState } from "react";
-import NextScreen from '../assets/nextPage.gif';
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link } from "react-router-dom";
 
-function determineSrc(type) {
+function Who() {
   return (
-    type === "w" ? wideScreenSrc :
-    type === "t" ? TabletscreenSrc :
-    type === "l" ? LaptopscreenSrc : 
-    type === "m" ? MobilescreenSrc :
-    ""
-  );
-}
-
-export default function Who() {
-  const GetScreenWidth = window.innerWidth;
-
-  const determineParams = () => {
-    if (GetScreenWidth <= 480) {
-      return "m";
-    } else if (GetScreenWidth <= 768) {
-      return "t";
-    } else if (GetScreenWidth <= 900) {
-      return "l";
-    } else if (GetScreenWidth <= 1200) {
-      return "w";  
-    } else {
-      return "w";
-    }
-  };
-
-  return (
-    <>
+    <div>
       <Nav />
-      {GetScreenWidth <= 480 && (
-        <div id="blur">
-          <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", backgroundColor: "#ffffff" }}>
+        <div style={{ width: "100%", height: "100%" }}>
+          <div style={{ position: "relative", width: "100%", height: 0, paddingTop: "56.2225%", paddingBottom: 0, boxShadow: "0 2px 8px 0 rgba(63,69,81,0.16)", overflow: "hidden", borderRadius: "8px", willChange: "transform" }}>
+            <iframe title="Canva Embed" loading="lazy" style={{ position: "absolute", width: "100%", height: "100%", top: 0, left: 0, border: "none", padding: 0, margin: 0 }} src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGDIuk7o4o&#x2F;V6fmSz0MEnBW_Lb1S2sJmg&#x2F;view?embed" allowfullscreen={true}></iframe>
+          </div>
         </div>
-      )}
-      <div id="WhoscreenBackgroundContainer">
-        <picture>
-          <img
-            id="WhoscreenBackground"
-            src={determineSrc(determineParams())}
-            alt="Background"
-          />
-        </picture>
-        <button onClick={Link} className="navigation-arrow">
-          <Link to="/jobs" className="navigation-arrow">
-            <img src={NextScreen} alt="Next" />
-          </Link>
-        </button>
       </div>
-    </>
+    </div>
   );
 }
+
+export default Who;
