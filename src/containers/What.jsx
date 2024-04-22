@@ -4,6 +4,7 @@ import wideScreenSrc from "../assets/WidescreenWHAT.png";
 import "../App.css";
 import { useState } from "react";
 import NextScreen from '../assets/icons8-move-right-100.png';
+import { Link } from "react-router-dom";
 
 function determineSrc(type) {
   return (
@@ -52,7 +53,7 @@ export default function What() {
             alt="Background"
           />
         </picture>
-        <button onClick={toggleMenu} className="navigation-arrow">
+        <button onClick={Link} className="navigation-arrow">
           <Link to="/who we are" className="navigation-arrow">
             <img src={NextScreen} alt="Next" />
           </Link>
