@@ -153,8 +153,8 @@ body {
       bottom: 15%;
       left: 5%;
       right: 0;
-      width: 50%;
-      left: 50%;
+      width: 40%;
+      left: 10%;
       transform: translateX(-50%);
 }
 #openBtn {
