@@ -24,7 +24,7 @@
   padding-top: 56.2225%;
   overflow: hidden;
   border-radius: 8px;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 .iframe-container iframe {
@@ -36,26 +36,26 @@
   border: none;
   padding: 0;
   margin: 0;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 .iframe-container::-webkit-scrollbar {
     display: none;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 /* Make it responsive */
 @media (min-width: 768px) {
   .iframe-container {
     padding-top: 15%; /* Adjust the padding-top value based on your needs */
-    box-shadow: none;
+    box-shadow: none !important;
   }
 }
 
 @media (min-width: 1024px) {
   .iframe-container {
     padding-top: 10%; /* Adjust the padding-top value based on your needs */
-    box-shadow: none;
+    box-shadow: none !important;
   }
 } 
 
