@@ -114,7 +114,7 @@ body {
   top: 0;
   left: 0;
   width: 120%;
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,7 +125,7 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   object-fit: cover;
   margin: 0;
   padding: 0;
