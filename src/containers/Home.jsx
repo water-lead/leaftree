@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link from React Router
-import Nav from "../component/Nav.jsx";
+import { Link } from "react-router-dom";
+import Nav from "../component/Nav.jsx"; // Make sure to import Nav if needed
 import widescreenSrc from "../assets/WidescreenLT.mp4";
 import NextScreen from '../assets/icons8-move-right-100.png';
 import "../App.css";
@@ -8,9 +8,9 @@ import "../App.css";
 function determineSrc(type) {
   return (
     type === "w" ? widescreenSrc :
-    type === "t" ? TabletscreenSrc :
-    type === "l" ? LaptopscreenSrc : 
-    type === "m" ? MobilescreenSrc :
+    type === "t" ? TabletscreenSrc : // Import TabletscreenSrc if needed
+    type === "l" ? LaptopscreenSrc : // Import LaptopscreenSrc if needed
+    type === "m" ? MobilescreenSrc : // Import MobilescreenSrc if needed
     ""
   );
 }
@@ -26,26 +26,27 @@ export default function Home() {
     } else if (GetScreenWidth <= 900) {
       return "l";
     } else if (GetScreenWidth <= 1200) {
-      return "w";    
+      return "w";
     } else {
       return "w";
     }
   };
 
   return (
-  <>
-    {GetScreenWidth <= 480 && (
-      <div id="blur">
-        <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
-      </div>
-    )}
-    <video autoPlay muted id="background-video" playsInline>
-      <source src={determineSrc(determineParams())} type="video/mp4" />
-    </video>
+    <>
+      {GetScreenWidth <= 480 && (
+        <div id="blur">
+          <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
+        </div>
+      )}
+      <video autoPlay muted id="background-video" playsInline>
+        <source src={determineSrc(determineParams())} type="video/mp4" />
+      </video>
 
-    {/* Toggle menu icon */}
-    <Link to="/how we invest" className="navigation-arrow">
-      <img src={NextScreen} alt="Next" />
-    </Link>
-  </>
-);
+      {/* Toggle menu icon */}
+      <Link to="/how we invest" className="navigation-arrow">
+        <img src={NextScreen} alt="Next" />
+      </Link>
+    </>
+  );
+}
