@@ -143,48 +143,39 @@ export default function How() {
   const [onForm, setonForm] = useState(false)
   const [formOn, setFormOn] = useState(1)
 
-  return (
+ return (
     <>
       <Nav />
       <div id="openBtnCont" style={{
-        bottom: GetScreenWidth >= 1260 && 
-        GetScreenWidth <= 1487 === true ?
-        "13%" : "8%"
+        bottom: GetScreenWidth >= 1260 && GetScreenWidth <= 1487 ? "13%" : "8%"
       }}>
-        {!onForm ?
-          <button id="openBtn" className="form-input form-input-new" onClick={() => setonForm(true)}>Request Presentation</button> :
+        {!onForm ? (
+          <button id="openBtn" className="form-input form-input-new" onClick={() => setonForm(true)}>Request Presentation</button>
+        ) : (
           <>
-            { 
-              formOn === 1 ? 
-              <Form1 fullName={fullName}    
-                setFullName={setFullName} 
-                setFormTo={setFormOn} 
-              /> :
-              formOn === 2 ?
-              <Form2 email={email}    
-                setEmail={setEmail} 
-                setFormTo={setFormOn} 
-              /> :
-              formOn === 3 ? 
-              <Form3 referral={referral}    
-                setReferral={setReferral} 
-                Payload={Payload}
-              /> :
+            {formOn === 1 ? (
+              <Form1 fullName={fullName} setFullName={setFullName} setFormTo={setFormOn} />
+            ) : formOn === 2 ? (
+              <Form2 email={email} setEmail={setEmail} setFormTo={setFormOn} />
+            ) : formOn === 3 ? (
+              <Form3 referral={referral} setReferral={setReferral} Payload={Payload} />
+            ) : (
               ""
-            }
+            )}
           </>
-        }
+        )}
       </div>
-      {GetScreenWidth <= 480 && <div id="blur">
-        <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
-      </div>}
+      {GetScreenWidth <= 480 && (
+        <div id="blur">
+          <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
+        </div>
+      )}
       <video>
-          <source src={wideSrceenSrc} type="video/mp4" />
-        </video>
-        <Link to="/what-we-believe" className="navigation-arrow">
-          <NextScreen />
-        </Link>
-      </div> 
+        <source src={wideSrceenSrc} type="video/mp4" />
+      </video>
+      <Link to="/what-we-believe" className="navigation-arrow">
+        <NextScreen />
+      </Link>
     </>
   );
 }
