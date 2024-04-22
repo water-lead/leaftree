@@ -26,18 +26,14 @@ body {
       font-family: "Syncopate", sans-serif;
 }
 
-.navigation-arrow picture {
-  position: fixed;
+.navigation-arrow {
   bottom: 20px; /* Adjust the distance from the bottom */
   right: 20px; /* Adjust the distance from the right */
   width: 10%; /* Decreased width */
   height: 10%; /* Decreased height */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
   cursor: pointer;
-  z-index: 2;
+  z-index: -1;
 }
 
 @media (max-width: 768px) {
