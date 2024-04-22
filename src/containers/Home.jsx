@@ -69,7 +69,6 @@ function Home() {
   return (
     <>
       {/* Include Nav here if needed */}
-  <!-- Canva embed code here -->
       <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", backgroundColor: "#ffffff" }}>
         <div style={{ width: "100%", height: "100%" }}>
           <div style={{ position: "relative", width: "100%", height: 0, paddingTop: "56.2225%", paddingBottom: 0, boxShadow: "0 2px 8px 0 rgba(63,69,81,0.16)", overflow: "hidden", borderRadius: "8px", willChange: "transform" }}>
@@ -130,9 +129,9 @@ function Home() {
         )}
       </div>
       
-      {GetScreenWidth <= 1200 && (
+      {GetScreenWidth <= 480 && (
         <div id="blur">
-          <p>The site can only be viewed in landscape mode. Please tilt your phone</p>
+          <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
         </div>
       )}
     </>
