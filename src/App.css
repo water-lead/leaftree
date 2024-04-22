@@ -43,7 +43,7 @@
 
 .iframe::-webkit-media-controls-panel {
     display: none !important;
-    opacity: 0 !important;
+    opacity: 1 !important;
 }
 
 /* Make it responsive */
