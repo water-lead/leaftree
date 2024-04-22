@@ -32,14 +32,6 @@ export default function Home() {
     }
   };
 
-  // State for menu collapse
-  const [isMenuCollapsed, setIsMenuCollapsed] = useState(false);
-
-  // Toggle menu function
-  const toggleMenu = () => {
-    setIsMenuCollapsed(!isMenuCollapsed);
-  };
-
   return (
     <>
       {GetScreenWidth <= 480 && (
@@ -55,16 +47,6 @@ export default function Home() {
       <button onClick={toggleMenu} className="navigation-arrow">
         <img src={NextScreen} alt="Next" />
       </button>
-
-      {/* Render your menu items based on isMenuCollapsed */}
-      {isMenuCollapsed && (
-        <div className="menu-items">
-          <Link to="/how we invest">How</Link>
-          <Link to="/what we believe">What</Link>
-          <Link to="/who we are">Who</Link>
-          <Link to="/jobs">Jobs</Link>
-        </div>
-      )}
     </>
   );
 }
