@@ -26,7 +26,7 @@ body {
       font-family: "Syncopate", sans-serif;
 }
 
-.navigation-arrow {
+.navigation-arrow picture {
   position: fixed;
   bottom: 20px; /* Adjust the distance from the bottom */
   right: 20px; /* Adjust the distance from the right */
@@ -50,6 +50,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: transparent;
   padding: 10px 20px; /* Adjust padding as needed */
 }
 
@@ -62,9 +63,11 @@ body {
 .dropdown-menu {
   position: absolute;
   top: 15px; /* Adjust distance from the top */
-  right: 30px; /* Adjust distance from the right */
+  right: 50px; /* Adjust distance from the right */
   background-color: #2a3a23;
   border: 1px solid #ccc;
+  height: 70%;
+  width: 70%;
   padding: 10px;
   list-style: vertical;
   z-index: 2;
