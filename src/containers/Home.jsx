@@ -6,6 +6,8 @@ import NextScreen from '../assets/nextPage.gif';
 import "../App.css";
 
 function determineSrc(type) {
+  <div> 
+    <Nav /> 
   return (
     type === "w" ? widescreenSrc :
     type === "t" ? TabletscreenSrc : // Import TabletscreenSrc if needed
@@ -31,8 +33,6 @@ export default function Home() {
       return "w";
     }
   };
-
-<div> <Nav /> </div>
   
   return (
     <>
@@ -50,5 +50,6 @@ export default function Home() {
         <img src={NextScreen} alt="Next" />
       </Link>
     </>
+      </div>
   );
 }
