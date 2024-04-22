@@ -24,7 +24,6 @@
   padding-top: 56.2225%;
   overflow: hidden;
   border-radius: 8px;
-  box-shadow: none !important;
 }
 
 .iframe-container iframe {
@@ -36,12 +35,10 @@
   border: none;
   padding: 0;
   margin: 0;
-  box-shadow: none !important;
 }
 
 .iframe-container::-webkit-scrollbar {
     display: none;
-  box-shadow: none !important;
 }
 
 .iframe::-webkit-media-controls-panel {
@@ -53,14 +50,12 @@
 @media (min-width: 768px) {
   .iframe-container {
     padding-top: 15%; /* Adjust the padding-top value based on your needs */
-    box-shadow: none !important;
   }
 }
 
 @media (min-width: 1024px) {
   .iframe-container {
     padding-top: 10%; /* Adjust the padding-top value based on your needs */
-    box-shadow: none !important;
   }
 } 
 
@@ -82,13 +77,6 @@ body {
       height: 100%;
       overflow: hidden;
       background-color: #ffffff;
-}
-
-* {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Syncopate", sans-serif;
 }
 
 .menu {
@@ -155,11 +143,10 @@ body {
 #openBtnCont {
       position: absolute;
       z-index: 1;
-      bottom: 15%;
+      bottom: 20%;
       left: 5%;
       right: 0;
-      width: 40%;
-      left: 10%;
+      width: 30%;
       transform: translateX(-50%);
 }
 #openBtn {
@@ -167,7 +154,7 @@ body {
       background-color: #2a3a23;
       border: none;
       padding: 12px;
-      border-radius: 10px;
+      border-radius: 25px;
       outline: none;
       cursor: pointer;
       font-family: "bold";
@@ -180,15 +167,15 @@ body {
       width:  90%;
       height:  33vh;
       position: absolute;
-      left: 10%;
-      top: 50%;
+      left: 5%;
+      top: 80%;
       transform: translate(-50%, -50%);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       background-color: #f9f9f9;
-      border-radius: 12px;
+      border-radius: 25px;
       border: 1px solid #ccc;
       gap: 1em;
       transition: 0.1s;
@@ -259,6 +246,7 @@ body {
                   width: 90%;
             }
 }
+
 @media (max-width: 370px) {
 .menu-items-link {
       font-size: 12px;
@@ -267,8 +255,6 @@ body {
       width: 85px;
 }
 }
-
-
 
 body,
 html {
@@ -306,7 +292,6 @@ html {
       padding: 20px;
       text-align: center;
 }
-
 
 @media (max-width: 480px) {
       .menu-items-link {
