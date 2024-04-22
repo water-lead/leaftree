@@ -6,7 +6,7 @@ import { useState } from "react";
 
 function determineSrc(type) {
   return (
-    type === "w" ? widescreenSrc :
+    type === "w" ? wideScreenSrc :
     type === "t" ? TabletscreenSrc :
     type === "l" ? LaptopscreenSrc : 
     type === "m" ? MobilescreenSrc :
@@ -39,10 +39,10 @@ export default function What() {
           <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
         </div>
       )}
-      <div id="HomescreenBackgroundContainer">
+      <div id="WhatscreenBackgroundContainer">
         <picture>
           <img
-            id="HomescreenBackground"
+            id="WhatscreenBackground"
             src={determineSrc(determineParams())}
             alt="Background"
           />
