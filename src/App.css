@@ -142,10 +142,11 @@ body {
 }
 
 #openBtnCont {
-      position: absolute;
+      /*position: absolute;*/
       z-index: 1;
       bottom: 50%;
-      left: 18%;
+      top: 75%;
+      left: 16.5%;
       right: 0px;
       width: 30%;
       transform: translateX(-50%);
