@@ -21,9 +21,9 @@ function How() {
   );
 }
 
-//export default How;
+export default How;
 
-export default function How() {
+export default function HowForm() {
   const GetScreenWidth = window.innerWidth;
 
   const determineParams = () => {
