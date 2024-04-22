@@ -1,28 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import "../App.css";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function What() {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+const GetScreenWidth = window.innerWidth;
 
   const determineParams = () => {
-    if (screenWidth <= 480) {
+    if (GetScreenWidth <= 480) {
       return "m";
-    } else if (screenWidth <= 768) {
+    } else if (GetScreenWidth <= 768) {
       return "t";
-    } else if (screenWidth <= 1200) {
+    } else if (GetScreenWidth <= 1200) {
       return "w";
-    } else if (screenWidth <= 900) {
+    } else if (GetScreenWidth <= 900) {
       return "l";
     } else {
       return "w";
