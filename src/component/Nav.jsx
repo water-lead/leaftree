@@ -28,22 +28,22 @@ export default function Nav() {
         <ul className="dropdown-menu">
           <li>
             <Link to="/how we invest" className="menu-items-link">
-              How
+              How We Invest
             </Link>
           </li>
           <li>
             <Link to="/what we believe" className="menu-items-link">
-              What
+              What We Believe
             </Link>
           </li>
           <li>
             <Link to="/who we are" className="menu-items-link">
-              Who
+              Who We Are
             </Link>
           </li>
           <li>
             <Link to="/jobs" className="menu-items-link">
-              Jobs
+              Apply for Jobs
             </Link>
           </li>
         </ul>
