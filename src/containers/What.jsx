@@ -23,13 +23,17 @@ export default function What() {
       return "m";
     } else if (GetScreenWidth <= 768) {
       return "t";
-      } else if (GetScreenWidth <= 900) {
+    } else if (GetScreenWidth <= 900) {
       return "l";
     } else if (GetScreenWidth <= 1200) {
       return "w";  
     } else {
       return "w";
     }
+  };
+
+  const toggleMenu = () => {
+    // Implement toggleMenu function
   };
 
   return (
@@ -49,9 +53,8 @@ export default function What() {
           />
         </picture>
         <button onClick={toggleMenu} className="navigation-arrow">
-        <img src={NextScreen} alt="Next" />
-      </button>
-    </>
+          <img src={NextScreen} alt="Next" />
+        </button>
       </div> 
     </>
   );
