@@ -1,25 +1,31 @@
 import Nav from "../component/Nav.jsx";
-import Widescreen from "../assets/WidescreenAU.png";
-// Import MobileScreen if needed
+import wideScreenSrc from "../assets/WidescreenWHO.png";
+// Import other image sources if needed
 import "../App.css";
 import { useState } from "react";
 
 function determineSrc(type) {
-  switch (type) {
-    case "w":
-      return Widescreen;
-    // Add case for MobileScreen if needed
-    default:
-      return "";
-  }
+  return (
+    type === "w" ? wideScreenSrc :
+    type === "t" ? TabletscreenSrc :
+    type === "l" ? LaptopscreenSrc : 
+    type === "m" ? MobilescreenSrc :
+    ""
+  );
 }
 
-export default function About() {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+export default function Who() {
+  const GetScreenWidth = window.innerWidth;
 
   const determineParams = () => {
-    if (screenWidth <= 480) {
+    if (GetScreenWidth <= 480) {
       return "m";
+    } else if (GetScreenWidth <= 768) {
+      return "t";
+      } else if (GetScreenWidth <= 900) {
+      return "l";
+    } else if (GetScreenWidth <= 1200) {
+      return "w";  
     } else {
       return "w";
     }
@@ -28,21 +34,20 @@ export default function About() {
   return (
     <>
       <Nav />
-      {screenWidth <= 480 && (
+      {GetScreenWidth <= 480 && (
         <div id="blur">
           <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
         </div>
       )}
-      <div id="HomescreenBackgroundContainer">
+      <div id="WhoscreenBackgroundContainer">
         <picture>
           <img
-            id="HomescreenBackground"
+            id="WhoscreenBackground"
             src={determineSrc(determineParams())}
             alt="Background"
           />
         </picture>
-      </div>
+      </div> 
     </>
   );
 }
-
