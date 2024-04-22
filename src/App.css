@@ -51,6 +51,19 @@
   }
 }
 
+.canva-embed-container {
+  display: none; /* Hide the container by default */
+  position: relative; /* Allow positioning of the iframe */
+  width: 100%; /* Take full width */
+  height: 100vh; /* Take full height of the viewport */
+  background-color: #ffffff; /* Set a white background */
+  border-radius: 8px; /* Add a slight border radius */
+  box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16); /* Add a subtle shadow */
+}
+
+.canva-embed-container.show {
+  display: block; /* Show the container when the .show class is added */
+}
 
 @font-face {
       font-family: 'bold';
