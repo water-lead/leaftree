@@ -49,12 +49,12 @@ export default function Who() {
             alt="Background"
           />
         </picture>
-        <button className="navigation-arrow">
+        <button onClick={Link} className="navigation-arrow">
           <Link to="/jobs" className="navigation-arrow">
             <img src={NextScreen} alt="Next" />
           </Link>
         </button>
-      </div> 
+      </div>
     </>
   );
 }
