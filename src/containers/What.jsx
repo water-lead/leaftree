@@ -1,31 +1,40 @@
 import Nav from "../component/Nav.jsx";
-import wideSrceen from "../assets/WidescreenOP.png";
+import wideSrceenSrc from "../assets/WidescreenWHAT.png";
 // Import other image sources if needed
 import "../App.css";
 import { useState } from "react";
 
+function determineSrc(type) {
+  return (
+    type === "w" ? widescreenSrc :
+    type === "t" ? TabletscreenSrc :
+    type === "l" ? LaptopscreenSrc : 
+    type === "m" ? MobilescreenSrc :
+    ""
+  );
+}
+
 export default function What() {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const GetScreenWidth = window.innerWidth;
 
   const determineParams = () => {
-    if (screenWidth <= 480) {
+    if (GetScreenWidth <= 480) {
       return "m";
-    } else if (screenWidth <= 768) {
+    } else if (GetScreenWidth <= 768) {
+      return "t";
+    } else if (GetScreenWidth <= 1200) {
+      return "w";
+    } else if (GetScreenWidth <= 900) {
       return "l";
     } else {
       return "w";
     }
   };
 
-  const determineSrc = (type) => {
-    return type === "w" ? wideSrceen : "";
-    // Add other sources if needed
-  };
-
   return (
     <>
       <Nav />
-      {screenWidth <= 480 && (
+      {GetScreenWidth <= 480 && (
         <div id="blur">
           <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
         </div>
