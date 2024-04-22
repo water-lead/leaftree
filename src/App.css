@@ -44,6 +44,11 @@
   box-shadow: none !important;
 }
 
+.iframe::-webkit-media-controls-panel {
+    display: none !important;
+    opacity: 0 !important;
+}
+
 /* Make it responsive */
 @media (min-width: 768px) {
   .iframe-container {
