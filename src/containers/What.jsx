@@ -32,8 +32,8 @@ function What() {
         <p>
         <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGDIlikyuo&#x2F;OEI5K6nERPRJWRuAocipOw&#x2F;view?utm_content=DAGDIlikyuo&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>
       </p>
-      </div>
-      {screenWidth <= 1200 && (
+       </div>
+      {GetScreenWidth <= 1200 && (
         <div id="blur">
           <p>The site can only be viewed in landscape mode. Please tilt your phone</p>
         </div>
