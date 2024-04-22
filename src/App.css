@@ -27,8 +27,9 @@ body {
 }
 
 .menu-icon {
-  width: 30px; /* Adjust the size of the menu icon */
+  width: 20px; /* Adjust the size of the menu icon */
   cursor: pointer;
+  right: 15px;
 }
 
 .navigation-arrow {
