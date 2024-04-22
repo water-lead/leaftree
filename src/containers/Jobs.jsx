@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "../component/Nav.jsx";
+//import Nav from "../component/Nav.jsx";
 // Import other image sources if needed
 import "../App.css";
 import { useState } from "react";
