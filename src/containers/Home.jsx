@@ -69,6 +69,9 @@ function Home() {
   return (
     <>
       {/* Include Nav here if needed */}
+
+<div className={`canva-embed-container ${onForm ? 'show' : ''}`}>
+  <!-- Canva embed code here -->
       <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", backgroundColor: "#ffffff" }}>
         <div style={{ width: "100%", height: "100%" }}>
           <div style={{ position: "relative", width: "100%", height: 0, paddingTop: "56.2225%", paddingBottom: 0, boxShadow: "0 2px 8px 0 rgba(63,69,81,0.16)", overflow: "hidden", borderRadius: "8px", willChange: "transform" }}>
@@ -79,6 +82,7 @@ function Home() {
           <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGDIsgHjVs&#x2F;qJoLoTwrtzbXwrvXSHtqtQ&#x2F;view?utm_content=DAGDIsgHjVs&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>
         </p>
       </div>
+    </div>
 
       <div id="openBtnCont" style={{ bottom: GetScreenWidth >= 1260 && GetScreenWidth <= 1487 ? "13%" : "8%" }}>
         {!onForm ? (
