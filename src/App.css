@@ -36,22 +36,26 @@
   border: none;
   padding: 0;
   margin: 0;
+  box-shadow: none;
 }
 
 .iframe-container::-webkit-scrollbar {
     display: none;
+  box-shadow: none;
 }
 
 /* Make it responsive */
 @media (min-width: 768px) {
   .iframe-container {
     padding-top: 15%; /* Adjust the padding-top value based on your needs */
+    box-shadow: none;
   }
 }
 
 @media (min-width: 1024px) {
   .iframe-container {
     padding-top: 10%; /* Adjust the padding-top value based on your needs */
+    box-shadow: none;
   }
 } 
 
@@ -305,7 +309,7 @@ html {
       }
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation: portrait) {
       #blur {
             display: flex;
       }
