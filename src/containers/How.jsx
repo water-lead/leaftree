@@ -14,7 +14,7 @@ function How() {
           </div>
         </div>
         <p>
-        <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGDIkjEZ8A&#x2F;XpptsF2iV8gpK2GXLkYGfQ&#x2F;view?utm_content=DAGDIkjEZ8A&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>
+        <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGDIkjEZ8A&#x2F;XpptsF2iV8gpK2GXLkYGfQ&#x2F;view?utm_content=DAGDIkjEZ8A&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"</a>
       </p>
       </div>
     </div>
