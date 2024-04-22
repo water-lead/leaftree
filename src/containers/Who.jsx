@@ -50,6 +50,7 @@ export default function Who() {
         </picture>
         </div> 
         <button onClick={toggleMenu} className="navigation-arrow">
+          <Link to="/jobs" className="navigation-arrow">
         <img src={NextScreen} alt="Next" />
       </button>
     </>
