@@ -5,6 +5,22 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function What() {
+const GetScreenWidth = window.innerWidth;
+
+  const determineParams = () => {
+    if (GetScreenWidth <= 480) {
+      return "m";
+    } else if (GetScreenWidth <= 768) {
+      return "t";
+    } else if (GetScreenWidth <= 1200) {
+      return "w";
+    } else if (GetScreenWidth <= 900) {
+      return "l";
+    } else {
+      return "w";
+    }
+  };
+  
   return (
     <div>
       <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", backgroundColor: "#ffffff" }}>
@@ -18,6 +34,13 @@ function What() {
       </p>
       </div>
     </div>
+
+    {GetScreenWidth <= 1200 && (
+        <div id="blur">
+          <p>The site can only be viewed in landscape mode. Please tilt your phone</p>
+        </div>
+      )}
+    </>
   );
 }
 
