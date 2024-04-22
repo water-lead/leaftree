@@ -55,8 +55,8 @@ export default function What() {
         <button onClick={toggleMenu} className="navigation-arrow">
           <Link to="/who we are" className="navigation-arrow">
           <img src={NextScreen} alt="Next" />
-        </button>
-      </div> 
+        </>
+      </> 
     </>
   );
 }
