@@ -33,21 +33,20 @@ export default function Home() {
   };
 
   return (
-    <>
-      {GetScreenWidth <= 480 && (
-        <div id="blur">
-          <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
-        </div>
-      )}
-      <video autoPlay muted id="background-video" playsInline>
-        <source src={determineSrc(determineParams())} type="video/mp4" />
-      </video>
+  <>
+    {GetScreenWidth <= 480 && (
+      <div id="blur">
+        <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
+      </div>
+    )}
+    <video autoPlay muted id="background-video" playsInline>
+      <source src={determineSrc(determineParams())} type="video/mp4" />
+    </video>
 
-      {/* Toggle menu icon */}
-      <button onClick={toggleMenu} className="navigation-arrow">
-        <Link to="/how we invest" className="navigation-arrow">
-        <img src={NextScreen} alt="Next" />
-      </button>
-    </>
-  );
+    {/* Toggle menu icon */}
+    <Link to="/how we invest" className="navigation-arrow">
+      <img src={NextScreen} alt="Next" />
+    </Link>
+  </>
+);
 }
