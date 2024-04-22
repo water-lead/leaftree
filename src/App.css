@@ -35,8 +35,8 @@ body {
   position: fixed;
   bottom: 20px; /* Adjust the distance from the bottom */
   right: 20px; /* Adjust the distance from the right */
-  width: 10vw;
-  height: 10vh;
+  width: 5vw; /* Decreased width */
+  height: 5vh; /* Decreased height */
   display: flex;
   justify-content: center;
   align-items: center;
