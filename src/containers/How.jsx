@@ -33,7 +33,6 @@ const GetScreenWidth = window.innerWidth;
       </p>
       </div>
     </div>
-
     {GetScreenWidth <= 1200 && (
         <div id="blur">
           <p>The site can only be viewed in landscape mode. Please tilt your phone</p>
