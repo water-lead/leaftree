@@ -26,12 +26,6 @@ body {
       font-family: "Syncopate", sans-serif;
 }
 
-.menu-icon {
-  width: 20px; /* Adjust the size of the menu icon */
-  cursor: pointer;
-  right: 15px;
-}
-
 .navigation-arrow {
   position: fixed;
   bottom: 20px; /* Adjust the distance from the bottom */
@@ -57,6 +51,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px; /* Adjust padding as needed */
+}
+
+.menu-icon {
+  width: 20px; /* Adjust the size of the menu icon */
+  cursor: pointer;
+  right: 30px;
 }
 
 .dropdown-menu {
@@ -102,7 +102,7 @@ body {
   position: relative;
   top: 0;
   left: 0;
-  width: 120%;
+  width: 100vw;
   height: 80%;
   display: flex;
   justify-content: center;
@@ -179,8 +179,9 @@ body {
 }
 
 .NextScreen {
-      width: 10px;
-      left: 5;
+      width: 10p%;
+      height: 10%;
+      right: 15px;
       background-color: transparent;
 }
 
