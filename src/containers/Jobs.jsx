@@ -40,13 +40,12 @@ function Jobs() {
                 margin: 0
               }}
               src="https://www.canva.com/design/DAGDDCN0PJE/4a8nwJ3HBjQNbM65hXXOEQ/view?embed" 
-              allowFullScreen
+              allowFullScreen={false}
             ></iframe>
           </div>
         </div>
         <p>
           <a href="https://www.canva.com/design/DAGDDCN0PJE/4a8nwJ3HBjQNbM65hXXOEQ/view?utm_content=DAGDDCN0PJE&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener">
-            View on Canva
           </a>
         </p>
       </div>
