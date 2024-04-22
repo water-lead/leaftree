@@ -89,7 +89,7 @@ body {
 .menu-icon {
   height: 10%;
   width: 25%;
-  right: 10px; /* Adjust as needed */
+  right: 10%; /* Adjust as needed */
 }
 
 .dropdown-menu {
