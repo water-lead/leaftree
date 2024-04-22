@@ -35,8 +35,8 @@ body {
   position: fixed;
   bottom: 20px; /* Adjust the distance from the bottom */
   right: 20px; /* Adjust the distance from the right */
-  width: 5vw; /* Decreased width */
-  height: 5vh; /* Decreased height */
+  width: 10%; /* Decreased width */
+  height: 10%; /* Decreased height */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,7 +102,7 @@ body {
   top: 0;
   left: 0;
   width: 120%;
-  height: auto;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,7 +113,7 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: auto;
+  height: 80%;
   object-fit: cover;
   margin: 0;
   padding: 0;
@@ -124,7 +124,7 @@ body {
   top: 0;
   left: 0;
   width: 100%; /* Adjusted to 100% */
-  height: auto;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,7 +135,7 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: auto;
+  height: 80%;
   object-fit: cover;
   margin: 0;
   padding: 0;
