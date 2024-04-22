@@ -39,13 +39,15 @@ function Jobs() {
                 padding: 0,
                 margin: 0
               }}
-              src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGDDCN0PJE&#x2F;4a8nwJ3HBjQNbM65hXXOEQ&#x2F;view?embed" allowfullscreen=false}>
-            <iframe/>
+              src="https://www.canva.com/design/DAGDDCN0PJE/4a8nwJ3HBjQNbM65hXXOEQ/view?embed" 
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
         <p>
-          <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGDDCN0PJE&#x2F;4a8nwJ3HBjQNbM65hXXOEQ&#x2F;view?utm_content=DAGDDCN0PJE&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"
-          ></a>
+          <a href="https://www.canva.com/design/DAGDDCN0PJE/4a8nwJ3HBjQNbM65hXXOEQ/view?utm_content=DAGDDCN0PJE&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener">
+            View on Canva
+          </a>
         </p>
       </div>
     </div>
