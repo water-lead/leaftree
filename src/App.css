@@ -177,6 +177,12 @@ body {
   object-fit: cover;
 }
 
+.NextScreen {
+      width: 10px;
+      left: 5;
+      background-color: transparent;
+}
+
 #openBtnCont {
       position: absolute;
       z-index: 1;
