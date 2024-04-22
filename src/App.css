@@ -24,7 +24,7 @@
   padding-top: 56.2225%;
   overflow: hidden;
   border-radius: 8px;
-  scroll-behavior: auto !important;
+  scroll-behavior: none !important;
 }
 
 .iframe-container iframe {
@@ -36,17 +36,18 @@
   border: none;
   padding: 0;
   margin: 0;
-  scroll-behavior: auto !important;
+  scroll-behavior: none !important;
 }
 
 .iframe-container::-webkit-scrollbar {
     display: none;
+    scroll-behavior: none !important;
 }
 
 .iframe::-webkit-media-controls-panel {
     display: none !important;
     opacity: 1 !important;
-    scroll-behavior: auto !important;
+    scroll-behavior: none !important;
 }
 
 /* Make it responsive */
