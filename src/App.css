@@ -65,8 +65,9 @@
       font-weight: 700;
       src: local('bold'), local('bold'), url(./assets/NeueMontreal-Bold.otf)format('truetype');
 }
+
 @font-face {
-      font-family: 'regular';
+      /*font-family: 'regular';*/
       font-style: normal;
       font-weight: 500;
       src: local('regular'), local('regular'), url(./assets/NeueMontreal-Regular.otf)format('truetype');
@@ -88,14 +89,14 @@ body {
   background-color: transparent; /* Adjust the background color and opacity */
   z-index: 3; /* Higher z-index to overlay the menu */
   display: flex;
-  justify-content: top;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .menu-icon {
   height: 10%;
   width: 25%;
-  right: 10; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
 }
 
 .dropdown-menu {
@@ -119,7 +120,7 @@ body {
   text-decoration: none;
   color: #007AFF; /* Change the text color to blue */
   font-size: 18px; /* Increase the font size */
-  font-family: 'bold'; /* Change the font family to bold */
+  font-family: 'regular'; /* Change the font family to bold */
   padding: 10px;
   display: block;
   border-bottom: 1px solid #fff; /* Add a white border-bottom */
@@ -168,7 +169,7 @@ body {
       position: absolute;
       left: 5%;
       top: 80%;
-      transform: translate(-50%, -50%);
+      /*transform: translate(-50%, -50%);*/
       display: flex;
       flex-direction: column;
       align-items: center;
