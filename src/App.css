@@ -60,13 +60,6 @@
 } 
 
 @font-face {
-      font-family: 'bold';
-      font-style: normal;
-      font-weight: 700;
-      src: local('bold'), local('bold'), url(./assets/NeueMontreal-Bold.otf)format('truetype');
-}
-
-@font-face {
       /*font-family: 'regular';*/
       font-style: normal;
       font-weight: 500;
@@ -157,7 +150,7 @@ body {
       border-radius: 25px;
       outline: none;
       cursor: pointer;
-      font-family: "bold";
+      font-family: "regular";
       /* width: 50%; */
 }
 #openBtn:hover {
