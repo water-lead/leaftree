@@ -48,11 +48,11 @@ export default function Who() {
             alt="Background"
           />
         </picture>
+        </div> 
         <button onClick={toggleMenu} className="navigation-arrow">
         <img src={NextScreen} alt="Next" />
       </button>
     </>
-      </div> 
     </>
   );
 }
