@@ -17,7 +17,7 @@
   align-items: center;
 }
 
-iframe {
+.iframe {
   scroll-behavior: none !important;
 }
 
