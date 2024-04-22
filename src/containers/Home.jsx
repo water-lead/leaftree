@@ -31,8 +31,8 @@ export default function Home() {
       return "w";
     }
   };
-   
-  <Nav />
+
+<div> <Nav /> </div>
   
   return (
     <>
