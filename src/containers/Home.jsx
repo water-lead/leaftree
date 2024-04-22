@@ -6,8 +6,6 @@ import NextScreen from '../assets/nextPage.gif';
 import "../App.css";
 
 function determineSrc(type) {
-  <div> 
-    <Nav /> 
   return (
     type === "w" ? widescreenSrc :
     type === "t" ? TabletscreenSrc : // Import TabletscreenSrc if needed
@@ -34,22 +32,28 @@ export default function Home() {
     }
   };
   
-  return (
+ return (
     <>
+      <Nav />
       {GetScreenWidth <= 480 && (
         <div id="blur">
           <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
         </div>
       )}
-      <video autoPlay muted id="background-video" playsInline>
-        <source src={determineSrc(determineParams())} type="video/mp4" />
-      </video>
-
-      {/* Toggle menu icon */}
-      <Link to="/how we invest" className="navigation-arrow">
-        <img src={NextScreen} alt="Next" />
-      </Link>
-    </>
+      <div id="HomescreenBackgroundContainer">
+        <picture>
+          <img
+            id="HomescreenBackground"
+            src={determineSrc(determineParams())}
+            alt="Background"
+          />
+        </picture>
+        <button onClick={Link} className="navigation-arrow">
+          <Link to="/how we invest" className="navigation-arrow">
+            <img src={NextScreen} alt="Next" />
+          </Link>
+        </button>
       </div>
+    </>
   );
 }
