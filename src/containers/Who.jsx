@@ -4,6 +4,7 @@ import wideScreenSrc from "../assets/WidescreenWHO.png";
 import "../App.css";
 import { useState } from "react";
 import NextScreen from '../assets/icons8-move-right-100.png';
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 function determineSrc(type) {
   return (
@@ -23,7 +24,7 @@ export default function Who() {
       return "m";
     } else if (GetScreenWidth <= 768) {
       return "t";
-      } else if (GetScreenWidth <= 900) {
+    } else if (GetScreenWidth <= 900) {
       return "l";
     } else if (GetScreenWidth <= 1200) {
       return "w";  
@@ -48,12 +49,12 @@ export default function Who() {
             alt="Background"
           />
         </picture>
-        </div> 
-        <button onClick={toggleMenu} className="navigation-arrow">
+        <button className="navigation-arrow">
           <Link to="/jobs" className="navigation-arrow">
-        <img src={NextScreen} alt="Next" />
-      </button>
-    </>
+            <img src={NextScreen} alt="Next" />
+          </Link>
+        </button>
+      </div> 
     </>
   );
 }
