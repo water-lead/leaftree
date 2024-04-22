@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 function Jobs() {
   return (
+    <div>
     <Nav />
     <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", backgroundColor: "#ffffff" }}>
       <div style={{ width: "100%", height: "100%" }}>
@@ -18,6 +19,7 @@ function Jobs() {
         <a href="https://www.canva.com/design/DAGDDCN0PJE/4a8nwJ3HBjQNbM65hXXOEQ/view?utm_content=DAGDDCN0PJE&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener"></a>
       </p>
     </div>
+      </div>
   );
 }
 
