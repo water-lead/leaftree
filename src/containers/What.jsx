@@ -33,10 +33,6 @@ export default function What() {
     }
   };
 
-  const toggleMenu = () => {
-    // Implement toggleMenu function
-  };
-
   return (
     <>
       <Nav />
