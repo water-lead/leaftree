@@ -17,6 +17,10 @@
   align-items: center;
 }
 
+iframe {
+  scroll-behavior: none !important;
+}
+
 .iframe-container {
   position: relative;
   width: 100%;
