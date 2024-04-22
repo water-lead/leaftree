@@ -41,12 +41,373 @@
 /* Make it responsive */
 @media (min-width: 768px) {
   .iframe-container {
-    padding-top: 45%; /* Adjust the padding-top value based on your needs */
+    padding-top: 15%; /* Adjust the padding-top value based on your needs */
   }
 }
 
 @media (min-width: 1024px) {
   .iframe-container {
-    padding-top: 30%; /* Adjust the padding-top value based on your needs */
+    padding-top: 10%; /* Adjust the padding-top value based on your needs */
   }
+}
+
+
+@font-face {
+      font-family: 'bold';
+      font-style: normal;
+      font-weight: 700;
+      src: local('bold'), local('bold'), url(./assets/NeueMontreal-Bold.otf)format('truetype');
+}
+@font-face {
+      font-family: 'regular';
+      font-style: normal;
+      font-weight: 500;
+      src: local('regular'), local('regular'), url(./assets/NeueMontreal-Regular.otf)format('truetype');
+}
+
+body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #ffffff;
+}
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Syncopate", sans-serif;
+}
+
+.navigation-arrow {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 3%;
+  width: 3%;
+  z-index: 3;
+  /* Other styles as needed */
+}
+
+@media (max-width: 768px) {
+  .navigation-arrow {
+    bottom: 60px; /* Adjust the distance from the bottom for smaller screens */
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent; /* Adjust the background color and opacity */
+  z-index: 3; /* Higher z-index to overlay the menu */
+  display: flex;
+  justify-content: top;
+  align-items: center;
+ /*  padding: 10px 20px; /* Adjust padding as needed */
+}
+
+.menu-icon {
+  height: 10%;
+  width: 25%;
+  right: 10; /* Adjust as needed */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 15px; /* Adjust distance from the top */
+  right: 50px; /* Adjust distance from the right */
+  background-color: #2a3a23;
+  border: 1px solid #ccc;
+  height: 35%;
+  width: 35%;
+  padding: 10px;
+  list-style: vertical;
+  z-index: 2;
+}
+
+.dropdown-menu li {
+  margin-bottom: 3px; /* Adjust margin between menu items */
+}
+
+.menu-items-link {
+  text-decoration: none;
+  color: #007AFF; /* Change the text color to blue */
+  font-size: 18px; /* Increase the font size */
+  font-family: 'bold'; /* Change the font family to bold */
+  padding: 10px;
+  display: block;
+  border-bottom: 1px solid #fff; /* Add a white border-bottom */
+}
+
+.menu-items-link:last-child {
+  border-bottom: none; /* Remove the border-bottom from the last menu item */
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.logo {
+      width: 150px;
+      left: 5;
+      background-color: transparent;
+}
+
+#WhatscreenBackgroundContainer {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Adjust the background image */
+#WhatscreenBackground {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+#WhoscreenBackgroundContainer {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%; /* Adjusted to 100% */
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  z-index: -1;
+      
+}
+
+#WhoscreenBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+#HomescreenVideoContainer video {
+      position: relative;
+      /* padding-bottom: -100.25em; */
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      z-index: -1;
+}
+
+#HomescreenVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#HowscreenVideoContainer video {
+      position: relative;
+      /* padding-bottom: -100.25em; */
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      z-index: -1;
+}
+
+#HowscreenVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.NextScreen {
+      width: 10p%;
+      height: 10%;
+      right: 15px;
+      background-color: transparent;
+}
+
+#openBtnCont {
+      position: absolute;
+      z-index: 1;
+      bottom: 8%;
+      left: 0;
+      right: 0;
+      width: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+}
+#openBtn {
+      color: white;
+      background-color: #2a3a23;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      outline: none;
+      cursor: pointer;
+      font-family: "bold";
+      /* width: 50%; */
+}
+#openBtn:hover {
+      text-decoration: underline;
+}
+#form-container {
+      width:  90%;
+      height:  33vh;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      gap: 1em;
+      transition: 0.1s;
+}
+.form-input {
+      width: 100%;
+      border-radius: 12px;
+      border: none;
+      padding: 13px;
+      border: 1px solid #ccc;
+      background-color: white;
+      font-family: "regular";
+      font-size: 17px;
+      outline: none;
+      text-align: center;
+}
+/* .form-input-new {
+      width: 100%;
+}
+.form-input:hover {
+      border: 2px solid #ccc;
+} */
+/* #form-btn {
+      width: 100%;
+      border-radius: 12px;
+      border: none;
+      padding: 15px;
+      font-family: "bold";
+      font-size: 16px;
+      color: white;
+      outline: none;
+      background-color: #007AFF;
+}
+#form-btn:hover {
+      text-decoration: underline;
+} */
+#popup {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.2);
+      text-align: center;
+}
+#popup::placeholder {
+      color: white;
+      font-family: "regular";
+}
+
+@media (min-width: 760px) {
+#form-container {
+      width: 90%;
+      height: 29vh;
+}
+#popup {
+      width: 100%;
+}
+.menu-items-link {
+      font-size: 18px;
+}
+.menu-items {
+      gap: 3em;
+      margin-right: 3em;
+}
+}
+@media (max-width: 480px) {
+      .menu-items-link {
+            font-size: 16px;
+      }
+            #openBtnCont {
+                  width: 90%;
+            }
+}
+@media (max-width: 370px) {
+.menu-items-link {
+      font-size: 12px;
+}
+.logo {
+      width: 85px;
+}
+}
+
+
+
+body,
+html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+}
+
+#background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      z-index: -1;
+}
+
+#blur {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(170,190,170,0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+      font-family: "regular";
+      backdrop-filter: blur(20px);
+}
+#blur p {
+      font-family: "regular";
+      padding: 20px;
+      text-align: center;
+}
+
+
+@media (max-width: 480px) {
+      .menu-items-link {
+            font-size: 16px;
+      }
+}
+
+@media screen and (orientation: landscape) {
+      #blur {
+            display: flex;
+      }
 }
