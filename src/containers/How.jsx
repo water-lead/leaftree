@@ -4,6 +4,7 @@ import "../App.css";
 import { useState } from "react";
 import validator from "validator";
 import { Link } from "react-router-dom";
+import NextScreen from '../assets/nextPage.gif';
 
 function determineSrc(type) {
   return (
@@ -177,19 +178,7 @@ export default function How() {
       {GetScreenWidth <= 480 && <div id="blur">
         <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
       </div>}
-      <div id="HowscreenVideoContainer">
-        <video
-          autoPlay
-          muted
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-          }}
-        >
+      <video>
           <source src={wideSrceenSrc} type="video/mp4" />
         </video>
         <Link to="/what-we-believe" className="navigation-arrow">
