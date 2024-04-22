@@ -36,9 +36,9 @@ export default function What() {
   return (
     <>
       <Nav />
-      {GetScreenWidth <= 480 && (
+      {GetScreenWidth <= 1200 && (
         <div id="blur">
-          <p>The site can only be viewed in portrait mode. Please tilt your phone</p>
+          <p>The site can only be viewed in landscape mode. Please tilt your phone</p>
         </div>
       )}
       <div id="WhatscreenBackgroundContainer">
