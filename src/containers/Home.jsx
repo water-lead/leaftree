@@ -45,6 +45,7 @@ export default function Home() {
 
       {/* Toggle menu icon */}
       <button onClick={toggleMenu} className="navigation-arrow">
+        <Link to="/how we invest" className="navigation-arrow">
         <img src={NextScreen} alt="Next" />
       </button>
     </>
