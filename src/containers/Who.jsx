@@ -3,7 +3,7 @@ import wideScreenSrc from "../assets/WidescreenWHO.png";
 // Import other image sources if needed
 import "../App.css";
 import { useState } from "react";
-import NextScreen from '../assets/nextPage.png';
+import NextScreen from '../assets/nextPage.gif';
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 function determineSrc(type) {
