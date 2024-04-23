@@ -61,7 +61,7 @@ function Home() {
         });
         
         setOnForm(true);
-        setTimeout(() => (window.location.href = "/"), 8000);
+        setTimeout(() => (window.location.href = "/who we are"), 8000);
       }
     }
   };
@@ -83,7 +83,7 @@ function Home() {
 
       <div id="openBtnCont" style={{ bottom: GetScreenWidth >= 1260 && GetScreenWidth <= 1487 ? "13%" : "8%" }}>
         {!onForm ? (
-          <button id="openBtn" className="form-input form-input-new" onClick={() => setOnForm(true)}>Request Presentation</button>
+          <button id="openBtn" className="form-input form-input-new" onClick={() => setOnForm(true)}>REQUEST MORE INFO</button>
         ) : (
           <>
             {formOn === 1 ? (
@@ -123,7 +123,7 @@ function Home() {
                 disabled={true}
                 style={{color:"white"}}    
                 className="form-input form-input-new" 
-                placeholder="Your information has been submitted." 
+                placeholder="Thank you for your interest!" 
               />
             )}
           </>
