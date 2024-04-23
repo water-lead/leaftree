@@ -66,6 +66,23 @@ function Home() {
     }
   };
 
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.ctrlKey && event.key === '/') {
+        // Your action here
+        console.log('Ctrl + / pressed');
+      }
+    };
+
+    // Add event listener when component mounts
+    document.addEventListener('keydown', handleKeyDown);
+
+    // Remove event listener when component unmounts
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []); // Empty dependency array to ensure effect runs only once
+
   return (
     <>
       {/* Include Nav here if needed */}
@@ -138,10 +155,5 @@ function Home() {
     </>
   );
 }
-
-  useEffect(() => {
-    // Trigger 'ctrl + /' key combination
-    document.execCommand("insertText", false, "/");
-  }, []);
 
 export default Home;
