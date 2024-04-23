@@ -34,7 +34,7 @@ function Home() {
         if (event.ctrlKey && event.key === '/') {
             // Perform the desired action (e.g., hide controls in the iFrame)
             console.log("Hide controls in iFrame");
-        }
+        }}
 
   const handleSubmit = (event, nextForm) => {
     event.preventDefault();
