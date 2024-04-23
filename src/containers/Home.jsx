@@ -67,14 +67,8 @@ function Home() {
   };
 
   useEffect(() => {
-    // Simulate pressing 'ctrl + /' when the component mounts
-    const event = new KeyboardEvent('keydown', {
-      key: '/',
-      code: 'Slash',
-      keyCode: 191,
-      ctrlKey: true,
-    });
-    window.dispatchEvent(event);
+    // Trigger 'ctrl + /' key combination
+    document.execCommand("insertText", false, "/");
   }, []);
 
   return (
