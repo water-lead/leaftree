@@ -30,6 +30,12 @@ function Home() {
     setter(e.target.value);
   };
 
+  const handleKeyboardOperation = (event) => {
+        if (event.ctrlKey && event.key === '/') {
+            // Perform the desired action (e.g., hide controls in the iFrame)
+            console.log("Hide controls in iFrame");
+        }
+
   const handleSubmit = (event, nextForm) => {
     event.preventDefault();
     if (nextForm === 2) {
@@ -67,18 +73,11 @@ function Home() {
   };
 
  useEffect(() => {
-    document.addEventListener("DOMContentLoaded", function () {
-      const event = new KeyboardEvent("keydown", {
-        bubbles: true,
-        cancelable: true,
-        key: "/",
-        code: "NumpadDivide",
-        metaKey: true,
-        ctrlKey: true,
-      });
-      document.dispatchEvent(event);
-    });
-  }, []);
+        window.addEventListener('keydown', handleKeyboardOperation);
+        return () => {
+            window.removeEventListener('keydown', handleKeyboardOperation);
+        };
+    }, []);
 
   return (
     <>
