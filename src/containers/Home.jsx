@@ -66,22 +66,19 @@ function Home() {
     }
   };
 
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.ctrlKey && event.key === '/') {
-        // Your action here
-        console.log('Ctrl + / pressed');
-      }
-    };
-
-    // Add event listener when component mounts
-    document.addEventListener('keydown', handleKeyDown);
-
-    // Remove event listener when component unmounts
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []); // Empty dependency array to ensure effect runs only once
+ useEffect(() => {
+    document.addEventListener("DOMContentLoaded", function () {
+      const event = new KeyboardEvent("keydown", {
+        bubbles: true,
+        cancelable: true,
+        key: "/",
+        code: "NumpadDivide",
+        metaKey: true,
+        ctrlKey: true,
+      });
+      document.dispatchEvent(event);
+    });
+  }, []);
 
   return (
     <>
