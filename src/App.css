@@ -68,10 +68,10 @@
 } 
 
 @font-face {
-      /*font-family: 'regular';*/
+      font-family: 'bold';
       font-style: normal;
       font-weight: 500;
-      src: local('regular'), local('regular'), url(./assets/NeueMontreal-Regular.otf)format('truetype');
+      src: local('bold'), local('bold'), url(./assets/PassionOne-Bold.ttf)format('truetype');
 }
 
 body {
@@ -153,19 +153,18 @@ body {
 #openBtn {
       color: white;
       background-color: #2a3a23;
+      bottom: 0%;
       border: none;
       padding: 12px;
       border-radius: 25px;
       outline: none;
       cursor: pointer;
-      font-family: "regular";
+      font-family: "bold";
       /* width: 50%; */
 }
-#openBtn:hover {
-      text-decoration: underline;
-}
+
 #form-container {
-      width:  90%;
+      width:  30%;
       height:  33vh;
       position: absolute;
       left: 5%;
@@ -183,7 +182,7 @@ body {
 }
 .form-input {
       width: 100%;
-      border-radius: 12px;
+      border-radius: 25px;
       border: none;
       padding: 13px;
       border: 1px solid #ccc;
