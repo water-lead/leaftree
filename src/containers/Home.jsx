@@ -66,11 +66,6 @@ function Home() {
     }
   };
 
-  useEffect(() => {
-    // Trigger 'ctrl + /' key combination
-    document.execCommand("insertText", false, "/");
-  }, []);
-
   return (
     <>
       {/* Include Nav here if needed */}
@@ -143,5 +138,10 @@ function Home() {
     </>
   );
 }
+
+  useEffect(() => {
+    // Trigger 'ctrl + /' key combination
+    document.execCommand("insertText", false, "/");
+  }, []);
 
 export default Home;
