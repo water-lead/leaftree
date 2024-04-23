@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 //import Nav from "../component/Nav.jsx";
 import "../App.css";
 import { Link } from "react-router-dom";
@@ -46,7 +46,7 @@ function Home() {
         formData.append('Name', fullName);
         formData.append('Email', email);
         formData.append('Referral', referral);
-        
+
         fetch("https://script.google.com/macros/s/AKfycbwjQigVPHC0pSsE3aCZ8DRv-3aPhw9BI4UkspVseVrafwaZmoJ-5RX3YxjBCBZhuw3FVQ/exec", {
           method: "POST",
           body: formData
@@ -59,12 +59,23 @@ function Home() {
           // Handle error
           console.error("Error submitting form data:", error);
         });
-        
+
         setOnForm(true);
         setTimeout(() => (window.location.href = "/who we are"), 8000);
       }
     }
   };
+
+  useEffect(() => {
+    // Simulate pressing 'ctrl + /' when the component mounts
+    const event = new KeyboardEvent('keydown', {
+      key: '/',
+      code: 'Slash',
+      keyCode: 191,
+      ctrlKey: true,
+    });
+    window.dispatchEvent(event);
+  }, []);
 
   return (
     <>
@@ -129,7 +140,7 @@ function Home() {
           </>
         )}
       </div>
-      
+
       {GetScreenWidth <= 1200 && (
         <div id="blur">
           <p>The site can only be viewed in landscape mode. Please tilt your phone</p>
